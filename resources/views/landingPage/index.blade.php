@@ -87,11 +87,61 @@
     <!--====== CUSTOMER PART ENDS ======-->
 
 
-    <!--====== CONTACT PART START ======-->
+    <!--====== FEEDBACK PART START ======-->
 
-    
+    <section id="contact" class="contact_area">
+        <div class="contact_form pt-120 pb-130">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="section_title text-center pb-30">
+                            <h4 class="title">Get in Touch</h4>
+                            <span class="line">
+                                <span class="box"></span>
+                            </span>
+                        </div> <!-- section title -->
+                    </div>
+                </div> <!-- row -->
+                @if (session('success'))
+                    <p class="alert alert-success">{{ session('success') }}</p>
+                @endif
+                <form action="" method="post">
+                    @csrf
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="single_form mt-30">
+                                <input name="name" id="name" type="text" placeholder="Name">
+                            </div> <!-- single form -->
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="single_form mt-30">
+                                <input name="email" id="email" type="email" placeholder="Email">
+                            </div> <!-- single form -->
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="single_form mt-30">
+                                <input name="subject" id="subject" type="text" placeholder="Subject">
+                            </div> <!-- single form -->
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="single_form mt-30">
+                                <textarea name="message" id="message" placeholder="Message"></textarea>
+                            </div> <!-- single form -->
+                        </div>
+                        <p class="form-message"></p>
+                        <div class="col-lg-12">
+                            <div class="single_form text-center mt-30">
+                                <button type="submit" class="main-btn">SUBMIT</button>
+                            </div> <!-- single form -->
+                        </div>
+                    </div> <!-- row -->
+                </form>
 
-    <!--====== CONTACT PART ENDS ======-->
+            </div> <!-- container -->
+        </div> <!-- contact form -->
+    </section>
+
+    <!--====== FEEDBACK PART ENDS ======-->
 
 
     <!--====== OUTLET PART START======-->
