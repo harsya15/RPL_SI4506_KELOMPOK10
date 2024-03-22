@@ -113,9 +113,7 @@
                         </div> <!-- section title -->
                     </div>
                 </div> <!-- row -->
-                @if (session('success'))
-                    <p class="alert alert-success">{{ session('success') }}</p>
-                @endif
+                
                 <form action="" method="post">
                     @csrf
                     <div class="row">
