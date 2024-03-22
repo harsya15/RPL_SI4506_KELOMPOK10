@@ -74,7 +74,18 @@
 
 
     <!--====== MENU PART START ======-->
-
+    <section id="contact" class="contact_area">
+        <div class="contact_form pt-120 pb-130">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="section_title text-center pb-30">
+                        </div>
+                    </div> <!-- row -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
     
 
     <!--====== MENU PART ENDS ======-->
