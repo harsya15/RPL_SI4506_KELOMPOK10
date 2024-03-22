@@ -72,7 +72,7 @@
 
     <!--====== COUNTER PART ENDS ======-->
 
-    <!--====== OUTLET PART START======-->
+    <!--====== GALERI FOTO PART START======-->
 
     <section id="contact" class="contact_area">
         <div class="contact_form pt-120 pb-130">
@@ -87,7 +87,7 @@
         </div> <!-- container -->
     </section>
 
-    <!--====== OUTLET PART ENDS ======-->
+    <!--====== GALERI FOTO PART ENDS ======-->
 
     <!--====== MENU PART START ======-->
     <section id="contact" class="contact_area">
