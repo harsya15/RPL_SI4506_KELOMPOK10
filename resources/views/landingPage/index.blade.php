@@ -45,7 +45,30 @@
 
     <!--====== COUNTER PART START ======-->
 
-    
+    <section id="counter" class="counter_area pt-50 pb-95 text-center" style="background-image: url(images/sate\ wallpaper.jpg)">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-12">
+                    <div class="single_counter mt-30 wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.2s">
+                        <span class="count"><span class="counter">36546</span></span>
+                        <p>Satay Served</p>
+                    </div> <!-- single counter -->
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <div class="single_counter mt-30 wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.5s">
+                        <span class="count"><span class="counter">6</span></span>
+                        <p>Type of Satay</p>
+                    </div> <!-- single counter -->
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <div class="single_counter mt-30 wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.8s">
+                        <span class="count"><span class="counter">12</span></span>
+                        <p>Team Members</p>
+                    </div> <!-- single counter -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
 
     <!--====== COUNTER PART ENDS ======-->
 
