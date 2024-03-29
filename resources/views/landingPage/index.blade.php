@@ -108,20 +108,89 @@
 
 
     <!--====== CUSTOMER PART START ======-->
-    <section id="contact" class="contact_area">
-        <div class="contact_form pt-120 pb-130">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-6">
-                        <div class="section_title text-center pb-30">
+    
+    <section id="customer" class="customer_area pt-120">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="section_title text-center pb-30">
+                        <h4 class="title">Customers Feedback</h4>
+                        <span class="line">
+                            <span class="box"></span>
+                        </span>
+                    </div> <!-- section title -->
+                </div>
+            </div> <!-- row -->
+            <div class="row customer_active">
+                <div class="col-lg-6">
+                    <div class="single_customer d-sm-flex align-items-center mt-30">
+                        <div class="customer_image">
+                            <img src="images/customer-1.jpg" alt="customer">
                         </div>
-                    </div> <!-- row -->
+                        <div class="customer_content media-body">
+                            <div class="customer_content_wrapper media-body">
+                                <h5 class="author_name">Justyna Helen</h5>
+                                <span class="sub_title">Satay Lover</span>
+                                <p>“Rekomendasi Sate Buntel dan Sate Kambing.. Teksturnya empuk dan bumbunya meresap”</p>
+                                <ul class="star">
+                                    <li><i class="lni lni-star-filled"></i></li>
+                                    <li><i class="lni lni-star-filled"></i></li>
+                                    <li><i class="lni lni-star-filled"></i></li>
+                                    <li><i class="lni lni-star-filled"></i></li>
+                                    <li><i class="lni lni-star-filled"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div> <!-- single customer -->
+                </div>
+                <div class="col-lg-6">
+                    <div class="single_customer d-sm-flex align-items-center mt-30">
+                        <div class="customer_image">
+                            <img src="images/customer-2.jpg" alt="customer">
+                        </div>
+                        <div class="customer_content media-body">
+                            <div class="customer_content_wrapper media-body">
+                                <h5 class="author_name">Fajar Siddiq</h5>
+                                <span class="sub_title">Food Enthusiast</span>
+                                <p>“Mudah dijangkau dengan transportasi umum maupun pribadi. Untuk masalah harga, relatif
+                                    ya..kan kambing empuk...enak kok satenya”</p>
+                                <ul class="star">
+                                    <li><i class="lni lni-star-filled"></i></li>
+                                    <li><i class="lni lni-star-filled"></i></li>
+                                    <li><i class="lni lni-star-filled"></i></li>
+                                    <li><i class="lni lni-star-filled"></i></li>
+                                    <li><i class="lni lni-star"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div> <!-- single customer -->
+                </div>
+                <div class="col-lg-6">
+                    <div class="single_customer d-sm-flex align-items-center mt-30">
+                        <div class="customer_image">
+                            <img src="images/customer-3.jpg" alt="customer">
+                        </div>
+                        <div class="customer_content media-body">
+                            <div class="customer_content_wrapper media-body">
+                                <h5 class="author_name">Rob Hope</h5>
+                                <span class="sub_title">Enthusiasts</span>
+                                <p>“Banyak pilihan sate. Buat lidah saya kecap nya terlalu manis tapi rasanya Enak . Good
+                                    lah”</p>
+                                <ul class="star">
+                                    <li><i class="lni lni-star-filled"></i></li>
+                                    <li><i class="lni lni-star-filled"></i></li>
+                                    <li><i class="lni lni-star-filled"></i></li>
+                                    <li><i class="lni lni-star-filled"></i></li>
+                                    <li><i class="lni lni-star"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div> <!-- single customer -->
                 </div>
             </div> <!-- row -->
         </div> <!-- container -->
     </section>
     
-
     <!--====== CUSTOMER PART ENDS ======-->
 
 
