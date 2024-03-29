@@ -74,20 +74,57 @@
 
     <!--====== GALERI FOTO PART START======-->
 
-    <section id="contact" class="contact_area">
-        <div class="contact_form pt-120 pb-130">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-6">
-                        <div class="section_title text-center pb-30">
-                        </div>
-                    </div> <!-- row -->
+<section id="gallery" class="gallery_area section_gap">
+    <div class="container">
+        <div class="section_title text-center">
+            <h2>Galeri Foto</h2>
+        </div>
+        <div class="gallery_filter">
+            <button class="active" data-filter="*">Semua</button>
+            <button data-filter=".makanan">Makanan</button>
+            <button data-filter=".dekorasi">Dekorasi</button>
+            <button data-filter=".acara">Acara</button>
+        </div>
+        <div class="row justify-content-center">
+            <div class="gallery_item makanan col-lg-4 col-md-6">
+                <div class="gallery_img">
+                    <img src="img/makanan1.jpg" alt="">
+                    <div class="hover">
+                        <a href="#" class="light" title="Makanan 1"><i class="fa fa-search"></i></a>
+                        <a href="#" title="Bagikan ke Media Sosial"><i class="fa fa-share-alt"></i></a>
+                    </div>
                 </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </section>
+            </div>
+            <!-- Gallery items for makanan -->
+            <!-- Repeat the above structure for other categories (dekorasi, acara) -->
 
-    <!--====== GALERI FOTO PART ENDS ======-->
+            <!-- Example for Dekorasi -->
+            <div class="gallery_item dekorasi col-lg-4 col-md-6">
+                <div class="gallery_img">
+                    <img src="img/dekorasi1.jpg" alt="">
+                    <div class="hover">
+                        <a href="#" class="light" title="Dekorasi 1"><i class="fa fa-search"></i></a>
+                        <a href="#" title="Bagikan ke Media Sosial"><i class="fa fa-share-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Example for Acara -->
+            <div class="gallery_item acara col-lg-4 col-md-6">
+                <div class="gallery_img">
+                    <img src="img/acara1.jpg" alt="">
+                    <div class="hover">
+                        <a href="#" class="light" title="Acara 1"><i class="fa fa-search"></i></a>
+                        <a href="#" title="Bagikan ke Media Sosial"><i class="fa fa-share-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--====== GALERI FOTO PART ENDS ======-->
+
 
     <!--====== MENU PART START ======-->
     <section id="contact" class="contact_area">
