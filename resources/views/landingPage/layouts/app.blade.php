@@ -21,6 +21,7 @@
 
     <link rel="stylesheet" href="{{asset('frontend')}}/css/style-min.css">
     <link rel="stylesheet" href="{{asset('frontend')}}/css/style.css">
+    <link rel="stylesheet" href="{{asset('frontend')}}/css/glightbox.min.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
@@ -43,6 +44,7 @@
   <script src="{{asset('frontend')}}/js/scrolling-nav.js"></script>
   <script src="{{asset('frontend')}}/js/slick.min.js"></script>
   <script src="{{asset('frontend')}}/js/wow.min.js"></script>
+  <script src="{{asset('frontend')}}/js/glightbox.min.js"></script>
 
  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
