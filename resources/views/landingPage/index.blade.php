@@ -127,17 +127,185 @@
 
 
     <!--====== MENU PART START ======-->
-    <section id="contact" class="contact_area">
-        <div class="contact_form pt-120 pb-130">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-6">
-                        <div class="section_title text-center pb-30">
-                        </div>
-                    </div> <!-- row -->
+    <section id="menu" class="food_section layout_padding pt-120">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="section_title text-center pb-30">
+                        <h4 class="title">Menu</h4>
+                        <span class="line">
+                            <span class="box"></span>
+                        </span>
+                    </div> <!-- section title -->
                 </div>
             </div> <!-- row -->
-        </div> <!-- container -->
+
+                
+            <div class="filters_content">
+                <div class="row grid"></div>
+                    <div class="col-lg-4 col-md-7 col-sm-9">
+                        <div class="box">
+                            <div>
+                                <div class="img-box">
+                                    <img src="images/sate tegal.jpg" alt="">
+                                </div>
+                                <div class="detail-box">
+                                    <h4 class="mb-2">Sate Kambing</h4>
+                                    <p>Campuran daging kambing balibul dan lemak yang dibakar dengan celupan bumbu kecap. Disajikan
+                                dengan kecap khas Solo dengan cita rasa manis dan gurih dan bahan pelengkap lainnya</p>
+                                    <div class="options">
+                                        <h6>$15</h6>
+                                        <a href="">
+                                            <i class="lni lni-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-7 col-sm-9 all burger">
+                        <div class="box">
+                            <div>
+                                <div class="img-box">
+                                    <img src="images/sate tegal.jpg" alt="">
+                                </div>
+                                <div class="detail-box">
+                                    <h4 class="mb-2">Sate Ayam</h4>
+                                    <p>Campuran daging ayam balibul dan lemak yang dibakar dengan celupan bumbu kecap. Disajikan
+                                dengan kecap khas Solo dengan cita rasa manis dan gurih dan bahan pelengkap lainnya</p>
+                                    <div class="options">
+                                        <h6>$15</h6>
+                                        <a href="">
+                                            <i class="lni lni-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-7 col-sm-9 all burger">
+                        <div class="box">
+                            <div>
+                                <div class="img-box">
+                                    <img src="images/sate tegal.jpg" alt="">
+                                </div>
+                                <div class="detail-box">
+                                    <h4 class="mb-2">Sate Tegal</h4>
+                                    <p>Campuran daging kambing balibul dan lemak yang dibakar dengan celupan bumbu Spesial tegal. Disajikan
+                                dengan kecap khas Solo dengan cita rasa manis dan gurih dan bahan pelengkap lainnya</p>
+                                    <div class="options">
+                                        <h6>$15</h6>
+                                        <a href="">
+                                            <i class="lni lni-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-7 col-sm-9 all burger">
+                        <div class="box">
+                            <div>
+                                <div class="img-box">
+                                    <img src="images/sate tegal.jpg" alt="">
+                                </div>
+                                <div class="detail-box">
+                                    <h4 class="mb-2">Sate Khalatak</h4>
+                                    <p>Campuran daging kambing balibul dan lemak yang dibakar dengan celupan bumbu khalatak. Disajikan
+                                dengan kecap khas Solo dengan cita rasa manis dan gurih dan bahan pelengkap lainnya</p>
+                                    <div class="options">
+                                        <h6>$15</h6>
+                                        <a href="">
+                                            <i class="lni lni-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+                <!-- <div class="col-lg-4 col-md-7 col-sm-9">
+                    <div class="single_menu text-center mt-30 wow fadeInUpBig" data-wow-duration="1.3s"
+                        data-wow-delay="0.2s">
+                        <div class="menu_image">
+                            <img src="images/sate solo.jpg" height="200" width="250" alt="coffee">
+                        </div>
+                        <div class="menu_content">
+                            <h4 class="menu_title">Sate Khas Solo</h4>
+                            <p>Campuran daging kambing balibul dan lemak yang dibakar dengan celupan bumbu kecap. Disajikan
+                                dengan kecap khas Solo dengan cita rasa manis dan gurih dan bahan pelengkap lainnya</p>
+                        </div>
+                    </div> single menu
+                </div> -->
+                <!-- <div class="col-lg-4 col-md-7 col-sm-9">
+                    <div class="single_menu text-center mt-30 wow fadeInUpBig" data-wow-duration="1.3s"
+                        data-wow-delay="0.2s">
+                        <div class="menu_image">
+                            <img src="images/sate tegal.jpg" height="200" width="250" alt="menu">
+                        </div>
+                        <div class="menu_content">
+                            <h4 class="menu_title">Sate Khas Tegal</h4>
+                            <p>Campuran daging kambing balibul dan lemak yang dibakar tanpa menggunakan bumbu. Disajikan
+                                dengan kecap khas Tegaldan bahan pelengkap lainnya</p>
+                        </div>
+                    </div> single sate 
+                </div>
+                <div class="col-lg-4 col-md-7 col-sm-9">
+                    <div class="single_menu text-center mt-30 wow fadeInUpBig" data-wow-duration="1.3s"
+                        data-wow-delay="0.2s">
+                        <div class="menu_image">
+                            <img src="images/sate klathak.jpg" height="200" width="250" alt="menu">
+                        </div>
+                        <div class="menu_content">
+                            <h4 class="menu_title">Sate Khas Klathak</h4>
+                            <p>Campuran daging kambing balibul dan lemak yang dibakar dengan celupan bumbu gurih. Disajikan
+                                dengan kuah gulai dan bahan pelengkap lainnya</p>
+                        </div>
+                    </div> single sate
+                </div>
+                <div class="col-lg-4 col-md-7 col-sm-9">
+                    <div class="single_menu text-center mt-30 wow fadeInUpBig" data-wow-duration="1.3s"
+                        data-wow-delay="0.2s">
+                        <div class="menu_image">
+                            <img src="images/sate buntel.jpg" height="200" width="250" alt="menu">
+                        </div>
+                        <div class="menu_content">
+                            <h4 class="menu_title">Sate Buntel</h4>
+                            <p>Sate yang dibuat dari daging kambing balibul cincang yang sudah dibumbui manis & dikukus,
+                                lalu dibakar</p>
+                        </div>
+                    </div> single sate
+                </div>
+                <div class="col-lg-4 col-md-7 col-sm-9">
+                    <div class="single_menu text-center mt-30 wow fadeInUpBig" data-wow-duration="1.3s"
+                        data-wow-delay="0.2s">
+                        <div class="menu_image">
+                            <img src="images/sate kepala kambing.jpg" height="200" width="250" alt="menu">
+                        </div>
+                        <div class="menu_content">
+                            <h4 class="menu_title">Sate Kepala Kambing</h4>
+                            <p>Kepala kambing balibul bakar yang sudah dipotong - potong kecil dengan 2 pilihan rasa, manis
+                                atau gurih</p>
+                        </div>
+                    </div> single sate
+                </div>
+                <div class="col-lg-4 col-md-7 col-sm-9">
+                    <div class="single_menu text-center mt-30 wow fadeInUpBig" data-wow-duration="1.3s"
+                        data-wow-delay="0.2s">
+                        <div class="menu_image">
+                            <img src="images/sate ayam.jpg" height="200" width="250" alt="menu">
+                        </div>
+                        <div class="menu_content">
+                            <h4 class="menu_title">Sate Ayam</h4>
+                            <p>Sate ayam yang disajikan dengan saus kacang khas Sate Balibul Bang Ali</p>
+                        </div>
+                    </div> single sate
+                </div>
+            </div> row
+        </div> container -->
     </section>
     
 
