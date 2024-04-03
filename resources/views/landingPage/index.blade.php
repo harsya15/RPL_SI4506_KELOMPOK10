@@ -107,7 +107,7 @@
     <!--====== MENU PART ENDS ======-->
 
 
-    <!--====== CUSTOMER PART START ======-->
+    <!--====== MENGAKSES KONTAK PART START ======-->
     
     <section id="customer" class="customer_area pt-120">
         <div class="container">
@@ -191,7 +191,7 @@
         </div> <!-- container -->
     </section>
     
-    <!--====== CUSTOMER PART ENDS ======-->
+    <!--====== MENGAKSES KONTAK PART ENDS ======-->
 
 
     <!--====== FEEDBACK PART START ======-->
