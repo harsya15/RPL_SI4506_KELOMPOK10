@@ -637,10 +637,101 @@ p {
   @media only screen and (min-width: 576px) and (max-width: 767px) {
     .single_counter p {
       font-size: 20px; } }
+      
+/*===========================
+    05.GALLERY css 
+===========================*/
+
+.gallery .gallery-item {
+  overflow: hidden;
+  border-right: 3px solid #454035;
+  border-bottom: 3px solid #454035;
+}
+
+.gallery .gallery-item img {
+  transition: all ease-in-out 0.4s;
+}
+
+.gallery .gallery-item:hover img {
+  transform: scale(1.1);
+}
 
 /*===========================
     05.MENU css 
 ===========================*/
+.food_section .filters_content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.food_section .filters_content .box {
+  position: relative;
+  display: flex;
+  margin-top: 25px;
+  background-color: #ffffff;
+  color: #ffffff;
+  border-radius: 15px;
+  background: linear-gradient(to bottom, #f1f2f3 25px, #222831 25px);
+  flex-direction: column;
+  align-items: center;
+}
+
+.food_section .filters_content .box .img-box {
+  background: #f1f2f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 215px;
+  border-radius: 0 0 0 45px;
+  margin: -1px;
+  padding: 25px;
+}
+
+.food_section .filters_content .box .img-box img {
+  max-width: 100%;
+  max-height: 150px;
+  transition: all .2s;
+}
+
+.food_section .filters_content .box .detail-box {
+  padding: 25px;
+}
+
+.food_section .filters_content .box .detail-box h4 {
+  color: #EEEEEE;
+}
+
+.food_section .filters_content .box .detail-box p {
+  color: #EEEEEE;
+  font-size: 15px;
+}
+
+.food_section .filters_content .box .detail-box h6 {
+  color: #EEEEEE;
+  margin-top: 10px;
+}
+
+.food_section .filters_content .box .options {
+  display: flex;
+  justify-content: space-between;
+}
+
+.food_section .filters_content .box .options a {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background: #c01c30;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.food_section .filters_content .box .options a i {
+  width: 18px;
+  height: auto;
+  color: #ffffff;
+}
 
 
 /*===========================

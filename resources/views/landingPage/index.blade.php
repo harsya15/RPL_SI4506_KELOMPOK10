@@ -74,33 +74,268 @@
 
     <!--====== GALERI FOTO PART START======-->
 
-    <section id="contact" class="contact_area">
-        <div class="contact_form pt-120 pb-130">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-6">
-                        <div class="section_title text-center pb-30">
+    <section id="gallery" class="gallery pt-120 pb-10">
+        <div class="section_title text-center pb-50">
+            <h4 class="title">Gallery</h4>
+            <span class="line">
+                <span class="box"></span>
+            </span>
+        </div>
+            <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+                <div class="row g-0">
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item">
+                            <a href="images/gallery/gallery-1.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                                <img src="images/gallery/gallery-1.jpg" alt="" class="img-fluid">
+                            </a>
                         </div>
-                    </div> <!-- row -->
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-4">
+                      <div class="gallery-item">
+                        <a href="images/gallery/gallery-2.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                          <img src="images/gallery/gallery-2.jpg" alt="" class="img-fluid">
+                        </a>
+                      </div>
+                    </div>
+                
+                    <div class="col-lg-3 col-md-4">
+                      <div class="gallery-item">
+                        <a href="images/gallery/gallery-3.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                          <img src="images/gallery/gallery-3.jpg" alt="" class="img-fluid">
+                        </a>
+                      </div>
+                    </div>
+                
+                    <div class="col-lg-3 col-md-4">
+                      <div class="gallery-item">
+                        <a href="images/gallery/gallery-4.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                          <img src="images/gallery/gallery-4.jpg" alt="" class="img-fluid">
+                        </a>
+                      </div>
+                    </div>
+                
+                    <div class="col-lg-3 col-md-4">
+                      <div class="gallery-item">
+                        <a href="images/gallery/gallery-5.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                          <img src="images/gallery/gallery-5.jpg" alt="" class="img-fluid">
+                        </a>
+                      </div>
+                    </div>
+                
+                    <div class="col-lg-3 col-md-4">
+                      <div class="gallery-item">
+                        <a href="images/gallery/gallery-6.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                          <img src="images/gallery/gallery-6.jpg" alt="" class="img-fluid">
+                        </a>
+                      </div>
+                    </div>
+                
+                    <div class="col-lg-3 col-md-4">
+                      <div class="gallery-item">
+                        <a href="images/gallery/gallery-7.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                          <img src="images/gallery/gallery-7.jpg" alt="" class="img-fluid">
+                        </a>
+                      </div>
+                    </div>
+                
+                    <div class="col-lg-3 col-md-4">
+                      <div class="gallery-item">
+                        <a href="images/gallery/gallery-8.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                          <img src="images/gallery/gallery-8.jpg" alt="" class="img-fluid">
+                        </a>
+                      </div>
+                    </div>
+                
+                  </div>
+                
                 </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </section>
 
-    <!--====== GALERI FOTO PART ENDS ======-->
+</section>
+
+<!--====== GALERI FOTO PART ENDS ======-->
+
 
     <!--====== MENU PART START ======-->
-    <section id="contact" class="contact_area">
-        <div class="contact_form pt-120 pb-130">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-6">
-                        <div class="section_title text-center pb-30">
-                        </div>
-                    </div> <!-- row -->
+    <section id="menu" class="food_section layout_padding pt-120">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="section_title text-center pb-30">
+                        <h4 class="title">Menu</h4>
+                        <span class="line">
+                            <span class="box"></span>
+                        </span>
+                    </div> <!-- section title -->
                 </div>
             </div> <!-- row -->
-        </div> <!-- container -->
+
+                
+            <div class="filters_content">
+                <div class="row grid"></div>
+                    <div class="col-lg-4 col-md-7 col-sm-9">
+                        <div class="box">
+                            <div>
+                                <div class="img-box">
+                                    <img src="images/sate tegal.jpg" alt="">
+                                </div>
+                                <div class="detail-box">
+                                    <h4 class="mb-2">Sate Kambing</h4>
+                                    <p>Campuran daging kambing balibul dan lemak yang dibakar dengan celupan bumbu kecap. Disajikan
+                                dengan kecap khas Solo dengan cita rasa manis dan gurih dan bahan pelengkap lainnya</p>
+                                    <div class="options">
+                                        <h6>$15</h6>
+                                        <a href="">
+                                            <i class="lni lni-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-7 col-sm-9 all burger">
+                        <div class="box">
+                            <div>
+                                <div class="img-box">
+                                    <img src="images/sate tegal.jpg" alt="">
+                                </div>
+                                <div class="detail-box">
+                                    <h4 class="mb-2">Sate Ayam</h4>
+                                    <p>Campuran daging ayam balibul dan lemak yang dibakar dengan celupan bumbu kecap. Disajikan
+                                dengan kecap khas Solo dengan cita rasa manis dan gurih dan bahan pelengkap lainnya</p>
+                                    <div class="options">
+                                        <h6>$15</h6>
+                                        <a href="">
+                                            <i class="lni lni-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-7 col-sm-9 all burger">
+                        <div class="box">
+                            <div>
+                                <div class="img-box">
+                                    <img src="images/sate tegal.jpg" alt="">
+                                </div>
+                                <div class="detail-box">
+                                    <h4 class="mb-2">Sate Tegal</h4>
+                                    <p>Campuran daging kambing balibul dan lemak yang dibakar dengan celupan bumbu Spesial tegal. Disajikan
+                                dengan kecap khas Solo dengan cita rasa manis dan gurih dan bahan pelengkap lainnya</p>
+                                    <div class="options">
+                                        <h6>$15</h6>
+                                        <a href="">
+                                            <i class="lni lni-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-7 col-sm-9 all burger">
+                        <div class="box">
+                            <div>
+                                <div class="img-box">
+                                    <img src="images/sate tegal.jpg" alt="">
+                                </div>
+                                <div class="detail-box">
+                                    <h4 class="mb-2">Sate Khalatak</h4>
+                                    <p>Campuran daging kambing balibul dan lemak yang dibakar dengan celupan bumbu khalatak. Disajikan
+                                dengan kecap khas Solo dengan cita rasa manis dan gurih dan bahan pelengkap lainnya</p>
+                                    <div class="options">
+                                        <h6>$15</h6>
+                                        <a href="">
+                                            <i class="lni lni-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+                <!-- <div class="col-lg-4 col-md-7 col-sm-9">
+                    <div class="single_menu text-center mt-30 wow fadeInUpBig" data-wow-duration="1.3s"
+                        data-wow-delay="0.2s">
+                        <div class="menu_image">
+                            <img src="images/sate solo.jpg" height="200" width="250" alt="coffee">
+                        </div>
+                        <div class="menu_content">
+                            <h4 class="menu_title">Sate Khas Solo</h4>
+                            <p>Campuran daging kambing balibul dan lemak yang dibakar dengan celupan bumbu kecap. Disajikan
+                                dengan kecap khas Solo dengan cita rasa manis dan gurih dan bahan pelengkap lainnya</p>
+                        </div>
+                    </div> single menu
+                </div> -->
+                <!-- <div class="col-lg-4 col-md-7 col-sm-9">
+                    <div class="single_menu text-center mt-30 wow fadeInUpBig" data-wow-duration="1.3s"
+                        data-wow-delay="0.2s">
+                        <div class="menu_image">
+                            <img src="images/sate tegal.jpg" height="200" width="250" alt="menu">
+                        </div>
+                        <div class="menu_content">
+                            <h4 class="menu_title">Sate Khas Tegal</h4>
+                            <p>Campuran daging kambing balibul dan lemak yang dibakar tanpa menggunakan bumbu. Disajikan
+                                dengan kecap khas Tegaldan bahan pelengkap lainnya</p>
+                        </div>
+                    </div> single sate 
+                </div>
+                <div class="col-lg-4 col-md-7 col-sm-9">
+                    <div class="single_menu text-center mt-30 wow fadeInUpBig" data-wow-duration="1.3s"
+                        data-wow-delay="0.2s">
+                        <div class="menu_image">
+                            <img src="images/sate klathak.jpg" height="200" width="250" alt="menu">
+                        </div>
+                        <div class="menu_content">
+                            <h4 class="menu_title">Sate Khas Klathak</h4>
+                            <p>Campuran daging kambing balibul dan lemak yang dibakar dengan celupan bumbu gurih. Disajikan
+                                dengan kuah gulai dan bahan pelengkap lainnya</p>
+                        </div>
+                    </div> single sate
+                </div>
+                <div class="col-lg-4 col-md-7 col-sm-9">
+                    <div class="single_menu text-center mt-30 wow fadeInUpBig" data-wow-duration="1.3s"
+                        data-wow-delay="0.2s">
+                        <div class="menu_image">
+                            <img src="images/sate buntel.jpg" height="200" width="250" alt="menu">
+                        </div>
+                        <div class="menu_content">
+                            <h4 class="menu_title">Sate Buntel</h4>
+                            <p>Sate yang dibuat dari daging kambing balibul cincang yang sudah dibumbui manis & dikukus,
+                                lalu dibakar</p>
+                        </div>
+                    </div> single sate
+                </div>
+                <div class="col-lg-4 col-md-7 col-sm-9">
+                    <div class="single_menu text-center mt-30 wow fadeInUpBig" data-wow-duration="1.3s"
+                        data-wow-delay="0.2s">
+                        <div class="menu_image">
+                            <img src="images/sate kepala kambing.jpg" height="200" width="250" alt="menu">
+                        </div>
+                        <div class="menu_content">
+                            <h4 class="menu_title">Sate Kepala Kambing</h4>
+                            <p>Kepala kambing balibul bakar yang sudah dipotong - potong kecil dengan 2 pilihan rasa, manis
+                                atau gurih</p>
+                        </div>
+                    </div> single sate
+                </div>
+                <div class="col-lg-4 col-md-7 col-sm-9">
+                    <div class="single_menu text-center mt-30 wow fadeInUpBig" data-wow-duration="1.3s"
+                        data-wow-delay="0.2s">
+                        <div class="menu_image">
+                            <img src="images/sate ayam.jpg" height="200" width="250" alt="menu">
+                        </div>
+                        <div class="menu_content">
+                            <h4 class="menu_title">Sate Ayam</h4>
+                            <p>Sate ayam yang disajikan dengan saus kacang khas Sate Balibul Bang Ali</p>
+                        </div>
+                    </div> single sate
+                </div>
+            </div> row
+        </div> container -->
     </section>
     
 
@@ -251,17 +486,135 @@
 
     <!--====== OUTLET PART START======-->
 
-    <section id="contact" class="contact_area">
-        <div class="contact_form pt-120 pb-130">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-6">
-                        <div class="section_title text-center pb-30">
+    <section id="outlet" class="outlet_area">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="section_title text-center pb-50">
+                        <h4 class="title">Our Outlet</h4>
+                        <span class="line">
+                            <span class="box"></span>
+                        </span>
+                    </div> <!-- section title -->
+                </div>
+            </div> <!-- row -->
+            <div class="row justify-content-center pb-90">
+                <div class="col-lg-4 col-md-7 col-sm-9">
+                    <div class="single_outlet mt-30 wow fadeInLeftBig">
+                        <div class="outlet_location">
+                            <h4 class="text-wrapper">Sate Balibul Pusat</h4>
+                            </li>
                         </div>
-                    </div> <!-- row -->
+                        <div class="outlet_content">
+                            <p>Jl. A. Yani No. 219 Pabelan Kartasura</p>
+                            <a href="https://wa.me/081326598126">Telp. 081326598126</a>
+                        </div>
+                    </div> <!-- single outlet -->
+                </div>
+                <div class="col-lg-4 col-md-7 col-sm-9">
+                    <div class="single_outlet mt-30 wow fadeInLeftBig">
+                        <div class="outlet_location">
+                            <h4 class="text-wrapper">Sate Balibul Yogya</h4>
+                            </li>
+                        </div>
+                        <div class="outlet_content">
+                            <p>Jl. Godean KM. 45 Area SPU Banyuraden, Yogyakarta</p>
+                            <a href="https://wa.me/081250331779">Telp. 081250331779</a>
+                        </div>
+                    </div> <!-- single outlet -->
+                </div>
+                <div class="col-lg-4 col-md-7 col-sm-9">
+                    <div class="single_outlet mt-30 wow fadeInLeftBig">
+                        <div class="outlet_location">
+                            <h4 class="text-wrapper">Sate Balibul Magelang</h4>
+                            </li>
+                        </div>
+                        <div class="outlet_content">
+                            <p>Jl. Magelang - Secang, Magelang (Depan kantor kec. Secang)</p>
+                            <a href="https://wa.me/081226003817">Telp. 081226003817</a>
+                        </div>
+                    </div> <!-- single outlet -->
+                </div>
+                <div class="col-lg-4 col-md-7 col-sm-9">
+                    <div class="single_outlet mt-30 wow fadeInLeftBig">
+                        <div class="outlet_location">
+                            <h4 class="text-wrapper">Sate Balibul Salatiga</h4>
+                            </li>
+                        </div>
+                        <div class="outlet_content">
+                            <p>Jl. Solo-Semarang, Lopait, Tuntang, Kab. Semarang, Salatiga</p>
+                            <a href="https://wa.me/081327218500">Telp. 081327218500</a>
+                        </div>
+                    </div> <!-- single outlet -->
+                </div>
+                <div class="col-lg-4 col-md-7 col-sm-9">
+                    <div class="single_outlet mt-30 wow fadeInLeftBig">
+                        <div class="outlet_location">
+                            <h4 class="text-wrapper">Sate Balibul Prambanan</h4>
+                            </li>
+                        </div>
+                        <div class="outlet_content">
+                            <p>Jl. Raya Jogjakarta - Solo No.KM.17, Kb. Dalem Kidul, Kec. Prambanan, Kab. Klaten, Jawa Tengah</p>
+                            <a href="https://wa.me/082324404571">Telp. 082324404571</a>
+                        </div>
+                    </div> <!-- single outlet -->
+                </div>
+                <div class="col-lg-4 col-md-7 col-sm-9">
+                    <div class="single_outlet mt-30 wow fadeInLeftBig">
+                        <div class="outlet_location">
+                            <h4 class="text-wrapper">Sate Balibul Sukoharjo</h4>
+                            </li>
+                        </div>
+                        <div class="outlet_content">
+                            <p>Jl. Slamet Riyadi Begajah Sukoharjo</p>
+                            <a href="https://wa.me/08818097065">Telp. 08818097065</a>
+                        </div>
+                    </div> <!-- single outlet -->
+                </div>
+                <div class="col-lg-4 col-md-7 col-sm-9">
+                    <div class="single_outlet mt-30 wow fadeInLeftBig">
+                        <div class="outlet_location">
+                            <h4 class="text-wrapper">Sate Balibul Wates</h4>
+                            </li>
+                        </div>
+                        <div class="outlet_content">
+                            <p>Jl. Wates KM.7, Balecatur Sleman, Yogyakarta</p>
+                            <a href="https://wa.me/082140659809">Telp. 082140659809</a>
+                        </div>
+                    </div> <!-- single outlet -->
+                </div>
+                <div class="col-lg-4 col-md-7 col-sm-9">
+                    <div class="single_outlet mt-30 wow fadeInLeftBig">
+                        <div class="outlet_location">
+                            <h4 class="text-wrapper">Sate Balibul Kalasan</h4>
+                        </div>
+                        <div class="outlet_content">
+                            <p>Jl. Solo Jogja KM. 11, Kalasan, Yogyakarta</p>
+                            <a href="https://wa.me/081311435400">Telp. 081311435400</a>
+                        </div>
+                    </div> <!-- single outlet -->
+                </div>
+                <div class="col-lg-4 col-md-7 col-sm-9">
+                    <div class="single_outlet mt-30 wow fadeInLeftBig">
+                        <div class="outlet_location">
+                            <h4 class="text-wrapper"></h4>
+                        </div>
+                        <div class="outlet_content">
+                            <p></p>
+                            <a></a>
+                        </div>
+                    </div> <!-- single outlet -->
                 </div>
             </div> <!-- row -->
         </div> <!-- container -->
+        <div class="contact_map">
+            <div class="gmap_canvas">
+                <iframe id="gmap_canvas"
+                    src="https://www.google.com/maps/d/u/0/embed?mid=13ln3xA3LVQnkn2EsGw1tlwt5_MPvooc&ehbc=2E312F&noprof=1"
+                    width="640" height="480" frameborder="0" scrolling="no" marginheight="0"
+                    marginwidth="0"></iframe>
+            </div>
+        </div> <!-- contact map -->
     </section>
 
     <!--====== OUTLET PART ENDS ======-->
