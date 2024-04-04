@@ -81,264 +81,201 @@
                 <span class="box"></span>
             </span>
         </div>
-            <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
-                <div class="row g-0">
-                    <div class="col-lg-3 col-md-4">
-                        <div class="gallery-item">
-                            <a href="images/gallery/gallery-1.jpg" class="gallery-lightbox" data-gall="gallery-item">
-                                <img src="images/gallery/gallery-1.jpg" alt="" class="img-fluid">
-                            </a>
-                        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3 col-md-4">
+                    <div class="gallery-item">
+                        <a href="images/gallery/gallery-1.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                            <img src="images/gallery/gallery-1.jpg" alt="" class="img-fluid">
+                        </a>
                     </div>
-                    
-                    <div class="col-lg-3 col-md-4">
-                      <div class="gallery-item">
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <div class="gallery-item">
                         <a href="images/gallery/gallery-2.jpg" class="gallery-lightbox" data-gall="gallery-item">
-                          <img src="images/gallery/gallery-2.jpg" alt="" class="img-fluid">
+                            <img src="images/gallery/gallery-2.jpg" alt="" class="img-fluid">
                         </a>
-                      </div>
                     </div>
-                
-                    <div class="col-lg-3 col-md-4">
-                      <div class="gallery-item">
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <div class="gallery-item">
                         <a href="images/gallery/gallery-3.jpg" class="gallery-lightbox" data-gall="gallery-item">
-                          <img src="images/gallery/gallery-3.jpg" alt="" class="img-fluid">
+                            <img src="images/gallery/gallery-3.jpg" alt="" class="img-fluid">
                         </a>
-                      </div>
                     </div>
-                
-                    <div class="col-lg-3 col-md-4">
-                      <div class="gallery-item">
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <div class="gallery-item">
                         <a href="images/gallery/gallery-4.jpg" class="gallery-lightbox" data-gall="gallery-item">
-                          <img src="images/gallery/gallery-4.jpg" alt="" class="img-fluid">
+                            <img src="images/gallery/gallery-4.jpg" alt="" class="img-fluid">
                         </a>
-                      </div>
                     </div>
-                
-                    <div class="col-lg-3 col-md-4">
-                      <div class="gallery-item">
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <div class="gallery-item">
                         <a href="images/gallery/gallery-5.jpg" class="gallery-lightbox" data-gall="gallery-item">
-                          <img src="images/gallery/gallery-5.jpg" alt="" class="img-fluid">
+                            <img src="images/gallery/gallery-5.jpg" alt="" class="img-fluid">
                         </a>
-                      </div>
                     </div>
-                
-                    <div class="col-lg-3 col-md-4">
-                      <div class="gallery-item">
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <div class="gallery-item">
                         <a href="images/gallery/gallery-6.jpg" class="gallery-lightbox" data-gall="gallery-item">
-                          <img src="images/gallery/gallery-6.jpg" alt="" class="img-fluid">
+                            <img src="images/gallery/gallery-6.jpg" alt="" class="img-fluid">
                         </a>
-                      </div>
                     </div>
-                
-                    <div class="col-lg-3 col-md-4">
-                      <div class="gallery-item">
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <div class="gallery-item">
                         <a href="images/gallery/gallery-7.jpg" class="gallery-lightbox" data-gall="gallery-item">
-                          <img src="images/gallery/gallery-7.jpg" alt="" class="img-fluid">
+                            <img src="images/gallery/gallery-7.jpg" alt="" class="img-fluid">
                         </a>
-                      </div>
                     </div>
-                
-                    <div class="col-lg-3 col-md-4">
-                      <div class="gallery-item">
+                </div>
+            
+                <div class="col-lg-3 col-md-4">
+                    <div class="gallery-item">
                         <a href="images/gallery/gallery-8.jpg" class="gallery-lightbox" data-gall="gallery-item">
-                          <img src="images/gallery/gallery-8.jpg" alt="" class="img-fluid">
+                            <img src="images/gallery/gallery-8.jpg" alt="" class="img-fluid">
                         </a>
-                      </div>
-                    </div>
-                
-                  </div>
-                
-                </div>
-
-</section>
-
-<!--====== GALERI FOTO PART ENDS ======-->
-
-
-    <!--====== MENU PART START ======-->
-    <section id="menu" class="food_section layout_padding pt-120">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="section_title text-center pb-30">
-                        <h4 class="title">Menu</h4>
-                        <span class="line">
-                            <span class="box"></span>
-                        </span>
-                    </div> <!-- section title -->
-                </div>
-            </div> <!-- row -->
-
-                
-            <div class="filters_content">
-                <div class="row grid"></div>
-                    <div class="col-lg-4 col-md-7 col-sm-9">
-                        <div class="box">
-                            <div>
-                                <div class="img-box">
-                                    <img src="images/sate tegal.jpg" alt="">
-                                </div>
-                                <div class="detail-box">
-                                    <h4 class="mb-2">Sate Kambing</h4>
-                                    <p>Campuran daging kambing balibul dan lemak yang dibakar dengan celupan bumbu kecap. Disajikan
-                                dengan kecap khas Solo dengan cita rasa manis dan gurih dan bahan pelengkap lainnya</p>
-                                    <div class="options">
-                                        <h6>$15</h6>
-                                        <a href="">
-                                            <i class="lni lni-cart"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-7 col-sm-9 all burger">
-                        <div class="box">
-                            <div>
-                                <div class="img-box">
-                                    <img src="images/sate tegal.jpg" alt="">
-                                </div>
-                                <div class="detail-box">
-                                    <h4 class="mb-2">Sate Ayam</h4>
-                                    <p>Campuran daging ayam balibul dan lemak yang dibakar dengan celupan bumbu kecap. Disajikan
-                                dengan kecap khas Solo dengan cita rasa manis dan gurih dan bahan pelengkap lainnya</p>
-                                    <div class="options">
-                                        <h6>$15</h6>
-                                        <a href="">
-                                            <i class="lni lni-cart"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-7 col-sm-9 all burger">
-                        <div class="box">
-                            <div>
-                                <div class="img-box">
-                                    <img src="images/sate tegal.jpg" alt="">
-                                </div>
-                                <div class="detail-box">
-                                    <h4 class="mb-2">Sate Tegal</h4>
-                                    <p>Campuran daging kambing balibul dan lemak yang dibakar dengan celupan bumbu Spesial tegal. Disajikan
-                                dengan kecap khas Solo dengan cita rasa manis dan gurih dan bahan pelengkap lainnya</p>
-                                    <div class="options">
-                                        <h6>$15</h6>
-                                        <a href="">
-                                            <i class="lni lni-cart"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-7 col-sm-9 all burger">
-                        <div class="box">
-                            <div>
-                                <div class="img-box">
-                                    <img src="images/sate tegal.jpg" alt="">
-                                </div>
-                                <div class="detail-box">
-                                    <h4 class="mb-2">Sate Khalatak</h4>
-                                    <p>Campuran daging kambing balibul dan lemak yang dibakar dengan celupan bumbu khalatak. Disajikan
-                                dengan kecap khas Solo dengan cita rasa manis dan gurih dan bahan pelengkap lainnya</p>
-                                    <div class="options">
-                                        <h6>$15</h6>
-                                        <a href="">
-                                            <i class="lni lni-cart"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!--====== GALERI FOTO PART ENDS ======-->
 
 
-                <!-- <div class="col-lg-4 col-md-7 col-sm-9">
-                    <div class="single_menu text-center mt-30 wow fadeInUpBig" data-wow-duration="1.3s"
-                        data-wow-delay="0.2s">
-                        <div class="menu_image">
-                            <img src="images/sate solo.jpg" height="200" width="250" alt="coffee">
-                        </div>
-                        <div class="menu_content">
-                            <h4 class="menu_title">Sate Khas Solo</h4>
-                            <p>Campuran daging kambing balibul dan lemak yang dibakar dengan celupan bumbu kecap. Disajikan
-                                dengan kecap khas Solo dengan cita rasa manis dan gurih dan bahan pelengkap lainnya</p>
-                        </div>
-                    </div> single menu
-                </div> -->
-                <!-- <div class="col-lg-4 col-md-7 col-sm-9">
-                    <div class="single_menu text-center mt-30 wow fadeInUpBig" data-wow-duration="1.3s"
-                        data-wow-delay="0.2s">
-                        <div class="menu_image">
-                            <img src="images/sate tegal.jpg" height="200" width="250" alt="menu">
-                        </div>
-                        <div class="menu_content">
-                            <h4 class="menu_title">Sate Khas Tegal</h4>
-                            <p>Campuran daging kambing balibul dan lemak yang dibakar tanpa menggunakan bumbu. Disajikan
-                                dengan kecap khas Tegaldan bahan pelengkap lainnya</p>
-                        </div>
-                    </div> single sate 
-                </div>
+    <!--====== MENU PART START ======-->
+
+    <section id="menu" class="food_section layout_padding pt-120">
+        <div class="container">
+            <div class="section_title text-center pb-30">
+                <h4 class="title">Menu</h4>
+                <span class="line">
+                    <span class="box"></span>
+                </span>
+            </div> <!-- section title --> 
+            <div class="filters_content">
                 <div class="col-lg-4 col-md-7 col-sm-9">
-                    <div class="single_menu text-center mt-30 wow fadeInUpBig" data-wow-duration="1.3s"
-                        data-wow-delay="0.2s">
-                        <div class="menu_image">
-                            <img src="images/sate klathak.jpg" height="200" width="250" alt="menu">
+                    <div class="box wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.2s">
+                        <div>
+                            <div class="img-box">
+                                <img src="images/sate solo.jpg" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <h4 class="mb-2">Sate Khas Solo</h4>
+                                <p>Daging kambing balibul bakar dicelup bumbu kecap, disajikan dengan kecap Solo manis-gurih & pelengkap.</p>
+                                <div class="options mt-3">
+                                    <h6>$15</h6>
+                                    <a href="">
+                                        <i class="lni lni-cart"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="menu_content">
-                            <h4 class="menu_title">Sate Khas Klathak</h4>
-                            <p>Campuran daging kambing balibul dan lemak yang dibakar dengan celupan bumbu gurih. Disajikan
-                                dengan kuah gulai dan bahan pelengkap lainnya</p>
-                        </div>
-                    </div> single sate
-                </div>
+                    </div>
+                </div> <!-- single menu -->
                 <div class="col-lg-4 col-md-7 col-sm-9">
-                    <div class="single_menu text-center mt-30 wow fadeInUpBig" data-wow-duration="1.3s"
-                        data-wow-delay="0.2s">
-                        <div class="menu_image">
-                            <img src="images/sate buntel.jpg" height="200" width="250" alt="menu">
+                    <div class="box wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.2s">
+                        <div>
+                            <div class="img-box">
+                                <img src="images/sate tegal.jpg" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <h4 class="mb-2">Sate Khas Tegal</h4>
+                                <p>Daging kambing balibul bakar tanpa bumbu, disajikan dengan kecap Tegal & pelengkap.</p>
+                                <div class="options mt-3">
+                                    <h6>$15</h6>
+                                    <a href="">
+                                        <i class="lni lni-cart"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="menu_content">
-                            <h4 class="menu_title">Sate Buntel</h4>
-                            <p>Sate yang dibuat dari daging kambing balibul cincang yang sudah dibumbui manis & dikukus,
-                                lalu dibakar</p>
-                        </div>
-                    </div> single sate
-                </div>
+                    </div>
+                </div> <!-- single menu -->
                 <div class="col-lg-4 col-md-7 col-sm-9">
-                    <div class="single_menu text-center mt-30 wow fadeInUpBig" data-wow-duration="1.3s"
-                        data-wow-delay="0.2s">
-                        <div class="menu_image">
-                            <img src="images/sate kepala kambing.jpg" height="200" width="250" alt="menu">
+                    <div class="box wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.2s">
+                        <div>
+                            <div class="img-box">
+                                <img src="images/sate klathak.jpg" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <h4 class="mb-2">Sate Khas Klathak</h4>
+                                <p>Daging kambing balibul bakar bumbu gurih, disajikan dengan kuah gulai & pelengkap.</p>
+                                <div class="options mt-3">
+                                    <h6>$15</h6>
+                                    <a href="">
+                                        <i class="lni lni-cart"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="menu_content">
-                            <h4 class="menu_title">Sate Kepala Kambing</h4>
-                            <p>Kepala kambing balibul bakar yang sudah dipotong - potong kecil dengan 2 pilihan rasa, manis
-                                atau gurih</p>
-                        </div>
-                    </div> single sate
-                </div>
+                    </div>
+                </div> <!-- single menu -->
                 <div class="col-lg-4 col-md-7 col-sm-9">
-                    <div class="single_menu text-center mt-30 wow fadeInUpBig" data-wow-duration="1.3s"
-                        data-wow-delay="0.2s">
-                        <div class="menu_image">
-                            <img src="images/sate ayam.jpg" height="200" width="250" alt="menu">
+                    <div class="box wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.2s">
+                        <div>
+                            <div class="img-box">
+                                <img src="images/sate buntel.jpg" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <h4 class="mb-2">Sate Buntel</h4>
+                                <p>Sate yang dibuat dari daging kambing balibul cincang yang sudah dibumbui manis & dikukus, lalu dibakar</p>
+                                <div class="options mt-3">
+                                    <h6>$15</h6>
+                                    <a href="">
+                                        <i class="lni lni-cart"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="menu_content">
-                            <h4 class="menu_title">Sate Ayam</h4>
-                            <p>Sate ayam yang disajikan dengan saus kacang khas Sate Balibul Bang Ali</p>
+                    </div>
+                </div> <!-- single menu -->
+                <div class="col-lg-4 col-md-7 col-sm-9">
+                    <div class="box wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.2s">
+                        <div>
+                            <div class="img-box">
+                                <img src="images/sate kepala kambing.jpg" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <h4 class="mb-2">Sate Kepala Kambing</h4>
+                                <p>Kepala kambing balibul bakar yang sudah dipotong - potong kecil dengan 2 pilihan rasa, manis atau gurih</p>
+                                <div class="options mt-3">
+                                    <h6>$15</h6>
+                                    <a href="">
+                                        <i class="lni lni-cart"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                    </div> single sate
-                </div>
-            </div> row
-        </div> container -->
+                    </div>
+                </div> <!-- single menu -->
+                <div class="col-lg-4 col-md-7 col-sm-9">
+                    <div class="box wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.2s">
+                        <div>
+                            <div class="img-box">
+                                <img src="images/sate ayam.jpg" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <h4 class="mb-2">Sate Ayam</h4>
+                                <p>Sate ayam disajikan dengan saus kacang istimewa, dipadukan dengan sentuhan khas</p>
+                                <div class="options mt-3">
+                                    <h6>$15</h6>
+                                    <a href="">
+                                        <i class="lni lni-cart"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- single menu -->
+            </div> 
+        </div> <!-- container -->
     </section>
     
-
     <!--====== MENU PART ENDS ======-->
 
 

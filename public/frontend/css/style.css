@@ -553,6 +553,64 @@ p {
     .slider-active .slick-dots li.slick-active button {
       background-color: #c01c30;
       border-color: #c01c30; }
+      
+.user_option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.user_option a {
+  margin: 0 10px;
+}
+
+.user_option .cart_link {
+  color: #ffffff;
+}
+
+.user_option .cart_link .shop_circle{
+  font-size: 9px;
+  background-color: #c01c30;
+  display: inline-block;
+  color: #fff;
+  padding: 0px 5px;
+  border-radius: 50%; 
+  position: absolute;
+  top: 25px;
+  margin-left: 2px;
+}
+
+.user_option .cart_link:hover{
+  color: #c01c30;
+}
+
+.sticky .navbar-nav .user_option .cart_link {
+  color: #222;
+  padding: 25px 0; }
+
+.sticky .navbar-nav .user_option .cart_link .shop_circle {
+  top: 19px; }
+
+.sticky .navbar-nav .user_option.active > .cart_link, .sticky .navbar-nav .user_option:hover > .cart_link {
+  color: #c01c30; }
+
+.user_option .login {
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: #c01c30;
+  color: #ffffff;
+  border-radius: 45px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border: none;
+}
+
+.user_option .login:hover {
+  background-color: #e69c00;
+}
 
 /*===========================
         03.ABOUT css 
@@ -642,10 +700,14 @@ p {
     05.GALLERY css 
 ===========================*/
 
+.gallery .row > [class*='col-'] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
 .gallery .gallery-item {
   overflow: hidden;
-  border-right: 3px solid #454035;
-  border-bottom: 3px solid #454035;
+  border: 3px solid #222831;
 }
 
 .gallery .gallery-item img {
@@ -659,7 +721,7 @@ p {
 /*===========================
     05.MENU css 
 ===========================*/
-.food_section .filters_content {
+.food_section .filters_content{
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -667,21 +729,24 @@ p {
 
 .food_section .filters_content .box {
   position: relative;
-  display: flex;
   margin-top: 25px;
   background-color: #ffffff;
   color: #ffffff;
   border-radius: 15px;
   background: linear-gradient(to bottom, #f1f2f3 25px, #222831 25px);
-  flex-direction: column;
-  align-items: center;
 }
 
 .food_section .filters_content .box .img-box {
   background: #f1f2f3;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 215px;
   border-radius: 0 0 0 45px;
   margin: -1px;
@@ -690,7 +755,9 @@ p {
 
 .food_section .filters_content .box .img-box img {
   max-width: 100%;
-  max-height: 150px;
+  max-height: 100%;
+  border-radius: 50%;
+  -webkit-transition: all .2s;
   transition: all .2s;
 }
 
@@ -704,17 +771,21 @@ p {
 
 .food_section .filters_content .box .detail-box p {
   color: #EEEEEE;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .food_section .filters_content .box .detail-box h6 {
   color: #EEEEEE;
   margin-top: 10px;
-}git
+}
 
 .food_section .filters_content .box .options {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .food_section .filters_content .box .options a {
@@ -722,9 +793,15 @@ p {
   height: 40px;
   border-radius: 100%;
   background: #c01c30;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .food_section .filters_content .box .options a i {
@@ -811,7 +888,38 @@ p {
 /*===========================
      07.CONTACT css 
 ===========================*/
+p.form-message.success, p.form-message.error {
+  font-size: 16px;
+  color: #2A2A2A;
+  background: #f7f7fd;
+  padding: 10px 15px;
+  margin-top: 30px;
+  margin-left: 15px; }
+  p.form-message.success.form-message.error, p.form-message.error.form-message.error {
+    color: #f00; }
 
+.single_form input,
+.single_form textarea {
+  padding: 0 25px;
+  border: 1px solid #7A7A7A;
+  border-radius: 5px;
+  height: 60px;
+  width: 100%;
+  font-size: 16px;
+  color: #7A7A7A; }
+  .single_form input:focus,
+  .single_form textarea:focus {
+    border-color: #c01c30; }
+
+.single_form textarea {
+  height: 180px;
+  padding-top: 15px;
+  resize: none; }
+
+.single_form .main-btn {
+  height: 60px;
+  line-height: 60px;
+  padding: 0 60px; }
 
 /*===========================
         08.FRANCHISE css 

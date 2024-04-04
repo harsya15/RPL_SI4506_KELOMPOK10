@@ -38,18 +38,16 @@
                                     <li class="nav-item">
                                         <a class="page-scroll" href="#outlet">Outlet</a>
                                     </li>
+                                    <div class="user_option ml-5">
+                                        <a href="#" class="cart_link">
+                                            <i class="lni lni-cart"></i>
+                                            <span class="shop_circle">3</span>
+                                        </a>
+                                    </div>
+                                    <div class="user_option ml-2">
+                                        <a href="" class="login">Login</a>
+                                    </div>
                                 </ul>
-                                <div>
-                                    <a href="">
-                                        <div class="d-flex align-items-center">
-                                            <span
-                                                class="page-scroll material-symbols-outlined bg-white p-1 mr-2 rounded-circle ml-4"
-                                                style="height:100%">
-                                                login
-                                            </span>
-                                        </div>
-                                    </a>
-                                </div>
                             </div> <!-- navbar collapse -->
                         </nav> <!-- navbar -->
                     </div>
@@ -59,6 +57,23 @@
         <div id="home" class="header_slider slider-active">
             <div class="single_slider bg_cover d-flex align-items-center"
                 style="background-image: url(images/wallpaper-2.png)">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="slider_content">
+                                <h2 class="slider_title">Sate Balibul Bang Ali</h2>
+                                <p class="wow fadeInUp">Selamat datang di Rumah Makan Sate Kambing Balibul! Kami adalah
+                                    destinasi kuliner unik yang menghadirkan kelezatan sate kambing dengan cita rasa
+                                    autentik. Kami bangga menjadi tempat berkumpul bagi pecinta masakan khas Indonesia
+                                    yang ingin menikmati cita rasa kambing yang lezat dan istimewa</p>
+                                <!-- <a href="https://rebrand.ly/cafe-ud" rel="nofollow" class="main-btn">More About Us</a> -->
+                            </div> <!-- slider content -->
+                        </div>
+                    </div> <!-- row -->
+                </div> <!-- container -->
+            </div> <!-- single slider -->
+            <div class="single_slider bg_cover d-flex align-items-center"
+                style="background-image: url(images/wallpaper-1.png)">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-9">
