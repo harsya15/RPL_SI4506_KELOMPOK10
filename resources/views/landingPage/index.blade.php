@@ -360,11 +360,11 @@
                 <div class="col-lg-6">
                     <div class="single_customer d-sm-flex align-items-center mt-30">
                         <div class="customer_image">
-                            <img src="images/customer-1.jpg" alt="customer">
+                            <img src="images/customer-1.jpeg" alt="customer">
                         </div>
                         <div class="customer_content media-body">
                             <div class="customer_content_wrapper media-body">
-                                <h5 class="author_name">Justyna Helen</h5>
+                                <h5 class="author_name">Ibu Siti Nurhalizah dan Pak Agus</h5>
                                 <span class="sub_title">Satay Lover</span>
                                 <p>“Rekomendasi Sate Buntel dan Sate Kambing.. Teksturnya empuk dan bumbunya meresap”</p>
                                 <ul class="star">
@@ -381,11 +381,11 @@
                 <div class="col-lg-6">
                     <div class="single_customer d-sm-flex align-items-center mt-30">
                         <div class="customer_image">
-                            <img src="images/customer-2.jpg" alt="customer">
+                            <img src="images/customer-2.jpeg" alt="customer">
                         </div>
                         <div class="customer_content media-body">
                             <div class="customer_content_wrapper media-body">
-                                <h5 class="author_name">Fajar Siddiq</h5>
+                                <h5 class="author_name">ibu aisyah</h5>
                                 <span class="sub_title">Food Enthusiast</span>
                                 <p>“Mudah dijangkau dengan transportasi umum maupun pribadi. Untuk masalah harga, relatif
                                     ya..kan kambing empuk...enak kok satenya”</p>
@@ -403,7 +403,7 @@
                 <div class="col-lg-6">
                     <div class="single_customer d-sm-flex align-items-center mt-30">
                         <div class="customer_image">
-                            <img src="images/customer-3.jpg" alt="customer">
+                            <img src="images/customer-3.jpeg" alt="customer">
                         </div>
                         <div class="customer_content media-body">
                             <div class="customer_content_wrapper media-body">
