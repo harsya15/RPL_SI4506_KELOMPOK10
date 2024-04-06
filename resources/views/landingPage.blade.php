@@ -242,7 +242,7 @@
                             </div>
                             <div class="detail-box">
                                 <h4 class="mb-2">Sate Kepala Kambing</h4>
-                                <p>Kepala kambing balibul bakar yang sudah dipotong - potong kecil dengan 2 pilihan rasa, manis atau gurih</p>
+                                <p>Kepala kambing balibul bakar yang sudah dipotong - potong kecil dengan 2pilihan rasa, manis atau asin</p>
                                 <div class="options mt-3">
                                     <h6>$15</h6>
                                     <a href="">
@@ -557,3 +557,5 @@
     <!--====== OUTLET PART ENDS ======-->
 
 @endsection
+
+
