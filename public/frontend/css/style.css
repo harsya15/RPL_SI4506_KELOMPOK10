@@ -710,7 +710,7 @@ p {
 .food_section .filters_content .box .detail-box h6 {
   color: #EEEEEE;
   margin-top: 10px;
-}git
+}
 
 .food_section .filters_content .box .options {
   display: flex;
@@ -910,4 +910,5 @@ p {
       border-radius: 5px;
       width: 75px; 
       height: 75px;}
+      
       
