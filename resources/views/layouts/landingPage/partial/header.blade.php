@@ -45,7 +45,7 @@
                                         </a>
                                     </div>
                                     <div class="user_option ml-2">
-                                        <a href="/login" class="login">Login</a>
+                                        <a href="/admin" class="login">Login</a>
                                     </div>
                                 </ul>
                             </div> <!-- navbar collapse -->
