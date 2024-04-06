@@ -28,11 +28,11 @@
   </head>
   <body>
   	
-  @include('landingPage.layouts.partial.header')
+  @include('layouts.landingPage.partial.header')
 
   @yield('content')                  
 
-  @include('landingPage.layouts.partial.footer')
+  @include('layouts.landingPage.partial.footer')
  
   <script src="{{asset('frontend')}}/js/vendor/jquery-3.5.1.min.js"></script>
   <script src="{{asset('frontend')}}/js/vendor/modernizr-3.7.1.min.js"></script>

@@ -1,4 +1,4 @@
-@extends('landingPage.layouts.app')
+@extends('layouts.landingPage.app')
 @section('title', 'Sate Balibul')
 @section('content')
 
