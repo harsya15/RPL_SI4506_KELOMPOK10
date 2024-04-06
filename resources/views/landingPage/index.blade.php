@@ -555,4 +555,5 @@
     </section>
 
     <!--====== OUTLET PART ENDS ======-->
+
 @endsection
