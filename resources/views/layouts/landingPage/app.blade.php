@@ -38,6 +38,7 @@
   <script src="{{asset('frontend')}}/js/vendor/modernizr-3.7.1.min.js"></script>
 
   <script src="{{asset('frontend')}}/js/boostrap.js"></script>
+  <script src="{{asset('frontend')}}/js/boostrap.min.js"></script>
   <script src="{{asset('frontend')}}/js/jquery.easing.min.js"></script>
   <script src="{{asset('frontend')}}/js/main.js"></script>
   <script src="{{asset('frontend')}}/js/popper.min.js"></script>
@@ -46,8 +47,9 @@
   <script src="{{asset('frontend')}}/js/wow.min.js"></script>
   <script src="{{asset('frontend')}}/js/glightbox.min.js"></script>
 
- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+  <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
         
 </html>
 

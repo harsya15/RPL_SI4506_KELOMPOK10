@@ -721,13 +721,34 @@ p {
 /*===========================
     05.MENU css 
 ===========================*/
-.food_section .filters_content{
+.food_section .filters_menu {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style-type: none;
+  margin: 45px 0 20px 0;
 }
 
-.food_section .filters_content .box {
+.food_section .filters_menu li {
+  border-radius: 25px;
+  padding: 7px 25px;
+  background-color: #222;
+  color: #EEEEEE;
+  cursor: pointer;
+}
+
+.food_section .filters_menu li.active {
+  background-color: #c01c30;
+  color: #ffffff;
+}
+
+.food_section .filters-content .box {
   position: relative;
   margin-top: 25px;
   background-color: #ffffff;
@@ -736,7 +757,7 @@ p {
   background: linear-gradient(to bottom, #f1f2f3 25px, #222831 25px);
 }
 
-.food_section .filters_content .box .img-box {
+.food_section .filters-content .box .img-box {
   background: #f1f2f3;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -753,33 +774,33 @@ p {
   padding: 25px;
 }
 
-.food_section .filters_content .box .img-box img {
+.food_section .filters-content .box .img-box img {
   max-width: 100%;
   max-height: 100%;
   border-radius: 50%;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all 1.2s;
+  transition: all 1.2s;
 }
 
-.food_section .filters_content .box .detail-box {
+.food_section .filters-content .box .detail-box {
   padding: 25px;
 }
 
-.food_section .filters_content .box .detail-box h4 {
+.food_section .filters-content .box .detail-box h4 {
   color: #EEEEEE;
 }
 
-.food_section .filters_content .box .detail-box p {
+.food_section .filters-content .box .detail-box p {
   color: #EEEEEE;
   font-size: 14px;
 }
 
-.food_section .filters_content .box .detail-box h6 {
+.food_section .filters-content .box .detail-box h6 {
   color: #EEEEEE;
   margin-top: 10px;
 }
 
-.food_section .filters_content .box .options {
+.food_section .filters-content .box .options {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -788,7 +809,7 @@ p {
           justify-content: space-between;
 }
 
-.food_section .filters_content .box .options a {
+.food_section .filters-content .box .options a {
   width: 40px;
   height: 40px;
   border-radius: 100%;
@@ -804,7 +825,7 @@ p {
           align-items: center;
 }
 
-.food_section .filters_content .box .options a i {
+.food_section .filters-content .box .options a i {
   width: 18px;
   height: auto;
   color: #ffffff;

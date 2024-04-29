@@ -100,6 +100,16 @@
       padding-right: 10px;
     }
 
+    #form select {
+      width: 1000px;
+      height: 50px;
+      border: 1px solid #757575;
+      border-radius: 8px;
+      margin-top: 20px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
     #form textarea {
       padding: 20px;
       margin-top: 20px;

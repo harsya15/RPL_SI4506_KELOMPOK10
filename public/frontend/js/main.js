@@ -133,6 +133,44 @@ $(function() {
             }
         ]
     });
+
+
+//     $('.menu_active').slick({
+//         dots: true,
+//         infinite: true,
+//         speed: 800,
+//         slidesToShow: 2,
+//         slidesToScroll: 1,
+//         arrows: false,
+// //        prevArrow: '<span class="prev"><i class="lni lni-chevron-left"></i></span>',
+// //        nextArrow: '<span class="next"><i class="lni lni-chevron-right"></i></span>',
+//         responsive: [
+//             {
+//               breakpoint: 1200,
+//               settings: {
+//                 slidesToShow: 2,
+//               }
+//             },
+//             {
+//               breakpoint: 992,
+//               settings: {
+//                 slidesToShow: 1,
+//               }
+//             },
+//             {
+//               breakpoint: 768,
+//               settings: {
+//                 slidesToShow: 1,
+//               }
+//             },
+//             {
+//               breakpoint: 576,
+//               settings: {
+//                 slidesToShow: 1,
+//               }
+//             }
+//         ]
+//     });
     
     
     //=====  Slick Customer
@@ -146,7 +184,7 @@ $(function() {
     })
     wow.init();
     
-      /**
+    /**
    * Initiate gallery lightbox 
    */
   const galleryLightbox = GLightbox({
@@ -160,4 +198,25 @@ $(function() {
     selector: '.glightbox'
   });
 
+});
+
+// isotope js
+$(window).on('load', function () {
+    $('.filters_menu li').click(function () {
+        $('.filters_menu li').removeClass('active');
+        $(this).addClass('active');
+
+        var data = $(this).attr('data-filter');
+        $grid.isotope({
+            filter: data
+        })
+    });
+
+    var $grid = $(".grid").isotope({
+        itemSelector: ".all",
+        percentPosition: false,
+        masonry: {
+            columnWidth: ".all"
+        }
+    })
 });
