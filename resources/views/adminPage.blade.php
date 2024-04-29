@@ -20,7 +20,7 @@
                         <div class="d-flex justify-content-lg-start mt-2">
                         </div>
                     </div>
-                    <div class="d-flex flex-column justify-content-between" style="">
+                    <div class="d-flex flex-column justify-content-between">
                         <img src='logobalibul.png' class='card-img-top' alt=''>
                     </div>
                 </div>
