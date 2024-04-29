@@ -200,7 +200,7 @@
                     <div class="box wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.2s">
                         <div>
                             <div class="img-box">
-                                <img src="images/sate klathak.jpg" alt="">
+                                <img src="images/sate klathak.jpg" alt=""> 
                             </div>
                             <div class="detail-box">
                                 <h4 class="mb-2">Sate Khas Klathak</h4>
