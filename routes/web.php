@@ -1,10 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
 
 Route::get('/', function () {
-    return view('landingPage.index');
+    return view('landingPage');
 });
-
-//route untuk insert data ke order_meja
-Route::post('/insert', 'App\Http\Controllers\ReservasiController@insert');
