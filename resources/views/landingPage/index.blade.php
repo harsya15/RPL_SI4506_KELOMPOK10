@@ -365,6 +365,39 @@
     
     <!--====== MENGAKSES KONTAK PART ENDS ======-->
 
+    <!--====== Reservasi PART START ======-->
+
+    <section id="reservasi" class="contact_area">
+        <div class="contact_form pt-120 pb-130">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="section_title text-center pb-30">
+                            <h4 class="title">Reservasi Meja</h4>
+                            <span class="line">
+                                <span class="box"></span>
+                            </span>
+                        </div> <!-- section title -->
+                    </div>
+                </div> <!-- row -->
+                
+                <form action="/insert" method="post">
+                    @csrf
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="single_form mt-30">
+                                <input name="atas_nama" id="atas_nama" type="text" placeholder="Atas Nama">
+                            </div> <!-- single form -->
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="single_form mt-30">
+                            <input name="no_meja" id="no_meja" type="number" placeholder="No Meja">
+                            </div> <!-- single form -->
+                        </div>
+                        
+
+    <!--====== Reservasi PART ENDS ======-->
+
 
     <!--====== FEEDBACK PART START ======-->
 
