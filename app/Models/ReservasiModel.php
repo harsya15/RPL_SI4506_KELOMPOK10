@@ -13,6 +13,9 @@ class ReservasiModel extends Model
     protected $fillable = [
         'no_meja',
         'atas_nama',
+        'date',
+        'time',
+        'jumlah_orang'
     ];
 
 

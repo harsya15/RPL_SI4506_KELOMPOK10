@@ -16,7 +16,10 @@ return new class extends Migration
             $table->id();
             $table->string('no_meja');
             $table->string('atas_nama');
-
+            $table->date('date');
+            $table->time('time');
+            $table->integer('jumlah_orang');
+            $table->timestamps();
         });
 
         

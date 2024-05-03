@@ -394,6 +394,34 @@
                             <input name="no_meja" id="no_meja" type="number" placeholder="No Meja">
                             </div> <!-- single form -->
                         </div>
+                        <div class="col-lg-6">
+                            <div class="single_form mt-30">
+                                <input name="date" id="date" type="date" placeholder="Tanggal">
+                            </div> <!-- single form -->
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="single_form mt-30">
+                            <input name="time" id="time" type="time" placeholder="Waktu">
+                            </div> <!-- single form -->
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="single_form mt-30">
+                                <input name="jumlah" id="jumlah" type="number" placeholder="Jumlah Orang">
+                            </div> <!-- single form -->
+                        </div>
+                        
+                        <p class="form-message"></p>
+                        <div class="col-lg-12">
+                            <div class="single_form text-center mt-30">
+                                <button type="submit" class="main-btn">Reservasi Meja</button>
+                            </div> <!-- single form -->
+                        </div>
+                    </div> <!-- row -->
+                </form>
+
+            </div> <!-- container -->
+        </div> <!-- contact form -->
+    </section>
                         
 
     <!--====== Reservasi PART ENDS ======-->
