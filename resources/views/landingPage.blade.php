@@ -409,6 +409,11 @@
                                 <input name="jumlah" id="jumlah" type="number" placeholder="Jumlah Orang">
                             </div> <!-- single form -->
                         </div>
+                        <div class="col-lg-12">
+                            <div class="single_form mt-30">
+                                <input name="email" id="email" type="email" placeholder="Email">
+                            </div> <!-- single form -->
+                        </div>
                         
                         <p class="form-message"></p>
                         <div class="col-lg-12">
