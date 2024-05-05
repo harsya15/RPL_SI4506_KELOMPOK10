@@ -13,6 +13,15 @@
             <?php $order = session('order'); ?>
             <div class="card-body">
                 <h4 class="mb-3">Detail Pesanan:</h4>
+                @if(session('success'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('success') }}
+                        </div>
+                    @elseif(session('error'))
+                        <div class="alert alert-danger" role="alert">
+                            {{ session('error') }}
+                        </div>
+                    @endif
                 <div class="row mb-3">
                     <div class="col-md-3"><strong>Nama Pemesan:</strong></div>
                     <div class="col-md-9">: {{ $order->nama_pemesan }}</div>

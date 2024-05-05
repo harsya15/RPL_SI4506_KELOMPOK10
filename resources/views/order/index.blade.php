@@ -19,7 +19,7 @@
 
     <!--====== ABOUT PART START ======-->
 
-    <div class="container shadow-lg my-lg-5 rounded-5 p-4" style="height: 100vh; width : 100vw">
+    <div class="container shadow-lg my-lg-5 rounded-5 p-4" style="min-height: 100vh; width : 100vw">
         <h3 class="font-bold fs-2 text-center">Silahkan Isi Data Pemesanan</h3>
         <form action="{{ route('submitOrder') }}" method="POST">
             @csrf
@@ -37,7 +37,7 @@
             </div>
 
             <!-- Menu Cards for selecting items to order -->
-            <d<div class="container">
+            <div class="container">
                 <div class="row scroll-horizontal">
                     <!-- Sate Khas Tegal -->
                     <div class="col-md-4">
@@ -108,8 +108,8 @@
 
                 </div>
     </div>
-    <div class="text-center">
-        <button type="submit" class="btn btn-success mb-3  mx-auto">Submit Pesanan</button>
+    <div class="text-center mt-4">
+        <button type="submit" class="btn btn-success  mx-auto">Submit Pesanan</button>
     </div>
     </form>
     </div>
