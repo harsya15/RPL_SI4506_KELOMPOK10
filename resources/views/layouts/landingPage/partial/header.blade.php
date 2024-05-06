@@ -30,13 +30,10 @@
                                         <a class="page-scroll" href="#menu">Menu</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#customer">Feedback</a>
-                                    </li>
-                                    <li class="nav-item">
                                         <a class="page-scroll" href="#reservasi">Reservasi</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#contact">Contact</a>
+                                        <a class="page-scroll" href="#customer">Feedback</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="page-scroll" href="#outlet">Outlet</a>
