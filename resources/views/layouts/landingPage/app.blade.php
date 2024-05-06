@@ -23,6 +23,9 @@
     <link rel="stylesheet" href="{{asset('frontend')}}/css/style.css">
     <link rel="stylesheet" href="{{asset('frontend')}}/css/glightbox.min.css">
 
+    <!-- isotope js -->
+    <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
   </head>
