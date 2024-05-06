@@ -33,6 +33,9 @@
                                         <a class="page-scroll" href="#customer">Feedback</a>
                                     </li>
                                     <li class="nav-item">
+                                        <a class="page-scroll" href="#reservasi">Reservasi</a>
+                                    </li>
+                                    <li class="nav-item">
                                         <a class="page-scroll" href="#contact">Contact</a>
                                     </li>
                                     <li class="nav-item">

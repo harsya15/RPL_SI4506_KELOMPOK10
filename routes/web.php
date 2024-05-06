@@ -7,6 +7,8 @@ use App\Http\Controllers\MenuController;
 
 Route::get('/', [HomeController::class, 'index'])->name('index');
 
+Route::post('/insert', 'App\Http\Controllers\ReservasiController@insert');
+
 Route::middleware(['auth'])->group(function(){
     // masukan routing disini
     Route::get('/menu', [MenuController::class, 'index'])->name('menu.index');
@@ -17,6 +19,7 @@ Route::middleware(['auth'])->group(function(){
     Route::delete('/Menu/delete/{id}', [MenuController::class, 'delete'])->name('menu.delete');
 });
 
+
 Auth::routes();
 
-Route::get('/admin', [AdminController::class, 'index'])->name('admin');
+Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin');
