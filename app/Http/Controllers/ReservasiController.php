@@ -40,7 +40,7 @@ class ReservasiController extends Controller
             ],
             'json' => [
                 "from" => [
-                    "email" => "adminReservasi@trial-k68zxl2ekoklj905.mlsender.net"
+                    "email" => "AdminBalibul@trial-k68zxl2ekoklj905.mlsender.net"
                 ],
                 "to" => [
                     [
