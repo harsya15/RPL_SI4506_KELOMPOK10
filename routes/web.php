@@ -8,6 +8,8 @@ use App\Http\Controllers\KaryawanController;
 
 Route::get('/', [HomeController::class, 'index']);
 
+Route::post('/insert', 'App\Http\Controllers\ReservasiController@insert');
+
 Route::middleware(['auth'])->group(function(){
     // masukan routing disini
     Route::get('/Menu', [MenuController::class, 'index'])->name('Menu.index');
