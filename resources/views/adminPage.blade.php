@@ -21,7 +21,7 @@
                         </div>
                     </div>
                     <div class="d-flex flex-column justify-content-between" style="">
-                        <img src='logobalibul.png' class='card-img-top' alt='showroom_ead'>
+                        <img src='logobalibul.png' class='card-img-top' alt=''>
                     </div>
                 </div>
             </div>
