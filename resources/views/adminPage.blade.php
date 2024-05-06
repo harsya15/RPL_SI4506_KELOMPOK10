@@ -4,7 +4,7 @@
         <!-- Jumbotron -->
         <section id="home" class="d-flex" style="height: 100vh">
             <div style="width: 30%; background-color: #dc354685">
-                <ul class="list-group">
+                <ul class="list-group mt-3">
                     <li class="list-group-item px-4 bg-transparent" style="border: none"><a style="text-decoration: none" class="text-black fw-bold" href="/Menu">List Menu</a></li>
                     <li class="list-group-item px-4 bg-transparent" style="border: none"><a style="text-decoration: none" class="text-black fw-bold" href="/Rating">Daftar Rating Customer</a></li>
                     <li class="list-group-item px-4 bg-transparent" style="border: none"><a style="text-decoration: none" class="text-black fw-bold" href="/Karyawan">Daftar Karyawan</a></li>
@@ -20,7 +20,7 @@
                         <div class="d-flex justify-content-lg-start mt-2">
                         </div>
                     </div>
-                    <div class="d-flex flex-column justify-content-between" style="">
+                    <div class="d-flex flex-column justify-content-between">
                         <img src='logobalibul.png' class='card-img-top' alt=''>
                     </div>
                 </div>
