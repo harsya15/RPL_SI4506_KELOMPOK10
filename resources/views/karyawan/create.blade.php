@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.adminPage.layout')
 
 @section('content')
   <section id='form'>
@@ -13,8 +13,10 @@
         <input id="warna" name="umur" type="number" required placeholder="Masukkan Umur Karyawan">
         <label for="merk">Email</label>
         <input id="tipe" name="email" type="text" required placeholder="Masukkan Email Karyawan">
-        <label for="merk">alamat</label>
+        <label for="merk">Alamat</label>
         <input id="tipe" name="alamat" type="text" required placeholder="Masukkan Alamat Karyawan">
+        <label for="merk">Jadwal</label>
+        <input id="tipe" name="jadwal" type="text" required placeholder="Masukkan Jadwal Karyawan">
         <button class="btn btn-primary" type="submit" style="margin-top: 40px;">Tambah</button>
       </form>
     </div>

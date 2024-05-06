@@ -16,8 +16,8 @@
             <input type="email" id="email" class="form-control mb-3" name="email" placeholder="email" required>
             <label for="pass" class="fw-bold">Password</label>
             <input type="password" id="pass" class="form-control mb-3" name="password" placeholder="Password" required>
-            <input type="checkbox" id="check" class="form-check-input" name="remember">
-            <label class="form-check-label" for="check">Remember me</label>
+            <input type="checkbox" id="remember" class="form-check-input" name="remember" {{ old('remember') ? 'checked' : '' }}>
+            <label class="form-check-label" for="remember">Remember me</label>
             <div class="mt-4">
                 <button type="submit" class="btn btn-primary px-5 w-100">Login</button>
             </div>

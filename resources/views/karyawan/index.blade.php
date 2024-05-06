@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.adminPage.layout')
 
 @if (session('success'))
     <p class="alert alert-success">{{ session('success') }}</p>
@@ -18,6 +18,8 @@
                     <th>Umur Karyawan</th>
                     <th>Email Karyawan</th>
                     <th>Alamat Karyawan</th>
+                    <th>Jadwal Karyawan</th>
+                    <th>Aksi</th>
                 </tr>
             </thead>
             <?php $no = 1 ?>
@@ -28,6 +30,7 @@
                 <td>{{ $karyawans->umur }}</td>
                 <td>{{ $karyawans->email }}</td>
                 <td>{{ $karyawans->alamat }}</td>
+                <td>{{ $karyawans->jadwal }}</td>
                 <td class="d-flex flex-col gap-3 justify-items-center">
                     <a class="btn btn-warning" href="{{ route('karyawan.edit', $karyawans->id) }}">Ubah</a>
                     <form method="post" action="{{ route('karyawan.delete', $karyawans->id) }}" style="display: inline-block;">

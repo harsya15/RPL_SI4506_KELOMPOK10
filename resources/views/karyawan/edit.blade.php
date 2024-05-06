@@ -1,3 +1,4 @@
+@extends('layouts.adminPage.layout')
 
 @section('content')
   <section id='form'>
@@ -14,6 +15,8 @@
         <input id="tipe" name="email" type="text" value="{{ $karyawan->email }}">
         <label for="merk">Alamat</label>
         <input id="tipe" name="alamat" type="text" value="{{ $karyawan->alamat }}">
+        <label for="merk">Jadwal</label>
+        <input id="tipe" name="jadwal" type="text" value="{{ $karyawan->jadwal }}">
         <button class="btn btn-primary" type="submit" style="margin-top: 40px;">Update</button>
       </form>
     </div>
