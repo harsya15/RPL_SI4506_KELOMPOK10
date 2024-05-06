@@ -74,6 +74,7 @@ class MenuController extends Controller
         $menu = Menu::findOrFail($id);
         File::delete(public_path('uploads/menu').'/'. $menu->gambar_menu);
         $menu->delete();
+      
         return redirect(route('Menu.index'))->with('allert', 'Berhasil menghapus menu dengan nama ' . $menu->nama_menu);
     }
 }
