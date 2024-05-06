@@ -19,6 +19,3 @@ Route::post('/Karyawan/store', [KaryawanController::class, 'store'])->name('kary
 Route::get('/Karyawan/edit/{id}', [KaryawanController::class, 'edit'])->name('karyawan.edit');
 Route::post('/Karyawan/update/{id}', [KaryawanController::class, 'update'])->name('karyawan.update');
 Route::delete('/Karyawan/delete/{id}', [KaryawanController::class, 'delete'])->name('karyawan.delete');
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
