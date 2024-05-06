@@ -3,17 +3,17 @@
 @section('content')
   <section id='form'>
     <div class="container">
-      <h1 class="tambahh1">Tambah Menu</h1>
+      <h1 class="add">Tambah Menu</h1>
       <p class="tambahp">Tambah Menu makanan ke dalam list menu</p>
-      <form action="{{ route('menu.store') }}" method="POST" enctype="multipart/form-data">
+      <form action="{{ route('Menu.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <label for="nama">Nama Menu</label>
         <input name="nama" type="text" required placeholder="Masukkan Nama Menu">
         <label for="deskripsi">Deskripsi Menu</label>
         <input name="deskripsi" type="text" maxlength="105" required placeholder="Masukkan Deskripsi Menu">
         <label for="kategori">Kategori Menu</label>
-        <select class="form-select mt-3" name="kategori" id="kategori" aria-label="Default select example">
-          <option selected>Pilih Kategori Menu</option>
+        <select name="kategori" required>
+          <option selected>Pilip Opsi</option>
           <option value="sate">Sate</option>
           <option value="masakan">Masakan</option>
         </select>
