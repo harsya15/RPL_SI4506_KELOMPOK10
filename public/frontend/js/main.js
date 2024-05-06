@@ -134,7 +134,6 @@ $(function() {
         ]
     });
     
-    
     //=====  Slick Customer
 
     // isotope js
