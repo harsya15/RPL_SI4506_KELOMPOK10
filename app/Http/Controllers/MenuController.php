@@ -19,7 +19,7 @@ class MenuController extends Controller
      */
     public function create()
     {
-        return view('menu.create');
+        return view('Menu.create');
     }
 
     /**
@@ -66,7 +66,7 @@ class MenuController extends Controller
 
         $menu->update($data);
 
-        return redirect('Menu')->with('allert', 'Berhasil mengubah menu dengan nama ' . $request['nama_menu']);
+        return redirect(route('Menu.index'))->with('allert', 'Berhasil mengubah menu dengan nama ' . $request['nama_menu']);
     }
 
     public function delete($id)
@@ -74,6 +74,7 @@ class MenuController extends Controller
         $menu = Menu::findOrFail($id);
         File::delete(public_path('uploads/menu').'/'. $menu->gambar_menu);
         $menu->delete();
-        return redirect('Menu')->with('allert', 'Berhasil menghapus menu dengan nama ' . $menu->nama_menu);
+      
+        return redirect(route('Menu.index'))->with('allert', 'Berhasil menghapus menu dengan nama ' . $menu->nama_menu);
     }
 }

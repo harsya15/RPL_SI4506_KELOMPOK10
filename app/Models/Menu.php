@@ -12,6 +12,6 @@ class Menu extends Model
     protected $table = 'list_menu';
 
     protected $fillable = [
-        'id', 'nama_menu', 'deskripsi_menu', 'kategori_menu','harga_menu', 'gambar_menu', 'created_at', 'updated_at'
+        'id', 'nama_menu', 'deskripsi_menu', 'kategori_menu' ,'harga_menu', 'gambar_menu', 'created_at', 'updated_at'
     ];
 }

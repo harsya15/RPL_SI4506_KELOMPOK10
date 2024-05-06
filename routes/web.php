@@ -8,8 +8,6 @@ use App\Http\Controllers\KaryawanController;
 
 Route::get('/', [HomeController::class, 'index']);
 
-Route::post('/insert', 'App\Http\Controllers\ReservasiController@insert');
-
 Route::middleware(['auth'])->group(function(){
     // masukan routing disini
     Route::get('/Menu', [MenuController::class, 'index'])->name('Menu.index');
@@ -25,8 +23,8 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/Karyawan/edit/{id}', [KaryawanController::class, 'edit'])->name('karyawan.edit');
     Route::post('/Karyawan/update/{id}', [KaryawanController::class, 'update'])->name('karyawan.update');
     Route::delete('/Karyawan/delete/{id}', [KaryawanController::class, 'delete'])->name('karyawan.delete');
-});
 
+});
 
 Auth::routes();
 

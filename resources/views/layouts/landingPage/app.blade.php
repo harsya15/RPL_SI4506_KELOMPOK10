@@ -1,6 +1,7 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<!DOCTYPE html>
+<html lang="en">
 <head>
+
     <meta charset="utf-8">
     <title>@yield('title')</title>
     
@@ -55,5 +56,3 @@
  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
         
 </html>
-
- 
