@@ -15,7 +15,7 @@
                         @csrf
                         <input type="hidden" name="nomor_hp" value="{{ $order->nomor_hp }}">
                         <h5>Pilih Item:</h5>
-                        @foreach($menus as $menu)
+                        @foreach($menu as $menu)
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" name="claimed_menus[]"
                                     value="{{ $menu['poin'] }}">

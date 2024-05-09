@@ -18,7 +18,7 @@
             <div class="col-lg-6">
                 <div class="card px-5 py-5">
                     <div class="w-100 text-center mb-5">
-                        <img class="" style="max-width: 200px;" src="logobalibul.png">
+                        <img class="" style="max-width: 200px;" src="images/logobalibul.png">
                     </div>
                         @yield('content')
                     </div>
