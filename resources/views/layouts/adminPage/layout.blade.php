@@ -79,7 +79,7 @@
     }
 
     #form label,
-    input {
+    input, select {
       display: block;
     }
 
@@ -90,7 +90,8 @@
       margin-top: 30px;
     }
 
-    #form input {
+
+    #form input, select {
       width: 1000px;
       height: 50px;
       border: 1px solid #757575;
@@ -236,6 +237,7 @@
       border: none;
       color: white;
     }
+    
   </style>
 </head>
 
@@ -246,5 +248,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
+
 
 </html>

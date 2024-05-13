@@ -4,6 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+
     "content-hash": "743a00fbadd1709e0e1bd6b8bc3abc96",
     "packages": [
         {
@@ -1052,6 +1053,7 @@
         },
         {
             "name": "laravel/framework",
+
             "version": "v11.6.0",
             "source": {
                 "type": "git",
@@ -1164,6 +1166,7 @@
                 "league/flysystem-sftp-v3": "^3.0",
                 "mockery/mockery": "^1.6",
                 "nyholm/psr7": "^1.2",
+
                 "orchestra/testbench-core": "^9.0.15",
                 "pda/pheanstalk": "^5.0",
                 "phpstan/phpstan": "^1.4.7",
@@ -1309,6 +1312,7 @@
             "description": "Add beautiful and user-friendly forms to your command-line applications.",
             "support": {
                 "issues": "https://github.com/laravel/prompts/issues",
+
                 "source": "https://github.com/laravel/prompts/tree/v0.1.21"
             },
             "time": "2024-04-30T12:46:16+00:00"
@@ -1998,6 +2002,7 @@
         },
         {
             "name": "nesbot/carbon",
+
             "version": "3.3.1",
             "source": {
                 "type": "git",
@@ -2100,6 +2105,7 @@
                     "type": "tidelift"
                 }
             ],
+
             "time": "2024-05-01T06:54:22+00:00"
         },
         {
@@ -3643,6 +3649,7 @@
         },
         {
             "name": "symfony/event-dispatcher-contracts",
+
             "version": "v3.5.0",
             "source": {
                 "type": "git",
@@ -3699,7 +3706,9 @@
                 "standards"
             ],
             "support": {
+
                 "source": "https://github.com/symfony/event-dispatcher-contracts/tree/v3.5.0"
+
             },
             "funding": [
                 {
@@ -3715,7 +3724,9 @@
                     "type": "tidelift"
                 }
             ],
+
             "time": "2024-04-18T09:32:20+00:00"
+
         },
         {
             "name": "symfony/finder",
@@ -4990,6 +5001,7 @@
         },
         {
             "name": "symfony/service-contracts",
+
             "version": "v3.5.0",
             "source": {
                 "type": "git",
@@ -5053,6 +5065,7 @@
                 "standards"
             ],
             "support": {
+
                 "source": "https://github.com/symfony/service-contracts/tree/v3.5.0"
             },
             "funding": [
@@ -5070,6 +5083,7 @@
                 }
             ],
             "time": "2024-04-18T09:32:20+00:00"
+
         },
         {
             "name": "symfony/string",
@@ -5253,6 +5267,7 @@
         },
         {
             "name": "symfony/translation-contracts",
+
             "version": "v3.5.0",
             "source": {
                 "type": "git",
@@ -5311,6 +5326,7 @@
                 "standards"
             ],
             "support": {
+
                 "source": "https://github.com/symfony/translation-contracts/tree/v3.5.0"
             },
             "funding": [
@@ -5327,7 +5343,9 @@
                     "type": "tidelift"
                 }
             ],
+
             "time": "2024-04-18T09:32:20+00:00"
+
         },
         {
             "name": "symfony/uid",
@@ -5943,7 +5961,80 @@
             "time": "2020-07-09T08:09:16+00:00"
         },
         {
+            "name": "laravel/dusk",
+            "version": "v8.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/dusk.git",
+                "reference": "773a12dfbd3f84174b0f26fbc2807a414a379a66"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/dusk/zipball/773a12dfbd3f84174b0f26fbc2807a414a379a66",
+                "reference": "773a12dfbd3f84174b0f26fbc2807a414a379a66",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-zip": "*",
+                "guzzlehttp/guzzle": "^7.5",
+                "illuminate/console": "^10.0|^11.0",
+                "illuminate/support": "^10.0|^11.0",
+                "php": "^8.1",
+                "php-webdriver/webdriver": "^1.9.0",
+                "symfony/console": "^6.2|^7.0",
+                "symfony/finder": "^6.2|^7.0",
+                "symfony/process": "^6.2|^7.0",
+                "vlucas/phpdotenv": "^5.2"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.6",
+                "orchestra/testbench": "^8.19|^9.0",
+                "phpstan/phpstan": "^1.10",
+                "phpunit/phpunit": "^10.1|^11.0",
+                "psy/psysh": "^0.11.12|^0.12"
+            },
+            "suggest": {
+                "ext-pcntl": "Used to gracefully terminate Dusk when tests are running."
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Laravel\\Dusk\\DuskServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laravel\\Dusk\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "Laravel Dusk provides simple end-to-end testing and browser automation.",
+            "keywords": [
+                "laravel",
+                "testing",
+                "webdriver"
+            ],
+            "support": {
+                "issues": "https://github.com/laravel/dusk/issues",
+                "source": "https://github.com/laravel/dusk/tree/v8.2.0"
+            },
+            "time": "2024-04-16T15:51:19+00:00"
+        },
+        {
             "name": "laravel/pint",
+
             "version": "v1.15.3",
             "source": {
                 "type": "git",
@@ -6006,6 +6097,7 @@
                 "issues": "https://github.com/laravel/pint/issues",
                 "source": "https://github.com/laravel/pint"
             },
+
             "time": "2024-04-30T15:02:26+00:00"
         },
         {
@@ -6427,6 +6519,72 @@
                 "source": "https://github.com/phar-io/version/tree/3.2.1"
             },
             "time": "2022-02-21T01:04:05+00:00"
+        },
+        {
+            "name": "php-webdriver/webdriver",
+            "version": "1.15.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-webdriver/php-webdriver.git",
+                "reference": "cd52d9342c5aa738c2e75a67e47a1b6df97154e8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-webdriver/php-webdriver/zipball/cd52d9342c5aa738c2e75a67e47a1b6df97154e8",
+                "reference": "cd52d9342c5aa738c2e75a67e47a1b6df97154e8",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "ext-zip": "*",
+                "php": "^7.3 || ^8.0",
+                "symfony/polyfill-mbstring": "^1.12",
+                "symfony/process": "^5.0 || ^6.0 || ^7.0"
+            },
+            "replace": {
+                "facebook/webdriver": "*"
+            },
+            "require-dev": {
+                "ergebnis/composer-normalize": "^2.20.0",
+                "ondram/ci-detector": "^4.0",
+                "php-coveralls/php-coveralls": "^2.4",
+                "php-mock/php-mock-phpunit": "^2.0",
+                "php-parallel-lint/php-parallel-lint": "^1.2",
+                "phpunit/phpunit": "^9.3",
+                "squizlabs/php_codesniffer": "^3.5",
+                "symfony/var-dumper": "^5.0 || ^6.0"
+            },
+            "suggest": {
+                "ext-SimpleXML": "For Firefox profile creation"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "lib/Exception/TimeoutException.php"
+                ],
+                "psr-4": {
+                    "Facebook\\WebDriver\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A PHP client for Selenium WebDriver. Previously facebook/webdriver.",
+            "homepage": "https://github.com/php-webdriver/php-webdriver",
+            "keywords": [
+                "Chromedriver",
+                "geckodriver",
+                "php",
+                "selenium",
+                "webdriver"
+            ],
+            "support": {
+                "issues": "https://github.com/php-webdriver/php-webdriver/issues",
+                "source": "https://github.com/php-webdriver/php-webdriver/tree/1.15.1"
+            },
+            "time": "2023-10-20T12:21:20+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -7900,6 +8058,7 @@
         },
         {
             "name": "spatie/ignition",
+
             "version": "1.14.1",
             "source": {
                 "type": "git",
@@ -7979,6 +8138,7 @@
                     "type": "github"
                 }
             ],
+
             "time": "2024-05-03T15:56:16+00:00"
         },
         {
@@ -8001,6 +8161,7 @@
                 "ext-mbstring": "*",
                 "illuminate/support": "^10.0|^11.0",
                 "php": "^8.1",
+
                 "spatie/flare-client-php": "^1.5",
                 "spatie/ignition": "^1.14",
                 "symfony/console": "^6.2.3|^7.0",
@@ -8071,6 +8232,7 @@
                     "type": "github"
                 }
             ],
+
             "time": "2024-05-02T13:42:49+00:00"
         },
         {
