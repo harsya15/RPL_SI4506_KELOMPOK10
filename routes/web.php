@@ -7,11 +7,9 @@ use App\Http\Controllers\MenuController;
 use App\Http\Controllers\KaryawanController;
 use App\Http\Controllers\OrderController;
 
-
 Route::get('/', [HomeController::class, 'index']);
 
 Route::post('/insert', 'App\Http\Controllers\ReservasiController@insert');
-
 
 Route::middleware(['auth'])->group(function(){
     // masukan routing disini
@@ -29,6 +27,8 @@ Route::middleware(['auth'])->group(function(){
     Route::post('/Karyawan/update/{id}', [KaryawanController::class, 'update'])->name('karyawan.update');
     Route::delete('/Karyawan/delete/{id}', [KaryawanController::class, 'delete'])->name('karyawan.delete');
 
+    Route::get('/Karyawan/laporan', [LaporanController::class, 'create'])->name('laporan.create');
+    Route::post('/Karyawan/laporan/store', [LaporanController::class, 'store'])->name('laporan.store');
 
     Route::get('/Rating', [RatingController::class, 'index'])->name('rating.index');
     Route::get('/Rating/create', [RatingController::class, 'create'])->name('rating.create');
@@ -44,26 +44,18 @@ Route::middleware(['auth'])->group(function(){
     Route::post('/Cabang/update/{id}', [CabangController::class, 'update'])->name('cabang.update');
     Route::delete('/Cabang/delete/{id}', [CabangController::class, 'delete'])->name('cabang.delete');
 
-
 });
-
-
-
 
 Auth::routes();
 
 Route::get('/admin', [AdminController::class, 'index'])->name('admin');
+
 Route::get('/order', [OrderController::class, 'index'])->name('order.index');
 Route::post('/order/submit', [OrderController::class, 'submitOrder'])->name('submitOrder');
 Route::get('/order/success', [OrderController::class, 'showSuccessPage'])->name('orderSuccess');
-
 
 // CLAIM
 Route::get('/order/input-nomor-hp', [OrderController::class, 'inputNomorHp'])->name('order.inputNomorHp');
 Route::post('/order/check-points', [OrderController::class, 'checkPoints'])->name('order.checkPoints');
 Route::post('/order/select-items', [OrderController::class, 'selectItems'])->name('order.selectItems');
 Route::post('/order/process-claim', [OrderController::class, 'processClaim'])->name('order.processClaim');
-
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
