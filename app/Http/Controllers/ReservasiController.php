@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\ReservasiModel;
+use App\Models\Reservasi;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 
@@ -23,7 +23,7 @@ class ReservasiController extends Controller
             'jumlah_orang' => $jumlah_orang
         );
 
-        ReservasiModel::create($data);
+        Reservasi::create($data);
         //send mail
         $this->sendmail($request->email,'Reservasi Meja','Meja Nomor '.$no_meja.' berhasil dipesan');
         //return redirect with alert
