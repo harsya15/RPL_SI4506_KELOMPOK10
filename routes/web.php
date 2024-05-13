@@ -19,6 +19,9 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/Karyawan/edit/{id}', [KaryawanController::class, 'edit'])->name('karyawan.edit');
     Route::post('/Karyawan/update/{id}', [KaryawanController::class, 'update'])->name('karyawan.update');
     Route::delete('/Karyawan/delete/{id}', [KaryawanController::class, 'delete'])->name('karyawan.delete');
+
+    Route::get('/Karyawan/laporan', [LaporanController::class, 'create'])->name('laporan.create');
+    Route::post('/Karyawan/laporan/store', [LaporanController::class, 'store'])->name('laporan.store');
 });
 
 
