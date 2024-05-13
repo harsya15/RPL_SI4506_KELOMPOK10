@@ -29,7 +29,16 @@ Route::middleware(['auth'])->group(function(){
     Route::post('/Karyawan/update/{id}', [KaryawanController::class, 'update'])->name('karyawan.update');
     Route::delete('/Karyawan/delete/{id}', [KaryawanController::class, 'delete'])->name('karyawan.delete');
 
+    Route::get('/Cabang', [CabangController::class, 'index'])->name('cabang.index');
+    Route::get('/Cabang/create', [CabangController::class, 'create'])->name('cabang.create');
+    Route::get('/Cabang/edit/{id}', [CabangController::class, 'edit'])->name('cabang.edit');
+    Route::post('/Cabang/store', [CabangController::class, 'store'])->name('cabang.store');
+    Route::post('/Cabang/update/{id}', [CabangController::class, 'update'])->name('cabang.update');
+    Route::delete('/Cabang/delete/{id}', [CabangController::class, 'delete'])->name('cabang.delete');
+
 });
+
+
 
 
 Auth::routes();
@@ -49,3 +58,4 @@ Route::post('/order/process-claim', [OrderController::class, 'processClaim'])->n
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
