@@ -29,6 +29,14 @@ Route::middleware(['auth'])->group(function(){
     Route::post('/Karyawan/update/{id}', [KaryawanController::class, 'update'])->name('karyawan.update');
     Route::delete('/Karyawan/delete/{id}', [KaryawanController::class, 'delete'])->name('karyawan.delete');
 
+    Route::get('/Rating', [RatingController::class, 'index'])->name('rating.index');
+    Route::get('/Rating/create', [RatingController::class, 'create'])->name('rating.create');
+    Route::get('/Rating/edit/{id}', [RatingController::class, 'edit'])->name('rating.edit');
+    Route::post('/Rating/store', [RatingController::class, 'store'])->name('rating.store');
+    Route::post('/Rating/update/{id}', [RatingController::class, 'update'])->name('rating.update');
+    Route::delete('/Rating/delete/{id}', [RatingController::class, 'delete'])->name('rating.delete');
+
+
 });
 
 
@@ -46,6 +54,5 @@ Route::post('/order/check-points', [OrderController::class, 'checkPoints'])->nam
 Route::post('/order/select-items', [OrderController::class, 'selectItems'])->name('order.selectItems');
 Route::post('/order/process-claim', [OrderController::class, 'processClaim'])->name('order.processClaim');
 
-Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
