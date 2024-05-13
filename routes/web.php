@@ -5,6 +5,8 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\KaryawanController;
+use App\Http\Controllers\OrderController;
+
 
 Route::get('/', [HomeController::class, 'index']);
 
@@ -31,3 +33,6 @@ Route::middleware(['auth'])->group(function(){
 Auth::routes();
 
 Route::get('/admin', [AdminController::class, 'index'])->name('admin');
+Route::get('/order', [OrderController::class, 'index'])->name('order.index');
+Route::post('/order/submit', [OrderController::class, 'submitOrder'])->name('submitOrder');
+Route::get('/order/success', [OrderController::class, 'showSuccessPage'])->name('orderSuccess');

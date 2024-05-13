@@ -1,7 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-
     <meta charset="utf-8">
     <title>@yield('title')</title>
     
@@ -48,6 +47,7 @@
   <script src="{{asset('frontend')}}/js/slick.min.js"></script>
   <script src="{{asset('frontend')}}/js/wow.min.js"></script>
   <script src="{{asset('frontend')}}/js/glightbox.min.js"></script>
+
 
   <!-- isotope js -->
   <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>

@@ -45,6 +45,7 @@
 
     <!--====== COUNTER PART START ======-->
 
+
     <section id="counter" class="counter_area pt-50 pb-95 text-center" style="background-image: url(images/sate\ wallpaper.jpg)">
         <div class="container">
             <div class="row">
@@ -132,7 +133,7 @@
                         </a>
                     </div>
                 </div>
-            
+
                 <div class="col-lg-3 col-md-4">
                     <div class="gallery-item">
                         <a href="images/gallery/gallery-8.jpg" class="gallery-lightbox" data-gall="gallery-item">
@@ -156,14 +157,16 @@
                 <span class="line">
                     <span class="box"></span>
                 </span>
-            </div> <!-- section title -->
 
+                <a href="/order" class="container mt-4 text-center">
+                    <button class="btn btn-danger" style="">Buy Now</button>
+                </a>
+            </div> <!-- section title -->
             <ul class="filters_menu">
                 <li class="active" data-filter="*">All</li>
                 <li data-filter=".sate">Sate</li>
                 <li data-filter=".masakan">Masakan</li>
             </ul>
-
             <div class="filters-content">
                 <div class="row grid">
                     @foreach($menu as $menus) 
@@ -193,9 +196,7 @@
             </div> 
         </div> <!-- container -->
     </section>
-    
     <!--====== MENU PART ENDS ======-->
-
 
     <!--====== Reservasi PART START ======-->
 
@@ -345,7 +346,7 @@
             </div> <!-- row -->
         </div> <!-- container -->
     </section>
-    
+
     <!--====== MENGAKSES KONTAK PART ENDS ======-->
 
 
@@ -364,7 +365,7 @@
                         </div> <!-- section title -->
                     </div>
                 </div> <!-- row -->
-                
+
                 <form action="" method="post">
                     @csrf
                     <div class="row">
@@ -538,5 +539,6 @@
     </section>
 
     <!--====== OUTLET PART ENDS ======-->
+
 
 @endsection

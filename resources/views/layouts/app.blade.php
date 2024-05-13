@@ -12,7 +12,6 @@
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     @vite(['resources/js/app.js'])
 </head>
-
 <body class="bg-danger">
     <div class="container">
         <div class="row vh-100 justify-content-center align-items-center">
