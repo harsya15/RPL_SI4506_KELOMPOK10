@@ -30,22 +30,22 @@
                                         <a class="page-scroll" href="#menu">Menu</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#customer">Feedback</a>
+                                        <a class="page-scroll" href="#reservasi">Reservasi</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#contact">Contact</a>
+                                        <a class="page-scroll" href="#customer">Feedback</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="page-scroll" href="#outlet">Outlet</a>
                                     </li>
                                     <div class="user_option ml-5">
-                                        <a href="#" class="cart_link">
+                                        <a href="" class="cart_link">
                                             <i class="lni lni-cart"></i>
                                             <span class="shop_circle">3</span>
                                         </a>
                                     </div>
                                     <div class="user_option ml-2">
-                                        <a href="" class="login">Login</a>
+                                        <a href="/admin" class="login">Login</a>
                                     </div>
                                 </ul>
                             </div> <!-- navbar collapse -->
