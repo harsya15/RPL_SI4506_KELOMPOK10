@@ -33,6 +33,8 @@
   @yield('content')                  
 
   @include('layouts.landingPage.partial.footer')
+
+  </body>
  
   <script src="{{asset('frontend')}}/js/vendor/jquery-3.5.1.min.js"></script>
   <script src="{{asset('frontend')}}/js/vendor/modernizr-3.7.1.min.js"></script>
@@ -46,9 +48,11 @@
   <script src="{{asset('frontend')}}/js/wow.min.js"></script>
   <script src="{{asset('frontend')}}/js/glightbox.min.js"></script>
 
+
+  <!-- isotope js -->
+  <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
+
  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
         
 </html>
-
- 
