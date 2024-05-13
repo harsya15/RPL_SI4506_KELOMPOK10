@@ -78,14 +78,14 @@ public function showSuccessPage(Request $request)
             return redirect()->route('order.inputNomorHp')->with('error', 'Nomor HP tidak ditemukan.');
         }
 
-        $menus = [
+        $menu = [
             ['nama' => 'Sate Khas Tegal', 'poin' => 50],
             ['nama' => 'Sate Khas Solo', 'poin' => 60],
             ['nama' => 'Sate Klathak', 'poin' => 70],
             // Tambahkan menu lainnya di sini
         ];
 
-        return view('order.select_items', compact('order', 'menus'));
+        return view('order.select_item', compact('order', 'menu'));
     }
 
     public function processClaim(Request $request)

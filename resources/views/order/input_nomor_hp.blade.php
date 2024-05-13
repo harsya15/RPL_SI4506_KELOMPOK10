@@ -15,7 +15,7 @@
                             <div class="alert alert-danger">{{ session('error') }}</div>
                         @endif
 
-                        <form action="{{ route('order.checkPoints') }}" GET="POST">
+                        <form action="{{ route('order.checkPoints') }}" method="POST">
                             @csrf
                             <div class="form-group">
                                 <label for="nomor_hp">Nomor HP:</label>

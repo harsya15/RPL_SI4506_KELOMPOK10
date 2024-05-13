@@ -12,6 +12,7 @@ Route::get('/', [HomeController::class, 'index']);
 
 Route::post('/insert', 'App\Http\Controllers\ReservasiController@insert');
 
+
 Route::middleware(['auth'])->group(function(){
     // masukan routing disini
     Route::get('/Menu', [MenuController::class, 'index'])->name('Menu.index');
@@ -30,6 +31,7 @@ Route::middleware(['auth'])->group(function(){
 
 });
 
+
 Auth::routes();
 
 Route::get('/admin', [AdminController::class, 'index'])->name('admin');
@@ -43,3 +45,7 @@ Route::get('/order/input-nomor-hp', [OrderController::class, 'inputNomorHp'])->n
 Route::post('/order/check-points', [OrderController::class, 'checkPoints'])->name('order.checkPoints');
 Route::post('/order/select-items', [OrderController::class, 'selectItems'])->name('order.selectItems');
 Route::post('/order/process-claim', [OrderController::class, 'processClaim'])->name('order.processClaim');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
