@@ -5,13 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Menu extends Model
+class Rating extends Model
 {
     use HasFactory;
 
-    protected $table = 'list_menu';
+    protected $table = 'rating_customers';
 
     protected $fillable = [
-        'id', 'nama_menu', 'deskripsi_menu', 'kategori_menu', 'harga_menu', 'gambar_menu', 'created_at', 'updated_at'
+        'id', 'nama', 'rating', 'komentar', 'created_at','updated_at'
     ];
 }

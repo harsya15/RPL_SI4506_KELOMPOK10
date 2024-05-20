@@ -45,6 +45,7 @@
 
     <!--====== COUNTER PART START ======-->
 
+
     <section id="counter" class="counter_area pt-50 pb-95 text-center" style="background-image: url(images/sate\ wallpaper.jpg)">
         <div class="container">
             <div class="row">
@@ -132,7 +133,7 @@
                         </a>
                     </div>
                 </div>
-            
+
                 <div class="col-lg-3 col-md-4">
                     <div class="gallery-item">
                         <a href="images/gallery/gallery-8.jpg" class="gallery-lightbox" data-gall="gallery-item">
@@ -156,14 +157,17 @@
                 <span class="line">
                     <span class="box"></span>
                 </span>
+                <a href="/order" class="container mt-4 text-center">
+                    <button class="btn btn-danger" style="">Buy Now</button>
+                </a>
             </div> <!-- section title -->
-
+            
             <ul class="filters_menu">
                 <li class="active" data-filter="*">All</li>
                 <li data-filter=".sate">Sate</li>
                 <li data-filter=".masakan">Masakan</li>
             </ul>
-
+            
             <div class="filters-content">
                 <div class="row grid">
                     @foreach($menu as $menus) 
@@ -193,8 +197,71 @@
             </div> 
         </div> <!-- container -->
     </section>
-    
     <!--====== MENU PART ENDS ======-->
+
+    <!--====== Reservasi PART START ======-->
+
+    <section id="reservasi" class="contact_area">
+        <div class="contact_form pt-120">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="section_title text-center pb-30">
+                            <h4 class="title">Reservasi Meja</h4>
+                            <span class="line">
+                                <span class="box"></span>
+                            </span>
+                        </div> <!-- section title -->
+                    </div>
+                </div> <!-- row -->
+                
+                <form action="/insert" method="post">
+                    @csrf
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="single_form mt-30">
+                                <input name="atas_nama" id="atas_nama" type="text" placeholder="Atas Nama">
+                            </div> <!-- single form -->
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="single_form mt-30">
+                            <input name="no_meja" id="no_meja" type="number" placeholder="No Meja">
+                            </div> <!-- single form -->
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="single_form mt-30">
+                                <input name="date" id="date" type="date" placeholder="Tanggal">
+                            </div> <!-- single form -->
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="single_form mt-30">
+                            <input name="time" id="time" type="time" placeholder="Waktu">
+                            </div> <!-- single form -->
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="single_form mt-30">
+                                <input name="jumlah" id="jumlah" type="number" placeholder="Jumlah Orang">
+                            </div> <!-- single form -->
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="single_form mt-30">
+                                <input name="email" id="email" type="email" placeholder="Email">
+                            </div> <!-- single form -->
+                        </div>
+                        
+                        <p class="form-message"></p>
+                        <div class="col-lg-12">
+                            <div class="single_form text-center mt-30">
+                                <button type="submit" class="main-btn">Reservasi Meja</button>
+                            </div> <!-- single form -->
+                        </div>
+                    </div> <!-- row -->
+                </form>
+            </div> <!-- container -->
+        </div> <!-- contact form -->
+    </section>
+                        
+    <!--====== Reservasi PART ENDS ======-->
 
 
     <!--====== MENGAKSES KONTAK PART START ======-->
@@ -280,7 +347,7 @@
             </div> <!-- row -->
         </div> <!-- container -->
     </section>
-    
+
     <!--====== MENGAKSES KONTAK PART ENDS ======-->
 
 
@@ -299,7 +366,7 @@
                         </div> <!-- section title -->
                     </div>
                 </div> <!-- row -->
-                
+
                 <form action="" method="post">
                     @csrf
                     <div class="row">
@@ -474,6 +541,5 @@
 
     <!--====== OUTLET PART ENDS ======-->
 
+
 @endsection
-
-

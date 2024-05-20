@@ -98,6 +98,14 @@
       padding-left: 10px;
       padding-right: 10px;
     }
+
+    #form textarea {
+      width: 1000px;
+      border: 1px solid #757575;
+      border-radius: 8px;
+      padding: 20px;
+      margin-top: 20px;
+    }
     
   </style>
 </head>
@@ -109,5 +117,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
+
 
 </html>
