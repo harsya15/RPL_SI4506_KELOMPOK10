@@ -2,11 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CabangController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\KaryawanController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\LaporanController;
+use App\Http\Controllers\RatingController;
 
 Route::get('/', [HomeController::class, 'index']);
 
