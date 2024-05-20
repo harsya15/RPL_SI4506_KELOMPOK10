@@ -13,7 +13,6 @@
     body {
       font-family: "Poppins", sans-serif;
     }
-
     .navbar a {
       color: #e0e0e0;
       font-weight: 600;
@@ -90,7 +89,6 @@
       margin-top: 30px;
     }
 
-
     #form input, select {
       width: 1000px;
       height: 50px;
@@ -108,7 +106,6 @@
       padding: 20px;
       margin-top: 20px;
     }
-
     
   </style>
 </head>
