@@ -21,6 +21,6 @@ class LaporanController extends Controller
             'deskripsi' => $data['deskripsi']
         ]);
 
-        return redirect(route('admin'));
+        return redirect(route('admin'))->with('success', 'Laporan berhasil terkirim!');
     }
 }
