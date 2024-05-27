@@ -4,8 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-
-    "content-hash": "743a00fbadd1709e0e1bd6b8bc3abc96",
+    "content-hash": "d367a9ab72a18f01f9262639cbeb8140",
     "packages": [
         {
             "name": "brick/math",
@@ -1053,7 +1052,6 @@
         },
         {
             "name": "laravel/framework",
-
             "version": "v11.6.0",
             "source": {
                 "type": "git",
@@ -1166,7 +1164,6 @@
                 "league/flysystem-sftp-v3": "^3.0",
                 "mockery/mockery": "^1.6",
                 "nyholm/psr7": "^1.2",
-
                 "orchestra/testbench-core": "^9.0.15",
                 "pda/pheanstalk": "^5.0",
                 "phpstan/phpstan": "^1.4.7",
@@ -1312,7 +1309,6 @@
             "description": "Add beautiful and user-friendly forms to your command-line applications.",
             "support": {
                 "issues": "https://github.com/laravel/prompts/issues",
-
                 "source": "https://github.com/laravel/prompts/tree/v0.1.21"
             },
             "time": "2024-04-30T12:46:16+00:00"
@@ -2002,7 +1998,6 @@
         },
         {
             "name": "nesbot/carbon",
-
             "version": "3.3.1",
             "source": {
                 "type": "git",
@@ -2105,7 +2100,6 @@
                     "type": "tidelift"
                 }
             ],
-
             "time": "2024-05-01T06:54:22+00:00"
         },
         {
@@ -3649,7 +3643,6 @@
         },
         {
             "name": "symfony/event-dispatcher-contracts",
-
             "version": "v3.5.0",
             "source": {
                 "type": "git",
@@ -3706,9 +3699,7 @@
                 "standards"
             ],
             "support": {
-
                 "source": "https://github.com/symfony/event-dispatcher-contracts/tree/v3.5.0"
-
             },
             "funding": [
                 {
@@ -3724,9 +3715,7 @@
                     "type": "tidelift"
                 }
             ],
-
             "time": "2024-04-18T09:32:20+00:00"
-
         },
         {
             "name": "symfony/finder",
@@ -5001,7 +4990,6 @@
         },
         {
             "name": "symfony/service-contracts",
-
             "version": "v3.5.0",
             "source": {
                 "type": "git",
@@ -5065,7 +5053,6 @@
                 "standards"
             ],
             "support": {
-
                 "source": "https://github.com/symfony/service-contracts/tree/v3.5.0"
             },
             "funding": [
@@ -5083,7 +5070,6 @@
                 }
             ],
             "time": "2024-04-18T09:32:20+00:00"
-
         },
         {
             "name": "symfony/string",
@@ -5267,7 +5253,6 @@
         },
         {
             "name": "symfony/translation-contracts",
-
             "version": "v3.5.0",
             "source": {
                 "type": "git",
@@ -5326,7 +5311,6 @@
                 "standards"
             ],
             "support": {
-
                 "source": "https://github.com/symfony/translation-contracts/tree/v3.5.0"
             },
             "funding": [
@@ -5343,9 +5327,7 @@
                     "type": "tidelift"
                 }
             ],
-
             "time": "2024-04-18T09:32:20+00:00"
-
         },
         {
             "name": "symfony/uid",
@@ -6034,7 +6016,6 @@
         },
         {
             "name": "laravel/pint",
-
             "version": "v1.15.3",
             "source": {
                 "type": "git",
@@ -6097,7 +6078,6 @@
                 "issues": "https://github.com/laravel/pint/issues",
                 "source": "https://github.com/laravel/pint"
             },
-
             "time": "2024-04-30T15:02:26+00:00"
         },
         {
@@ -8058,7 +8038,6 @@
         },
         {
             "name": "spatie/ignition",
-
             "version": "1.14.1",
             "source": {
                 "type": "git",
@@ -8138,7 +8117,6 @@
                     "type": "github"
                 }
             ],
-
             "time": "2024-05-03T15:56:16+00:00"
         },
         {
@@ -8161,7 +8139,6 @@
                 "ext-mbstring": "*",
                 "illuminate/support": "^10.0|^11.0",
                 "php": "^8.1",
-
                 "spatie/flare-client-php": "^1.5",
                 "spatie/ignition": "^1.14",
                 "symfony/console": "^6.2.3|^7.0",
@@ -8232,7 +8209,6 @@
                     "type": "github"
                 }
             ],
-
             "time": "2024-05-02T13:42:49+00:00"
         },
         {
