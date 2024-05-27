@@ -44,9 +44,18 @@
                                             <span class="shop_circle">3</span>
                                         </a>
                                     </div>
+                                    @if (Auth::check())
                                     <div class="user_option ml-2">
-                                        <a href="/admin" class="login">Login</a>
+                                        <a href="{{ route('logout') }}" class="login" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                                            @csrf
+                                        </form>
                                     </div>
+                                    @else
+                                    <div class="user_option ml-2">
+                                        <a href="/login" class="login">Login</a>
+                                    </div>
+                                    @endif
                                 </ul>
                             </div> <!-- navbar collapse -->
                         </nav> <!-- navbar -->

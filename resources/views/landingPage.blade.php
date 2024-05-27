@@ -158,7 +158,7 @@
                     <span class="box"></span>
                 </span>
                 <a href="/order" class="container mt-4 text-center">
-                    <button class="btn btn-danger" style="">Buy Now</button>
+                    <button class="btn btn-danger">Buy Now</button>
                 </a>
             </div> <!-- section title -->
             
