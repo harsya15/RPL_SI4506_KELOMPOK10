@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class AdminController extends Controller
+class UserController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -23,6 +23,17 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('adminPage');
+        if (auth()->user()->role == 'karyawan')
+        {
+            return view('adminPage');
+        }
+        elseif (auth()->user()->role == 'manager') 
+        {
+            return view('adminPage');
+        }
+        else
+        {
+            return redirect(route('landingPage'));
+        }
     }
 }

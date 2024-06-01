@@ -193,16 +193,17 @@
                 <span class="line">
                     <span class="box"></span>
                 </span>
-
                 <a href="/order" class="container mt-4 text-center">
-                    <button class="btn btn-danger" style="">Buy Now</button>
+                    <button class="btn btn-danger">Buy Now</button>
                 </a>
             </div> <!-- section title -->
+            
             <ul class="filters_menu">
                 <li class="active" data-filter="*">All</li>
                 <li data-filter=".sate">Sate</li>
                 <li data-filter=".masakan">Masakan</li>
             </ul>
+            
             <div class="filters-content">
                 <div class="row grid">
                     @foreach ($menu as $menus)

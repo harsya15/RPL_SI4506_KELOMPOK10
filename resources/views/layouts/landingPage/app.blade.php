@@ -27,6 +27,9 @@
     <link rel="stylesheet" href="{{ asset('frontend') }}/css/style.css">
     <link rel="stylesheet" href="{{ asset('frontend') }}/css/glightbox.min.css">
 
+    <!-- isotope js -->
+    <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     @stack('styles')
 </head>
@@ -54,11 +57,16 @@
 <script src="{{ asset('frontend') }}/js/glightbox.min.js"></script>
 
 
+
 <!-- isotope js -->
 <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
 
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 @stack('scripts')
+=======
+  <!-- isotope js -->
+  <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
+
 
 </html>
