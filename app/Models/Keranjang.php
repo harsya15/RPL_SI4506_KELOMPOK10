@@ -16,3 +16,6 @@ class Keranjang extends Model
         return $this->belongsTo(Menu::class, 'list_menu_id', 'id');
     }
 }
+
+
+
