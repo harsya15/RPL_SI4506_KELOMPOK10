@@ -3,9 +3,14 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CabangController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ItemController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\KaryawanController;
+
+use Illuminate\Support\Facades\Auth;
+=======
 use App\Http\Controllers\KeranjangController;
+
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\RatingController;
@@ -33,8 +38,10 @@ Route::middleware(['auth', CustomerMiddleware::class])->group(function(){
 
 
 Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index'])->name('index');
 
 Route::post('/insert', 'App\Http\Controllers\ReservasiController@insert');
+Route::post('/insert', 'App\Http\Controllers\KontakController@insert');
 
 
 Route::middleware(['auth'])->group(function () {
@@ -109,6 +116,9 @@ Route::post('/order/select-items', [OrderController::class, 'selectItems'])->nam
 Route::post('/order/process-claim', [OrderController::class, 'processClaim'])->name('order.processClaim');
 
 
+Route::post('/items/save', [ItemController::class, 'save'])->name('items.save');
+=======
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
@@ -117,4 +127,5 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 =======
 Route::get('/userAccess', [UserController::class, 'index'])->name('userAccess');
+
 
