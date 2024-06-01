@@ -14,20 +14,13 @@ class MenuController extends Controller
         return view('Menu.index', compact('menu'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
         return view('Menu.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-        
         $data = $request->all( ); 
 
         $file =  $request->file('gambar');
@@ -42,7 +35,7 @@ class MenuController extends Controller
             'gambar_menu' => $imageName,
         ]);
 
-        return redirect(route('Menu.index'));
+        return redirect(route('Menu.index'))->with('success', 'Berhasil menambahkan menu '. $request['nama']);
     }
 
     public function edit($id)
@@ -66,7 +59,7 @@ class MenuController extends Controller
 
         $menu->update($data);
 
-        return redirect(route('Menu.index'))->with('allert', 'Berhasil mengubah menu dengan nama ' . $request['nama_menu']);
+        return redirect(route('Menu.index'))->with('success', 'Berhasil mengubah menu ' . $request['nama']);
     }
 
     public function delete($id)
@@ -75,6 +68,6 @@ class MenuController extends Controller
         File::delete(public_path('uploads/menu').'/'. $menu->gambar_menu);
         $menu->delete();
       
-        return redirect(route('Menu.index'))->with('allert', 'Berhasil menghapus menu dengan nama ' . $menu->nama_menu);
+        return redirect(route('Menu.index'))->with('success', 'Berhasil menghapus menu ' . $menu->nama_menu);
     }
 }

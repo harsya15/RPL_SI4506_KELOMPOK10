@@ -1,10 +1,10 @@
 @extends('layouts.adminPage.layout')
 
-@if (session('success'))
-    <p class="alert alert-success">{{ session('success') }}</p>
-@endif
-
 @section('content')
+
+@if (session('success'))
+<p class="alert alert-success">{{ session('success') }}</p>
+@endif
 
 <a href="/Menu/create" type="button" class="btn btn-primary mt-4 ms-4">Tambah</a>
 <div class="px-4">
@@ -46,9 +46,10 @@
                 @endforeach
             </tbody>
         </table>
+        @else
+        <p>Tidak ada makanan dan minum di menu ini.</p>
+        @endif
     </div>
 </div>
-@else
-<p>Tidak ada makanan dan minum di menu ini.</p>
-@endif
+
 @endsection
