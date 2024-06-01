@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\KaryawanController;
+use App\Http\Controllers\KeranjangController;
 use App\Http\Controllers\OrderController;
 
 
@@ -13,7 +14,7 @@ Route::get('/', [HomeController::class, 'index']);
 Route::post('/insert', 'App\Http\Controllers\ReservasiController@insert');
 
 
-Route::middleware(['auth'])->group(function(){
+Route::middleware(['auth'])->group(function () {
     // masukan routing disini
     Route::get('/Menu', [MenuController::class, 'index'])->name('Menu.index');
     Route::get('/Menu/create', [MenuController::class, 'create'])->name('Menu.create');
@@ -21,7 +22,7 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/Menu/edit/{id}', [MenuController::class, 'edit'])->name('Menu.edit');
     Route::post('/Menu/update/{id}', [MenuController::class, 'update'])->name('Menu.update');
     Route::delete('/Menu/delete/{id}', [MenuController::class, 'delete'])->name('Menu.delete');
-  
+
     Route::get('/Karyawan', [KaryawanController::class, 'index'])->name('karyawan.index');
     Route::get('/Karyawan/create', [KaryawanController::class, 'create'])->name('karyawan.create');
     Route::post('/Karyawan/store', [KaryawanController::class, 'store'])->name('karyawan.store');
@@ -45,6 +46,10 @@ Route::middleware(['auth'])->group(function(){
     Route::delete('/Cabang/delete/{id}', [CabangController::class, 'delete'])->name('cabang.delete');
 
 
+    // keranjang
+    Route::get('keranjang', [KeranjangController::class, 'index'])->name('keranjang.index');
+    Route::post('/keranjang/update', [KeranjangController::class, 'update'])->name('keranjang.update');
+    Route::delete('/keranjang/{id}', [KeranjangController::class, 'destroy'])->name('keranjang.destroy');
 });
 
 
@@ -67,3 +72,7 @@ Route::post('/order/process-claim', [OrderController::class, 'processClaim'])->n
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
