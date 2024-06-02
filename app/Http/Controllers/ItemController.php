@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Item;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use Session;
 
 class ItemController extends Controller
 {
@@ -23,6 +25,25 @@ class ItemController extends Controller
         $item->bank         = $request['id_bank'];
         $item->save();
 
+        Session::put('email_nama_menu', $request['nama_menu']);
+        Session::put('email_bank', $request['id_bank']);
+        Session::put('email_harga', $request['harga']);
+
+        $details = [
+            'title' => 'Mail from Admin Restoran',
+            'body' => 'Your reservation have been Placed Successfully'
+        ];
+       
+        // \Mail::to(Auth::user()->email)->send(new \App\Mail\ReserveMail($details));
+        
+        $data["title"] = "From Admin Restoran";
+        $data["body"] = "Your reservation have been Placed Successfully";
+
+
+        Mail::send('mails.Reserve', $data, function($message)use($data) {
+            $message->to('jentrasukmaasruli8@gmail.com')
+                    ->subject($data["title"]);
+        });
         // Return a response, for example, redirect to a specific route with a success message
         return redirect()->route('index')->with('success', 'Saved successfully!');
     }

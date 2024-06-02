@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CabangController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ItemController;
@@ -8,7 +11,6 @@ use App\Http\Controllers\MenuController;
 use App\Http\Controllers\KaryawanController;
 
 use Illuminate\Support\Facades\Auth;
-=======
 use App\Http\Controllers\KeranjangController;
 
 use App\Http\Controllers\OrderController;
@@ -37,11 +39,10 @@ Route::middleware(['auth', CustomerMiddleware::class])->group(function(){
 
 
 
-Route::get('/', [HomeController::class, 'index']);
 Route::get('/', [HomeController::class, 'index'])->name('index');
 
 Route::post('/insert', 'App\Http\Controllers\ReservasiController@insert');
-Route::post('/insert', 'App\Http\Controllers\KontakController@insert');
+Route::post('/getintouch', 'App\Http\Controllers\ReservasiController@getintouch');
 
 
 Route::middleware(['auth'])->group(function () {
@@ -63,6 +64,7 @@ Route::middleware(['auth', KaryawanMiddleware::class])->group(function(){
     Route::get('/Karyawan/edit/{id}', [KaryawanController::class, 'edit'])->name('karyawan.edit');
     Route::post('/Karyawan/update/{id}', [KaryawanController::class, 'update'])->name('karyawan.update');
     Route::delete('/Karyawan/delete/{id}', [KaryawanController::class, 'delete'])->name('karyawan.delete');
+
 
 
     Route::get('/Karyawan/laporan', [LaporanController::class, 'create'])->name('laporan.create');
@@ -98,7 +100,10 @@ Route::middleware(['auth', ManagerMiddleware::class])->group(function(){
     Route::get('/Karyawan/edit/{id}', [KaryawanController::class, 'edit'])->name('karyawan.edit');
     Route::post('/Karyawan/update/{id}', [KaryawanController::class, 'update'])->name('karyawan.update');
     Route::delete('/Karyawan/delete/{id}', [KaryawanController::class, 'delete'])->name('karyawan.delete');
+
 });
+
+Route::post('/items/save', [ItemController::class, 'save'])->name('items.save');
 
 Auth::routes();
 
@@ -116,6 +121,7 @@ Route::post('/order/select-items', [OrderController::class, 'selectItems'])->nam
 Route::post('/order/process-claim', [OrderController::class, 'processClaim'])->name('order.processClaim');
 
 
+
 Route::post('/items/save', [ItemController::class, 'save'])->name('items.save');
 =======
 
@@ -127,5 +133,4 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 =======
 Route::get('/userAccess', [UserController::class, 'index'])->name('userAccess');
-
 
