@@ -27,3 +27,4 @@ class Item extends Model
         'bank',
     ];
 }
+
