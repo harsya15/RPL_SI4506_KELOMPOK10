@@ -143,6 +143,81 @@ public function cekDelivery($no)
     return view('order.cekdelivery', compact('order', 'deliveryStatus', 'deliveryAddress', 'items'));
 
 }
+//delete order
+public function delete($id,$nohp)
+{
+    $order = Order::find($id);
+    $order->delete();
 
+    return redirect()->route('order.cekdelivery', $nohp)->with('success', 'Pesanan berhasil dihapus!');
+}
+
+//crudadmin
+public function read()
+{
+    $orders = Order::all();
+    return view('order.read', compact('orders'));
+}
+//add
+public function create()
+{
+    return view('order.create');
+}
+//store
+public function store(Request $request)
+{
+    $request->validate([
+        'nama_pemesan' => 'required|string',
+        'nomor_hp' => 'required|string',
+        'email' => 'required|string',
+        'alamat' => 'required|string',
+        'pesanan' => 'required|array',
+        'poin' => 'required|integer',
+        'status' => 'required|string',
+    ]);
+
+    $order = new Order();
+    $order->nama_pemesan = $request->nama_pemesan;
+    $order->nomor_hp = $request->nomor_hp;
+    $order->email = $request->email;
+    $order->alamat = $request->alamat;
+    $order->pesanan = json_encode($request->pesanan);
+    $order->poin = $request->poin;
+    $order->status = $request->status;
+    $order->save();
+
+    return redirect()->route('order.read')->with('success', 'Pesanan berhasil disimpan!');
+}
+//edit
+public function edit($id)
+{
+    $order = Order::find($id);
+    return view('order.edit', compact('order'));
+}
+//update
+public function update(Request $request, $id)
+{
+    $request->validate([
+        'nama_pemesan' => 'required|string',
+        'nomor_hp' => 'required|string',
+        'email' => 'required|string',
+        'alamat' => 'required|string',
+        'pesanan' => 'required|array',
+        'poin' => 'required|integer',
+        'status' => 'required|string',
+    ]);
+
+    $order = Order::find($id);
+    $order->nama_pemesan = $request->nama_pemesan;
+    $order->nomor_hp = $request->nomor_hp;
+    $order->email = $request->email;
+    $order->alamat = $request->alamat;
+    $order->pesanan = json_encode($request->pesanan);
+    $order->poin = $request->poin;
+    $order->status = $request->status;
+    $order->save();
+
+    return redirect()->route('order.read')->with('success', 'Pesanan berhasil diupdate!');
+}
 
 }
