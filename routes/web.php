@@ -51,6 +51,11 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/order', [OrderController::class, 'index'])->name('order.index');
     Route::post('/order/submit', [OrderController::class, 'submitOrder'])->name('submitOrder');
     Route::get('/order/success', [OrderController::class, 'showSuccessPage'])->name('orderSuccess');
+    Route::get('/order/cekdelivery/{nohp}', [OrderController::class, 'cekdelivery'])->name('order.cekdelivery');
+    Route::get('/order/read/', [OrderController::class, 'read'])->name('order.read');
+    Route::get('/order/delete/{id}/{nohp}', [OrderController::class, 'delete'])->name('order.delete');
+    Route::get('/order/updatestatus/{id}/{status}', [OrderController::class, 'updatestatus'])->name('order.updatestatus');
+
     
     // Routes CLAIM
     Route::get('/order/input-nomor-hp', [OrderController::class, 'inputNomorHp'])->name('order.inputNomorHp');
