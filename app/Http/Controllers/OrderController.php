@@ -120,8 +120,29 @@ public function showSuccessPage(Request $request)
 
     return view('order.process_claim', compact('order','totalPointsFromOrders'));
 }
+//cekdelivery
+public function cekDelivery($no)
+{
+    //get order by nohp
+    $order = Order::where('nomor_hp', $no)->first();
 
+    //if order not found
+    if (!$order) {
+        return redirect()->route('order.inputNomorHp')->with('error', 'Nomor HP tidak ditemukan.');
+    }
+   
+    // Get the delivery status of the order
+    $deliveryStatus = $order->delivery_status;
 
+    // Get the delivery address of the order
+    $deliveryAddress = $order->alamat;
+
+    // Get the items in the order
+    $items = json_decode($order->pesanan, true);
+
+    return view('order.cekdelivery', compact('order', 'deliveryStatus', 'deliveryAddress', 'items'));
+
+}
 
 
 }
