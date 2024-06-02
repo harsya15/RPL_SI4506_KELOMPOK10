@@ -1,6 +1,3 @@
-
-
-=======
 <section class="header_area">
         <div class="header_navbar">
             <div class="container">

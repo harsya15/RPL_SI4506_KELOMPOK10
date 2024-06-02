@@ -71,7 +71,7 @@
 
 <body>
 
-    <x-Header></x-Header>
+@include('layouts.landingPage.partial.header')
 
     @yield('content')
 
