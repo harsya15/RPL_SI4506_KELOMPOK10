@@ -219,5 +219,15 @@ public function update(Request $request, $id)
 
     return redirect()->route('order.read')->with('success', 'Pesanan berhasil diupdate!');
 }
+//updatestatus
+public function updateStatus($id,$status)
+{
+    $order = Order::find($id);
+    $order->status = $status;
+    $order->save();
+    //sendmail
+    $this->sendmail($order->email,'Status Pesanan','Status pesanan anda '.$status);
 
+    return redirect()->route('order.read')->with('success', 'Status pesanan berhasil diupdate!');
+}
 }
