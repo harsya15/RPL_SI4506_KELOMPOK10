@@ -156,7 +156,7 @@
                             <ul class="">
                                 <li><strong id="id_bank"></strong> <br />
                                     &nbsp;&nbsp;No. Rek 011-322-1060 <br />
-                                    &nbsp;&nbsp;KCU Bandung <br />
+                                    &nbsp;&nbsp;KCU. Bandung <br />
                                     &nbsp;&nbsp;An. Sate Balibul</p>
                                 </li>
                             </ul>
@@ -845,8 +845,7 @@
         var valueLocal  = localStorage.getItem("checked")
         console.log(valueLocal)
         $('input[name="radio-card"][value="' + valueLocal + '"]').prop('checked', true);
-
-        
+ 
         $('#myModal').modal('show');
         $('.id_menu').val(id)
         $('.nama_menu').val(nama)
