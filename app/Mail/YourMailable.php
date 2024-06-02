@@ -34,3 +34,4 @@ class YourMailable extends Mailable
                     ->view('mails.Reserve');
     }
 }
+
