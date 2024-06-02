@@ -1,6 +1,40 @@
 @extends('layouts.landingPage.app')
 @section('title', 'Sate Balibul')
 @section('content')
+    <div id="home" class="header_slider slider-active">
+        <div class="single_slider bg_cover d-flex align-items-center" style="background-image: url(images/wallpaper-2.png)">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="slider_content">
+                            <h2 class="slider_title">Sate Balibul Bang Ali</h2>
+                            <p class="wow fadeInUp">Selamat datang di Rumah Makan Sate Kambing Balibul! Kami adalah
+                                destinasi kuliner unik yang menghadirkan kelezatan sate kambing dengan cita rasa
+                                autentik. Kami bangga menjadi tempat berkumpul bagi pecinta masakan khas Indonesia
+                                yang ingin menikmati cita rasa kambing yang lezat dan istimewa</p>
+                            <!-- <a href="https://rebrand.ly/cafe-ud" rel="nofollow" class="main-btn">More About Us</a> -->
+                        </div> <!-- slider content -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- single slider -->
+        <div class="single_slider bg_cover d-flex align-items-center" style="background-image: url(images/wallpaper-1.png)">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="slider_content">
+                            <h2 class="slider_title">Sate Balibul Bang Ali</h2>
+                            <p class="wow fadeInUp">Selamat datang di Rumah Makan Sate Kambing Balibul! Kami adalah
+                                destinasi kuliner unik yang menghadirkan kelezatan sate kambing dengan cita rasa
+                                autentik. Kami bangga menjadi tempat berkumpul bagi pecinta masakan khas Indonesia
+                                yang ingin menikmati cita rasa kambing yang lezat dan istimewa</p>
+                            <!-- <a href="https://rebrand.ly/cafe-ud" rel="nofollow" class="main-btn">More About Us</a> -->
+                        </div> <!-- slider content -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- single slider -->
+    </div> <!-- header slider -->
 
 <!--====== PEMBAYARAN PART START ======-->
 
@@ -240,7 +274,8 @@
                             dengan resep warisan keluarga yang telah turun-temurun.</p>
                         <ul class="social">
                             <li><a href="https://wa.me/082224000250"><i class="lni lni-whatsapp"></i></a></li>
-                            <li><a href="https://www.instagram.com/satebalibulbangali/"><i class="lni lni-instagram-original"></i></a></li>
+                            <li><a href="https://www.instagram.com/satebalibulbangali/"><i
+                                        class="lni lni-instagram-original"></i></a></li>
                         </ul>
                     </div> <!-- row -->
                 </div>
@@ -253,7 +288,13 @@
 
     <!--====== COUNTER PART START ======-->
 
+
     <section id="counter" class="counter_area pt-50 pb-95 text-center" style="background-image: url(images/sate\ wallpaper.jpg)">
+
+
+    <section id="counter" class="counter_area pt-50 pb-95 text-center"
+        style="background-image: url(images/sate\ wallpaper.jpg)">
+
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-sm-12">
@@ -364,7 +405,15 @@
                 <span class="line">
                     <span class="box"></span>
                 </span>
+
             </div> <!-- section title -->
+
+
+                <a href="/order" class="container mt-4 text-center">
+                    <button class="btn btn-danger">Buy Now</button>
+                </a>
+            </div> <!-- section title -->
+            
 
             <ul class="filters_menu">
                 <li class="active" data-filter="*">All</li>
@@ -374,6 +423,7 @@
 
             <div class="filters-content">
                 <div class="row grid">
+
 
                     @foreach($menu as $menus) 
                     <div class="col-lg-4 col-md-7 col-sm-9 all {{ $menus->kategori_menu }}">
@@ -393,15 +443,34 @@
                                                 <i class="lni lni-cart"></i>
                                             </button>
                                         </form>
+=======
+                    @foreach ($menu as $menus)
+                        <div class="col-lg-4 col-md-7 col-sm-9 all {{ $menus->kategori_menu }}">
+                            <div class="box">
+                                <div>
+                                    <div class="img-box">
+                                        <img src="{{ asset('uploads/menu/' . $menus->gambar_menu) }}" alt="">
+                                    </div>
+                                    <div class="detail-box">
+                                        <h4 class="mb-2">{{ $menus->nama_menu }}</h4>
+                                        <p>{{ $menus->deskripsi_menu }}</p>
+                                        <div class="options mt-3">
+                                            <h6>{{ 'Rp ' . number_format($menus->harga_menu / 1000) . 'k' }}</h6>
+                                            <form action="">
+                                                <button type="submit">
+                                                    <i class="lni lni-cart"></i>
+                                                </button>
+                                            </form>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div> <!-- single menu --> 
+                        </div> <!-- single menu -->
                     @endforeach
 
                 </div> <!-- row-->
-            </div> 
+            </div>
         </div> <!-- container -->
     </section>
     
@@ -423,7 +492,7 @@
                         </div> <!-- section title -->
                     </div>
                 </div> <!-- row -->
-                
+
                 <form action="/insert" method="post">
                     @csrf
                     <div class="row">
@@ -434,7 +503,11 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="single_form mt-30">
+
                             <input required name="no_meja" id="no_meja" type="number" placeholder="No Meja">
+
+                                <input name="no_meja" id="no_meja" type="number" placeholder="No Meja">
+
                             </div> <!-- single form -->
                         </div>
                         <div class="col-lg-6">
@@ -444,7 +517,11 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="single_form mt-30">
+
                             <input required name="time" id="time" type="time" placeholder="Waktu">
+=======
+                                <input name="time" id="time" type="time" placeholder="Waktu">
+
                             </div> <!-- single form -->
                         </div>
                         <div class="col-lg-12">
@@ -457,7 +534,7 @@
                                 <input required name="email" id="email" type="email" placeholder="Email">
                             </div> <!-- single form -->
                         </div>
-                        
+
                         <p class="form-message"></p>
                         <div class="col-lg-12">
                             <div class="single_form text-center mt-30">
@@ -469,12 +546,17 @@
             </div> <!-- container -->
         </div> <!-- contact form -->
     </section>
-                        
+
     <!--====== Reservasi PART ENDS ======-->
+
 
 
     <!--====== FEEDBACK PART START ======-->
     
+=======
+    <!--====== MENGAKSES KONTAK PART START ======-->
+
+
     <section id="customer" class="customer_area pt-120">
         <div class="container">
             <div class="row justify-content-center">
@@ -684,7 +766,8 @@
                             </li>
                         </div>
                         <div class="outlet_content">
-                            <p>Jl. Raya Jogjakarta - Solo No.KM.17, Kb. Dalem Kidul, Kec. Prambanan, Kab. Klaten, Jawa Tengah</p>
+                            <p>Jl. Raya Jogjakarta - Solo No.KM.17, Kb. Dalem Kidul, Kec. Prambanan, Kab.
+                                Klaten, Jawa Tengah</p>
                             <a href="https://wa.me/082324404571">Telp. 082324404571</a>
                         </div>
                     </div> <!-- single outlet -->

@@ -48,37 +48,59 @@ class ReservasiController extends Controller
         return redirect('/')->with('alert', 'Meja Nomor '.$no_meja.' berhasil dipesan');
     }
 
-    public function sendmail($to,$subject,$message){
+    public function sendmail($to, $subject, $message){
         $client = new Client();
-
-        $response = $client->post('https://api.mailersend.com/v1/email', [
-            'headers' => [
-                'Content-Type' => 'application/json',
-                'Authorization' => 'Bearer mlsn.7cbdd0020e01e14b572276b7af46bf3c99a45e9c548636cd7fae6023a13fa2c6'
-            ],
-            'json' => [
-                "from" => [
-                    "email" => "AdminBalibul@trial-k68zxl2ekoklj905.mlsender.net"
+    
+        try {
+            $response = $client->post('https://api.mailersend.com/v1/email', [
+                'headers' => [
+                    'Content-Type' => 'application/json',
+                    'Authorization' => 'Bearer mlsn.7cbdd0020e01e14b572276b7af46bf3c99a45e9c548636cd7fae6023a13fa2c6'
                 ],
-                "to" => [
-                    [
-                        "email" => $to
-                    ]
-                ],
-                "subject" => $subject,
-                "text" =>   $message,
-                "html" => "<p>".$message."</p>"
-            ]
-        ]);
-
-        // Handle response as needed
-        $statusCode = $response->getStatusCode();
-        $body = $response->getBody()->getContents();
-
-        return response()->json([
-            'status_code' => $statusCode,
-            'response_body' => $body
-        ]);
+                'json' => [
+                    "from" => [
+                        "email" => "AdminBalibul@trial-k68zxl2ekoklj905.mlsender.net"
+                    ],
+                    "to" => [
+                        [
+                            "email" => $to
+                        ]
+                    ],
+                    "subject" => $subject,
+                    "text" => $message,
+                    "html" => "<p>".$message."</p>"
+                ]
+            ]);
+    
+            $statusCode = $response->getStatusCode();
+            $body = $response->getBody()->getContents();
+    
+            return response()->json([
+                'status_code' => $statusCode,
+                'response_body' => $body
+            ]);
+        } catch (\GuzzleHttp\Exception\ClientException $e) {
+            $response = $e->getResponse();
+            $statusCode = $response->getStatusCode();
+            $body = $response->getBody()->getContents();
+    
+            // Handle specific 422 error
+            if ($statusCode == 422) {
+                $errorData = json_decode($body, true);
+                $errorMessage = $errorData['message'];
+                return response()->json([
+                    'status_code' => $statusCode,
+                    'error_message' => $errorMessage,
+                    'detailed_errors' => $errorData['errors']
+                ], 422);
+            }
+    
+            return response()->json([
+                'status_code' => $statusCode,
+                'error_message' => 'An error occurred while sending the email.',
+                'response_body' => $body
+            ], $statusCode);
+        }
     }
 
     //make insert data to order_meja
