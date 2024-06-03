@@ -1,6 +1,7 @@
 @extends('layouts.landingPage.app')
 @section('title', 'Sate Balibul')
 @section('content')
+
     <div id="home" class="header_slider slider-active">
         <div class="single_slider bg_cover d-flex align-items-center" style="background-image: url(images/wallpaper-2.png)">
             <div class="container">
@@ -244,6 +245,7 @@
 
     <!--====== PEMBAYARAN PART ENDS ======-->
 
+
     <!--====== ABOUT PART START ======-->
 
     <section id="about" class="about_area pt-120 pb-130">
@@ -423,8 +425,6 @@
 
             <div class="filters-content">
                 <div class="row grid">
-
-
                     @foreach($menu as $menus) 
                     <div class="col-lg-4 col-md-7 col-sm-9 all {{ $menus->kategori_menu }}">
                         <div class="box">
@@ -438,37 +438,16 @@
                                     <div class="options mt-3">
                                         <h6>{{ 'Rp '.number_format($menus->harga_menu/1000).'k' }}</h6>
                                         <form action="">
-                                            <!-- data-toggle="modal" data-target="#myModal" -->
-                                            <button type="button" class="btn btn-primary" onclick="test( '{{ $menus->id }}', '{{ $menus->nama_menu }}', '{{ $menus->harga_menu }}' )">
+                                            <button type="submit">
                                                 <i class="lni lni-cart"></i>
                                             </button>
                                         </form>
-=======
-                    @foreach ($menu as $menus)
-                        <div class="col-lg-4 col-md-7 col-sm-9 all {{ $menus->kategori_menu }}">
-                            <div class="box">
-                                <div>
-                                    <div class="img-box">
-                                        <img src="{{ asset('uploads/menu/' . $menus->gambar_menu) }}" alt="">
-                                    </div>
-                                    <div class="detail-box">
-                                        <h4 class="mb-2">{{ $menus->nama_menu }}</h4>
-                                        <p>{{ $menus->deskripsi_menu }}</p>
-                                        <div class="options mt-3">
-                                            <h6>{{ 'Rp ' . number_format($menus->harga_menu / 1000) . 'k' }}</h6>
-                                            <form action="">
-                                                <button type="submit">
-                                                    <i class="lni lni-cart"></i>
-                                                </button>
-                                            </form>
-                                        </div>
-
                                     </div>
                                 </div>
                             </div>
-                        </div> <!-- single menu -->
+                        </div> 
+                    </div> <!-- single menu -->
                     @endforeach
-
                 </div> <!-- row-->
             </div>
         </div> <!-- container -->
@@ -517,11 +496,7 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="single_form mt-30">
-
-                            <input required name="time" id="time" type="time" placeholder="Waktu">
-=======
-                                <input name="time" id="time" type="time" placeholder="Waktu">
-
+                              <input required name="time" id="time" type="time" placeholder="Waktu">
                             </div> <!-- single form -->
                         </div>
                         <div class="col-lg-12">
@@ -553,7 +528,7 @@
 
     <!--====== FEEDBACK PART START ======-->
     
-=======
+
     <!--====== MENGAKSES KONTAK PART START ======-->
 
 

@@ -9,10 +9,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\KaryawanController;
-
-
 use App\Http\Controllers\KeranjangController;
-
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\RatingController;
@@ -25,6 +22,13 @@ Route::get('/', [HomeController::class, 'index'])->name('landingPage');
 
 Route::middleware(['auth', CustomerMiddleware::class])->group(function(){
     Route::post('/insert', 'App\Http\Controllers\ReservasiController@insert');
+    Route::post('/getintouch', 'App\Http\Controllers\ReservasiController@getintouch');
+    Route::post('/insert', 'App\Http\Controllers\KontakController@insert');
+
+    // keranjang
+    Route::get('keranjang', [KeranjangController::class, 'index'])->name('keranjang.index');
+    Route::post('/keranjang/update', [KeranjangController::class, 'update'])->name('keranjang.update');
+    Route::delete('/keranjang/{id}', [KeranjangController::class, 'destroy'])->name('keranjang.destroy');
 
     Route::get('/order', [OrderController::class, 'index'])->name('order.index');
     Route::post('/order/submit', [OrderController::class, 'submitOrder'])->name('submitOrder');
@@ -35,15 +39,44 @@ Route::middleware(['auth', CustomerMiddleware::class])->group(function(){
     Route::post('/order/check-points', [OrderController::class, 'checkPoints'])->name('order.checkPoints');
     Route::post('/order/select-items', [OrderController::class, 'selectItems'])->name('order.selectItems');
     Route::post('/order/process-claim', [OrderController::class, 'processClaim'])->name('order.processClaim');
+
 });
 
+Route::middleware(['auth', KaryawanMiddleware::class])->group(function(){
+    Route::get('/Menu', [MenuController::class, 'index'])->name('Menu.index');
+    Route::get('/Menu/create', [MenuController::class, 'create'])->name('Menu.create');
+    Route::post('/Menu/store', [MenuController::class, 'store'])->name('Menu.store');
+    Route::get('/Menu/edit/{id}', [MenuController::class, 'edit'])->name('Menu.edit');
+    Route::post('/Menu/update/{id}', [MenuController::class, 'update'])->name('Menu.update');
+    Route::delete('/Menu/delete/{id}', [MenuController::class, 'delete'])->name('Menu.delete');
 
 
-Route::get('/', [HomeController::class, 'index'])->name('index');
+    Route::get('/Karyawan', [KaryawanController::class, 'index'])->name('karyawan.index');
+    Route::get('/Karyawan/create', [KaryawanController::class, 'create'])->name('karyawan.create');
+    Route::post('/Karyawan/store', [KaryawanController::class, 'store'])->name('karyawan.store');
+    Route::get('/Karyawan/edit/{id}', [KaryawanController::class, 'edit'])->name('karyawan.edit');
+    Route::post('/Karyawan/update/{id}', [KaryawanController::class, 'update'])->name('karyawan.update');
+    Route::delete('/Karyawan/delete/{id}', [KaryawanController::class, 'delete'])->name('karyawan.delete');
 
-Route::post('/insert', 'App\Http\Controllers\ReservasiController@insert');
-Route::post('/getintouch', 'App\Http\Controllers\ReservasiController@getintouch');
 
+    Route::get('/Karyawan/laporan', [LaporanController::class, 'create'])->name('laporan.create');
+    Route::post('/Karyawan/laporan/store', [LaporanController::class, 'store'])->name('laporan.store');
+
+    Route::get('/Rating', [RatingController::class, 'index'])->name('rating.index');
+    Route::get('/Rating/create', [RatingController::class, 'create'])->name('rating.create');
+    Route::get('/Rating/edit/{id}', [RatingController::class, 'edit'])->name('rating.edit');
+    Route::post('/Rating/store', [RatingController::class, 'store'])->name('rating.store');
+    Route::post('/Rating/update/{id}', [RatingController::class, 'update'])->name('rating.update');
+    Route::delete('/Rating/delete/{id}', [RatingController::class, 'delete'])->name('rating.delete');
+
+    Route::get('/Cabang', [CabangController::class, 'index'])->name('cabang.index');
+    Route::get('/Cabang/create', [CabangController::class, 'create'])->name('cabang.create');
+    Route::get('/Cabang/edit/{id}', [CabangController::class, 'edit'])->name('cabang.edit');
+    Route::post('/Cabang/store', [CabangController::class, 'store'])->name('cabang.store');
+    Route::post('/Cabang/update/{id}', [CabangController::class, 'update'])->name('cabang.update');
+    Route::delete('/Cabang/delete/{id}', [CabangController::class, 'delete'])->name('cabang.delete');
+
+});
 
 Route::middleware(['auth'])->group(function () {
     // Routes yang memerlukan auth
@@ -62,6 +95,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/order/check-points', [OrderController::class, 'checkPoints'])->name('order.checkPoints');
     Route::post('/order/select-items', [OrderController::class, 'selectItems'])->name('order.selectItems');
     Route::post('/order/process-claim', [OrderController::class, 'processClaim'])->name('order.processClaim');
+
 
     // Route untuk user access
     Route::get('/userAccess', [UserController::class, 'index'])->name('userAccess');

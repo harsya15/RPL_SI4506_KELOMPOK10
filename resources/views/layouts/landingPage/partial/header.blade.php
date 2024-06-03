@@ -1,4 +1,7 @@
-<section class="header_area">
+
+    <!--====== HEADER PART START ======-->
+    
+    <section class="header_area">
         <div class="header_navbar">
             <div class="container">
                 <div class="row">
@@ -37,9 +40,9 @@
                                         <a class="page-scroll" href="#outlet">Outlet</a>
                                     </li>
                                     <div class="user_option ml-5">
-                                        <a href="" class="cart_link">
+                                        <a href="{{ route('keranjang.index') }}" class="cart_link">
                                             <i class="lni lni-cart"></i>
-                                            <span class="shop_circle">3</span>
+                                            <span class="shop_circle">{{ $cart_count }}</span>
                                         </a>
                                     </div>
                                     @if (Auth::check())
