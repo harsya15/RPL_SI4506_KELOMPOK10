@@ -322,6 +322,7 @@
     </section>
 
     <!--====== COUNTER PART ENDS ======-->
+    
 
     <!--====== GALERI FOTO PART START======-->
 
