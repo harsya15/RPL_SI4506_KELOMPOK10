@@ -8,7 +8,6 @@ use App\Http\Controllers\MenuController;
 use App\Http\Controllers\KaryawanController;
 
 use Illuminate\Support\Facades\Auth;
-=======
 use App\Http\Controllers\KeranjangController;
 
 use App\Http\Controllers\OrderController;
@@ -23,6 +22,12 @@ Route::get('/', [HomeController::class, 'index'])->name('landingPage');
 
 Route::middleware(['auth', CustomerMiddleware::class])->group(function(){
     Route::post('/insert', 'App\Http\Controllers\ReservasiController@insert');
+    Route::post('/insert', 'App\Http\Controllers\KontakController@insert');
+
+    // keranjang
+    Route::get('keranjang', [KeranjangController::class, 'index'])->name('keranjang.index');
+    Route::post('/keranjang/update', [KeranjangController::class, 'update'])->name('keranjang.update');
+    Route::delete('/keranjang/{id}', [KeranjangController::class, 'destroy'])->name('keranjang.destroy');
 
     Route::get('/order', [OrderController::class, 'index'])->name('order.index');
     Route::post('/order/submit', [OrderController::class, 'submitOrder'])->name('submitOrder');
@@ -33,22 +38,12 @@ Route::middleware(['auth', CustomerMiddleware::class])->group(function(){
     Route::post('/order/check-points', [OrderController::class, 'checkPoints'])->name('order.checkPoints');
     Route::post('/order/select-items', [OrderController::class, 'selectItems'])->name('order.selectItems');
     Route::post('/order/process-claim', [OrderController::class, 'processClaim'])->name('order.processClaim');
+
+    Route::post('/items/save', [ItemController::class, 'save'])->name('items.save');
 });
 
 
-
-Route::get('/', [HomeController::class, 'index']);
-Route::get('/', [HomeController::class, 'index'])->name('index');
-
-Route::post('/insert', 'App\Http\Controllers\ReservasiController@insert');
-Route::post('/insert', 'App\Http\Controllers\KontakController@insert');
-
-
-Route::middleware(['auth'])->group(function () {
-    // masukan routing disini
-
 Route::middleware(['auth', KaryawanMiddleware::class])->group(function(){
-
     Route::get('/Menu', [MenuController::class, 'index'])->name('Menu.index');
     Route::get('/Menu/create', [MenuController::class, 'create'])->name('Menu.create');
     Route::post('/Menu/store', [MenuController::class, 'store'])->name('Menu.store');
@@ -82,13 +77,6 @@ Route::middleware(['auth', KaryawanMiddleware::class])->group(function(){
     Route::post('/Cabang/update/{id}', [CabangController::class, 'update'])->name('cabang.update');
     Route::delete('/Cabang/delete/{id}', [CabangController::class, 'delete'])->name('cabang.delete');
 
-
-
-    // keranjang
-    Route::get('keranjang', [KeranjangController::class, 'index'])->name('keranjang.index');
-    Route::post('/keranjang/update', [KeranjangController::class, 'update'])->name('keranjang.update');
-    Route::delete('/keranjang/{id}', [KeranjangController::class, 'destroy'])->name('keranjang.destroy');
-
 });
 
 Route::middleware(['auth', ManagerMiddleware::class])->group(function(){
@@ -100,32 +88,9 @@ Route::middleware(['auth', ManagerMiddleware::class])->group(function(){
     Route::delete('/Karyawan/delete/{id}', [KaryawanController::class, 'delete'])->name('karyawan.delete');
 });
 
-Auth::routes();
-
-
-Route::get('/admin', [AdminController::class, 'index'])->name('admin');
-Route::get('/order', [OrderController::class, 'index'])->name('order.index');
-Route::post('/order/submit', [OrderController::class, 'submitOrder'])->name('submitOrder');
-Route::get('/order/success', [OrderController::class, 'showSuccessPage'])->name('orderSuccess');
-
-
-// CLAIM
-Route::get('/order/input-nomor-hp', [OrderController::class, 'inputNomorHp'])->name('order.inputNomorHp');
-Route::post('/order/check-points', [OrderController::class, 'checkPoints'])->name('order.checkPoints');
-Route::post('/order/select-items', [OrderController::class, 'selectItems'])->name('order.selectItems');
-Route::post('/order/process-claim', [OrderController::class, 'processClaim'])->name('order.processClaim');
-
-
-Route::post('/items/save', [ItemController::class, 'save'])->name('items.save');
-=======
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-=======
 Route::get('/userAccess', [UserController::class, 'index'])->name('userAccess');
 
 
