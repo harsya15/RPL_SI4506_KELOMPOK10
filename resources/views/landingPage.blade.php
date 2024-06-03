@@ -46,6 +46,215 @@
     <!--====== HEADER AREA PART ENDS ======-->
 
 
+    <!--====== PEMBAYARAN PART START ======-->
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" style="color:white;">Payment Method</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="container">
+                        <label for="harga_payment" class="mt-3">Summary</label>
+                         <h5 id="harga_payment" class="mt-3" style="float: right;"></h5>
+                         <hr>
+                    </div>
+
+                    <div class="container" style="text-align:center;">
+                        <div class="grid-wrapper grid-col-auto">
+                            <label for="radio-card-1" class="radio-card">
+                            <input type="radio" name="radio-card" onclick="handleRadioClick(this)" id="radio-card-1" value="BCA" checked />
+                            <div class="card-content-wrapper">
+                                <span class="check-icon"></span>
+                                <div class="card-content text-center">
+                                <img src="https://www.bca.co.id/-/media/Feature/Header/Header-Logo/logo-bca.svg?"
+                                    class="img-fluid" />
+                                <h4>BCA</h4>
+                                </div>
+                            </div>
+                            </label>
+                            <!-- /.radio-card -->
+                            <label for="radio-card-2" class="radio-card">
+                            <input type="radio" name="radio-card" onclick="handleRadioClick(this)" id="radio-card-2" value="Mandiri" />
+                            <div class="card-content-wrapper">
+                                <span class="check-icon"></span>
+                                <div class="card-content text-center">
+                                <img src="https://bankmandiri.co.id/image/layout_set_logo?img_id=31567&t=1715878917709"
+                                    class="img-fluid" />
+                                <h4>Mandiri</h4>
+                                </div>
+                            </div>
+                            </label>
+                            <!-- /.radio-card -->
+                            <label for="radio-card-3" class="radio-card">
+                            <input type="radio" name="radio-card" onclick="handleRadioClick(this)" id="radio-card-3" value="BRI" />
+                            <div class="card-content-wrapper">
+                                <span class="check-icon"></span>
+                                <div class="card-content text-center">
+                                <img src="https://bri.co.id/o/bri-corporate-theme/images/bri-logo.png"
+                                    class="img-fluid" />
+                                <h4>BRI</h4>
+                                </div>
+                            </div>
+                            </label>
+                            <!-- /.radio-card -->
+                            <label for="radio-card-4" class="radio-card">
+                            <input type="radio" name="radio-card" onclick="handleRadioClick(this)" id="radio-card-4" value="BNI" />
+                            <div class="card-content-wrapper">
+                                <span class="check-icon"></span>
+                                <div class="card-content text-center">
+                                <img src="https://www.bni.co.id/Portals/1/bni-logo-id.png"
+                                    class="img-fluid" />
+                                <h4>BNI</h4>
+                                </div>
+                            </div>
+                            </label>
+                            <!-- /.radio-card -->
+                            <label for="radio-card-5" class="radio-card">
+                            <input type="radio" name="radio-card" onclick="handleRadioClick(this)" id="radio-card-5" value="CC" />
+                            <div class="card-content-wrapper">
+                                <span class="check-icon"></span>
+                                <div class="card-content text-center">
+                                <img src="https://cdn-icons-png.flaticon.com/512/2175/2175515.png"
+                                    class="img-fluid" />
+                                <h4>Credit Card</h4>
+                                </div>
+                            </div>
+                            </label>
+                            <!-- /.radio-card -->
+        
+                        </div>
+                        <!-- /.grid-wrapper -->
+                    </div>
+
+                </div>
+                <div class="modal-footer justify-content-end p-0 mt-3">
+                    <button type="button" class="btn-outline-light m-0" data-dismiss="modal" aria-label="Close">Cancel</button>
+                    <button type="button" class="btn-outline-primary m-0" data-dismiss="modal" aria-label="Close" onclick="next()">Next</button>
+                </div>
+            </div>
+              <!-- /.modal-content -->
+        </div>
+    </div>
+
+    <div class="modal fade" id="myModalBank" tabindex="-1" role="dialog" aria-labelledby="myModalLabelBank" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" style="color:white;">Payment Method</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="container m-3">
+                        <form action="{{ route('items.save') }}" method="POST">
+                        @csrf
+
+                            <input type="hidden" class="form-control id_menu" name="id_menu" >
+                            <input type="hidden" class="form-control nama_menu" name="nama_menu" >
+                            <input type="hidden" class="form-control" name="id_bank" id="id_bank_save">
+                            <input type="hidden" class="form-control harga" name="harga" id="harga_save">
+
+                            <h2>Cara Pembayaran</h2>
+                            <p>Silakan melakukan pembayaran melalui ATM Non-Tunai, setoran Bank, atau Internet Banking dengan nominal tepat seperti tertera diatas.</p><br>
+                            <p>Anda dapat melakukan pembayaran ke nomor rekening berikut:</p>
+                            <ul class="">
+                                <li><strong id="id_bank"></strong> <br />
+                                    &nbsp;&nbsp;No. Rek 011-322-1060 <br />
+                                    &nbsp;&nbsp;KCU. Bandung <br />
+                                    &nbsp;&nbsp;An. Sate Balibul</p>
+                                </li>
+                            </ul>
+
+                            <button class="btn btn-primary mt-2" type="submit">Make a payment!</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- <div class="modal-footer justify-content-end p-0 mt-3">
+                    <button type="button" class="btn-outline-light m-0" data-dismiss="modal" aria-label="Close">Cancel</button>
+                    <button type="button" class="btn-outline-primary m-0">Confirm</button>
+                </div> -->
+            </div>
+              <!-- /.modal-content -->
+        </div>
+    </div>
+
+    <div class="modal fade" id="myModalCC" tabindex="-1" role="dialog" aria-labelledby="myModalLabelCC" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" style="color:white;">Payment Method</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="container m-4">
+                        <form action="{{ route('items.save') }}" method="POST">
+                        @csrf
+
+                            <input type="hidden" class="form-control id_menu" name="id_menu" >
+                            <input type="hidden" class="form-control nama_menu" name="nama_menu" >
+                            <input type="hidden" class="form-control harga" name="harga" id="harga_save">
+
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                        <label>CARD NUMBER</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" name="id_bank" placeholder="Valid Card Number" required="">
+                                            <!-- <span class="input-group-addon"><i class="fa fa-credit-card"></i></span> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mr-2">
+                                <div class="col-xs-6 col-md-6">
+                                    <div class="form-group">
+                                        <label>EXPIRATION DATE</label>
+                                        <input type="text" class="form-control" name="Expiry" placeholder="MM / YY" required="">
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-md-6">
+                                    <div class="form-group">
+                                        <label>CV CODE</label>
+                                        <input type="text" class="form-control" name="CVC" placeholder="CVC" required="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                        <label>NAME OF CARD</label>
+                                        <input type="text" class="form-control" name="nameCard" placeholder="NAME AND SURNAME">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <button class="btn btn-primary" type="submit">Make a payment!</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- <div class="modal-footer justify-content-end p-0 mt-3">
+                    <button type="button" class="btn-outline-light m-0" data-dismiss="modal" aria-label="Close">Cancel</button>
+                    <button type="button" class="btn-outline-primary m-0">Confirm</button>
+                </div> -->
+            </div>
+              <!-- /.modal-content -->
+        </div>
+    </div>
+
+    <!--====== PEMBAYARAN PART ENDS ======-->
+
+
     <!--====== ABOUT PART START ======-->
 
     <section id="about" class="about_area pt-120 pb-130">
@@ -76,7 +285,8 @@
                             dengan resep warisan keluarga yang telah turun-temurun.</p>
                         <ul class="social">
                             <li><a href="https://wa.me/082224000250"><i class="lni lni-whatsapp"></i></a></li>
-                            <li><a href="https://www.instagram.com/satebalibulbangali/"><i class="lni lni-instagram-original"></i></a></li>
+                            <li><a href="https://www.instagram.com/satebalibulbangali/"><i
+                                        class="lni lni-instagram-original"></i></a></li>
                         </ul>
                     </div> <!-- row -->
                 </div>
@@ -91,6 +301,11 @@
 
 
     <section id="counter" class="counter_area pt-50 pb-95 text-center" style="background-image: url(images/sate\ wallpaper.jpg)">
+
+
+    <section id="counter" class="counter_area pt-50 pb-95 text-center"
+        style="background-image: url(images/sate\ wallpaper.jpg)">
+
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-sm-12">
@@ -116,8 +331,10 @@
     </section>
 
     <!--====== COUNTER PART ENDS ======-->
+    
 
     <!--====== GALERI FOTO PART START======-->
+    
 
     <section id="gallery" class="gallery pt-120 pb-10">
         <div class="section_title text-center pb-50">
@@ -177,7 +394,7 @@
                         </a>
                     </div>
                 </div>
-
+            
                 <div class="col-lg-3 col-md-4">
                     <div class="gallery-item">
                         <a href="images/gallery/gallery-8.jpg" class="gallery-lightbox" data-gall="gallery-item">
@@ -201,17 +418,22 @@
                 <span class="line">
                     <span class="box"></span>
                 </span>
+
+            </div> <!-- section title -->
+
+
                 <a href="/order" class="container mt-4 text-center">
                     <button class="btn btn-danger">Buy Now</button>
                 </a>
             </div> <!-- section title -->
             
+
             <ul class="filters_menu">
                 <li class="active" data-filter="*">All</li>
                 <li data-filter=".sate">Sate</li>
                 <li data-filter=".masakan">Masakan</li>
             </ul>
-            
+
             <div class="filters-content">
                 <div class="row grid">
                     @foreach($menu as $menus) 
@@ -235,14 +457,16 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div> <!-- single menu --> 
+                        </div> 
+                    </div> <!-- single menu -->
                     @endforeach
                 </div> <!-- row-->
-            </div> 
+            </div>
         </div> <!-- container -->
     </section>
+    
     <!--====== MENU PART ENDS ======-->
+
 
     <!--====== Reservasi PART START ======-->
 
@@ -259,41 +483,45 @@
                         </div> <!-- section title -->
                     </div>
                 </div> <!-- row -->
-                
+
                 <form action="/insert" method="post">
                     @csrf
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="single_form mt-30">
-                                <input name="atas_nama" id="atas_nama" type="text" placeholder="Atas Nama">
+                                <input required name="atas_nama" id="atas_nama" type="text" placeholder="Atas Nama">
                             </div> <!-- single form -->
                         </div>
                         <div class="col-lg-6">
                             <div class="single_form mt-30">
-                            <input name="no_meja" id="no_meja" type="number" placeholder="No Meja">
+
+                            <input required name="no_meja" id="no_meja" type="number" placeholder="No Meja">
+
+                                <input name="no_meja" id="no_meja" type="number" placeholder="No Meja">
+
                             </div> <!-- single form -->
                         </div>
                         <div class="col-lg-6">
                             <div class="single_form mt-30">
-                                <input name="date" id="date" type="date" placeholder="Tanggal">
+                                <input required name="date" id="date" type="date" placeholder="Tanggal">
                             </div> <!-- single form -->
                         </div>
                         <div class="col-lg-6">
                             <div class="single_form mt-30">
-                            <input name="time" id="time" type="time" placeholder="Waktu">
+                              <input required name="time" id="time" type="time" placeholder="Waktu">
                             </div> <!-- single form -->
                         </div>
                         <div class="col-lg-12">
                             <div class="single_form mt-30">
-                                <input name="jumlah" id="jumlah" type="number" placeholder="Jumlah Orang">
+                                <input required name="jumlah" id="jumlah" type="number" placeholder="Jumlah Orang">
                             </div> <!-- single form -->
                         </div>
                         <div class="col-lg-12">
                             <div class="single_form mt-30">
-                                <input name="email" id="email" type="email" placeholder="Email">
+                                <input required name="email" id="email" type="email" placeholder="Email">
                             </div> <!-- single form -->
                         </div>
-                        
+
                         <p class="form-message"></p>
                         <div class="col-lg-12">
                             <div class="single_form text-center mt-30">
@@ -305,12 +533,17 @@
             </div> <!-- container -->
         </div> <!-- contact form -->
     </section>
-                        
+
     <!--====== Reservasi PART ENDS ======-->
 
 
-    <!--====== MENGAKSES KONTAK PART START ======-->
+
+    <!--====== FEEDBACK PART START ======-->
     
+
+    <!--====== MENGAKSES KONTAK PART START ======-->
+
+
     <section id="customer" class="customer_area pt-120">
         <div class="container">
             <div class="row justify-content-center">
@@ -392,11 +625,10 @@
             </div> <!-- row -->
         </div> <!-- container -->
     </section>
+    
+    <!--====== FEEDBACK PART ENDS ======-->
 
-    <!--====== MENGAKSES KONTAK PART ENDS ======-->
-
-
-    <!--====== FEEDBACK PART START ======-->
+    <!--====== MENGAKSES KONTAK PART START ======-->
 
     <section id="contact" class="contact_area">
         <div class="contact_form pt-120 pb-130">
@@ -404,35 +636,35 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-6">
                         <div class="section_title text-center pb-30">
-                            <h4 class="title">Get in Touch</h4>
+                            <h4 class="title">Mengakses Kontak</h4>
                             <span class="line">
                                 <span class="box"></span>
                             </span>
                         </div> <!-- section title -->
                     </div>
                 </div> <!-- row -->
-
-                <form action="" method="post">
+                
+                <form action="/getintouch" method="post">
                     @csrf
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="single_form mt-30">
-                                <input name="name" id="name" type="text" placeholder="Name">
+                                <input required name="name" id="name" type="text" placeholder="Name">
                             </div> <!-- single form -->
                         </div>
                         <div class="col-lg-6">
                             <div class="single_form mt-30">
-                                <input name="email" id="email" type="email" placeholder="Email">
+                                <input required name="email" id="email" type="email" placeholder="Email">
                             </div> <!-- single form -->
                         </div>
                         <div class="col-lg-12">
                             <div class="single_form mt-30">
-                                <input name="subject" id="subject" type="text" placeholder="Subject">
+                                <input required name="subject" id="subject" type="text" placeholder="Subject">
                             </div> <!-- single form -->
                         </div>
                         <div class="col-lg-12">
                             <div class="single_form mt-30">
-                                <textarea name="message" id="message" placeholder="Message"></textarea>
+                                <textarea required name="message" id="message" placeholder="Message"></textarea>
                             </div> <!-- single form -->
                         </div>
                         <p class="form-message"></p>
@@ -448,7 +680,7 @@
         </div> <!-- contact form -->
     </section>
 
-    <!--====== FEEDBACK PART ENDS ======-->
+    <!--====== MENGAKSES KONTAK PART ENDS ======-->
 
 
     <!--====== OUTLET PART START======-->
@@ -521,7 +753,8 @@
                             </li>
                         </div>
                         <div class="outlet_content">
-                            <p>Jl. Raya Jogjakarta - Solo No.KM.17, Kb. Dalem Kidul, Kec. Prambanan, Kab. Klaten, Jawa Tengah</p>
+                            <p>Jl. Raya Jogjakarta - Solo No.KM.17, Kb. Dalem Kidul, Kec. Prambanan, Kab.
+                                Klaten, Jawa Tengah</p>
                             <a href="https://wa.me/082324404571">Telp. 082324404571</a>
                         </div>
                     </div> <!-- single outlet -->
@@ -585,6 +818,41 @@
     </section>
 
     <!--====== OUTLET PART ENDS ======-->
+    
+<script>
+    function handleRadioClick(radio) {
+        var selectedValue = radio.value;
+        window.localStorage.setItem('checked', selectedValue);
+    }
 
+    function test(id, nama, harga){
+        var valueLocal  = localStorage.getItem("checked")
+        console.log(valueLocal)
+        $('input[name="radio-card"][value="' + valueLocal + '"]').prop('checked', true);
+ 
+        $('#myModal').modal('show');
+        $('.id_menu').val(id)
+        $('.nama_menu').val(nama)
+        $('.harga').val(harga)
+
+        $('#harga_payment').empty()
+        $('#harga_payment').append('Rp. '+harga)
+    }
+
+    function next(){
+        var payment_method = $('input[name="radio-card"]:checked').val();
+
+        if(payment_method == 'CC'){
+            $('#myModalCC').modal('show');
+        }else{
+            $('#id_bank').empty()
+            $('#id_bank').append('Bank '+payment_method)
+            $('#id_bank_save').val(payment_method)
+            
+            $('#myModalBank').modal('show');
+        }
+
+    }
+</script>
 
 @endsection

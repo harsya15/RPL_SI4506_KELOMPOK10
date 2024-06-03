@@ -1,4 +1,6 @@
-<!--====== HEADER PART START ======-->
+
+
+    <!--====== HEADER PART START ======-->
 
     <section class="header_area">
         <div class="header_navbar">
@@ -65,4 +67,5 @@
         </div> <!-- header navbar -->
     </section>
 
-<!--====== HEADER PART ENDS ======-->
+    <!--====== HEADER PART ENDS ======-->
+

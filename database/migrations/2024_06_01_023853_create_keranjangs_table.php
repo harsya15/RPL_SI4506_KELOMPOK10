@@ -11,15 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('orders', function (Blueprint $table) {
+        Schema::create('keranjang', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_pemesan');
-            $table->string('nomor_hp');
-            $table->string('email');
-            $table->string('alamat');
-            $table->json('pesanan');
-            $table->integer('poin')->default(0);
-            $table->json('status')->default('sedang diproses');
+            $table->foreignId('list_menu_id')->constrained('list_menu')->cascadeOnDelete();
+            $table->bigInteger('harga');
+            $table->integer('jumlah');
+            $table->bigInteger('total_harga');
+            $table->foreignId('user_id')->constrained('users')->cascadeOnDelete();
             $table->timestamps();
         });
     }
@@ -29,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('order');
+        Schema::dropIfExists('keranjang');
     }
 };
