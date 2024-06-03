@@ -2,49 +2,6 @@
 @section('title', 'Sate Balibul')
 @section('content')
 
-    <!--====== HEADER AREA PART START ======-->
-
-    <section class="header_area">
-        <div id="home" class="header_slider slider-active">
-            <div class="single_slider bg_cover d-flex align-items-center"
-                style="background-image: url(images/wallpaper-2.png)">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-9">
-                            <div class="slider_content">
-                                <h2 class="slider_title">Sate Balibul Bang Ali</h2>
-                                <p class="wow fadeInUp">Selamat datang di Rumah Makan Sate Kambing Balibul! Kami adalah
-                                    destinasi kuliner unik yang menghadirkan kelezatan sate kambing dengan cita rasa
-                                    autentik. Kami bangga menjadi tempat berkumpul bagi pecinta masakan khas Indonesia
-                                    yang ingin menikmati cita rasa kambing yang lezat dan istimewa</p>
-                                <!-- <a href="https://rebrand.ly/cafe-ud" rel="nofollow" class="main-btn">More About Us</a> -->
-                            </div> <!-- slider content -->
-                        </div>
-                    </div> <!-- row -->
-                </div> <!-- container -->
-            </div> <!-- single slider -->
-            <div class="single_slider bg_cover d-flex align-items-center"
-                style="background-image: url(images/wallpaper-1.png)">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-9">
-                            <div class="slider_content">
-                                <h2 class="slider_title">Sate Balibul Bang Ali</h2>
-                                <p class="wow fadeInUp">Selamat datang di Rumah Makan Sate Kambing Balibul! Kami adalah
-                                    destinasi kuliner unik yang menghadirkan kelezatan sate kambing dengan cita rasa
-                                    autentik. Kami bangga menjadi tempat berkumpul bagi pecinta masakan khas Indonesia
-                                    yang ingin menikmati cita rasa kambing yang lezat dan istimewa</p>
-                                <!-- <a href="https://rebrand.ly/cafe-ud" rel="nofollow" class="main-btn">More About Us</a> -->
-                            </div> <!-- slider content -->
-                        </div>
-                    </div> <!-- row -->
-                </div> <!-- container -->
-            </div> <!-- single slider -->
-        </div> <!-- header slider -->
-    </section>
-
-    <!--====== HEADER AREA PART ENDS ======-->
-
 
     <!--====== PEMBAYARAN PART START ======-->
 
@@ -253,6 +210,50 @@
     </div>
 
     <!--====== PEMBAYARAN PART ENDS ======-->
+    
+
+    <!--====== HEADER AREA PART START ======-->
+
+    <section class="header_area">
+        <div id="home" class="header_slider slider-active">
+            <div class="single_slider bg_cover d-flex align-items-center"
+                style="background-image: url(images/wallpaper-2.png)">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="slider_content">
+                                <h2 class="slider_title">Sate Balibul Bang Ali</h2>
+                                <p class="wow fadeInUp">Selamat datang di Rumah Makan Sate Kambing Balibul! Kami adalah
+                                    destinasi kuliner unik yang menghadirkan kelezatan sate kambing dengan cita rasa
+                                    autentik. Kami bangga menjadi tempat berkumpul bagi pecinta masakan khas Indonesia
+                                    yang ingin menikmati cita rasa kambing yang lezat dan istimewa</p>
+                                <!-- <a href="https://rebrand.ly/cafe-ud" rel="nofollow" class="main-btn">More About Us</a> -->
+                            </div> <!-- slider content -->
+                        </div>
+                    </div> <!-- row -->
+                </div> <!-- container -->
+            </div> <!-- single slider -->
+            <div class="single_slider bg_cover d-flex align-items-center"
+                style="background-image: url(images/wallpaper-1.png)">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="slider_content">
+                                <h2 class="slider_title">Sate Balibul Bang Ali</h2>
+                                <p class="wow fadeInUp">Selamat datang di Rumah Makan Sate Kambing Balibul! Kami adalah
+                                    destinasi kuliner unik yang menghadirkan kelezatan sate kambing dengan cita rasa
+                                    autentik. Kami bangga menjadi tempat berkumpul bagi pecinta masakan khas Indonesia
+                                    yang ingin menikmati cita rasa kambing yang lezat dan istimewa</p>
+                                <!-- <a href="https://rebrand.ly/cafe-ud" rel="nofollow" class="main-btn">More About Us</a> -->
+                            </div> <!-- slider content -->
+                        </div>
+                    </div> <!-- row -->
+                </div> <!-- container -->
+            </div> <!-- single slider -->
+        </div> <!-- header slider -->
+    </section>
+
+    <!--====== HEADER AREA PART ENDS ======-->
 
 
     <!--====== ABOUT PART START ======-->
@@ -301,11 +302,6 @@
 
 
     <section id="counter" class="counter_area pt-50 pb-95 text-center" style="background-image: url(images/sate\ wallpaper.jpg)">
-
-
-    <section id="counter" class="counter_area pt-50 pb-95 text-center"
-        style="background-image: url(images/sate\ wallpaper.jpg)">
-
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-sm-12">
@@ -418,16 +414,13 @@
                 <span class="line">
                     <span class="box"></span>
                 </span>
-
             </div> <!-- section title -->
-
-
+            <div>
                 <a href="/order" class="container mt-4 text-center">
                     <button class="btn btn-danger">Buy Now</button>
                 </a>
-            </div> <!-- section title -->
+            </div>
             
-
             <ul class="filters_menu">
                 <li class="active" data-filter="*">All</li>
                 <li data-filter=".sate">Sate</li>
@@ -494,11 +487,7 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="single_form mt-30">
-
-                            <input required name="no_meja" id="no_meja" type="number" placeholder="No Meja">
-
-                                <input name="no_meja" id="no_meja" type="number" placeholder="No Meja">
-
+                                <input required name="no_meja" id="no_meja" type="number" placeholder="No Meja">
                             </div> <!-- single form -->
                         </div>
                         <div class="col-lg-6">

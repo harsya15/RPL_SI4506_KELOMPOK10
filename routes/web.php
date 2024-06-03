@@ -91,7 +91,6 @@ Route::middleware(['auth', KaryawanMiddleware::class])->group(function(){
 
 Route::middleware(['auth'])->group(function () {
     // Routes yang memerlukan auth
-    Route::get('/admin', [AdminController::class, 'index'])->name('admin');
     Route::get('/order', [OrderController::class, 'index'])->name('order.index');
     Route::post('/order/submit', [OrderController::class, 'submitOrder'])->name('submitOrder');
     Route::get('/order/success', [OrderController::class, 'showSuccessPage'])->name('orderSuccess');
