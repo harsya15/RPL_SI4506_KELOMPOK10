@@ -325,6 +325,7 @@
     
 
     <!--====== GALERI FOTO PART START======-->
+    
 
     <section id="gallery" class="gallery pt-120 pb-10">
         <div class="section_title text-center pb-50">
