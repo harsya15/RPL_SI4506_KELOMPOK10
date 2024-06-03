@@ -15,9 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('nama_pemesan');
             $table->string('nomor_hp');
+            $table->string('email');
             $table->string('alamat');
             $table->json('pesanan');
             $table->integer('poin')->default(0);
+            $table->json('status')->default('sedang diproses');
             $table->timestamps();
         });
     }

@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -37,30 +38,40 @@
 
     @yield('content')
 
+
     @include('layouts.landingPage.partial.footer')
 
 </body>
 
-<script src="{{ asset('frontend') }}/js/vendor/jquery-3.5.1.min.js"></script>
-<script src="{{ asset('frontend') }}/js/vendor/modernizr-3.7.1.min.js"></script>
+    <script src="{{asset('frontend')}}/js/vendor/jquery-3.5.1.min.js"></script>
+    <script src="{{asset('frontend')}}/js/vendor/modernizr-3.7.1.min.js"></script>
 
-<script src="{{ asset('frontend') }}/js/boostrap.js"></script>
-<script src="{{ asset('frontend') }}/js/jquery.easing.min.js"></script>
-<script src="{{ asset('frontend') }}/js/main.js"></script>
-<script src="{{ asset('frontend') }}/js/popper.min.js"></script>
-<script src="{{ asset('frontend') }}/js/scrolling-nav.js"></script>
-<script src="{{ asset('frontend') }}/js/slick.min.js"></script>
-<script src="{{ asset('frontend') }}/js/wow.min.js"></script>
-<script src="{{ asset('frontend') }}/js/glightbox.min.js"></script>
+    <script src="{{asset('frontend')}}/js/boostrap.js"></script>
+    <script src="{{asset('frontend')}}/js/jquery.easing.min.js"></script>
+    <script src="{{asset('frontend')}}/js/main.js"></script>
+    <script src="{{asset('frontend')}}/js/popper.min.js"></script>
+    <script src="{{asset('frontend')}}/js/scrolling-nav.js"></script>
+    <script src="{{asset('frontend')}}/js/slick.min.js"></script>
+    <script src="{{asset('frontend')}}/js/wow.min.js"></script>
+    <script src="{{asset('frontend')}}/js/glightbox.min.js"></script>
 
-<!-- isotope js -->
-<script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
+    <!-- isotope js -->
+    <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
 
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    @stack('scripts')
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
+
+</html>
         
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </html>
+
