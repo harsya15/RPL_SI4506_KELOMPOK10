@@ -3,8 +3,16 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+
     <title>@yield('title')</title>
+
+    <link rel="shortcut icon" href="{{asset('images')}}/logobalibul.png" type="image/png">
+
+    <link rel="stylesheet" href="{{asset('frontend')}}/css/animate.css">
+    
+    <link rel="stylesheet" href="{{asset('frontend')}}/css/bootstrap.css">
 
     <link href="https://fonts.googleapis.com/css?family=Philosopher:400,700|Poppins:300,400,500,600,700,800&display=swap"
         rel="stylesheet">
@@ -14,19 +22,15 @@
 
     <link rel="stylesheet" href="{{ asset('frontend') }}/css/animate.css">
 
-    <link rel="stylesheet" href="{{ asset('frontend') }}/css/bootstrap.css">
-    <link rel="stylesheet" href="{{ asset('frontend') }}/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{asset('frontend')}}/css/LineIcons.css">
 
     <link rel="stylesheet" href="{{ asset('frontend') }}/css/default.css">
 
-    <link rel="stylesheet" href="{{ asset('frontend') }}/css/LineIcons-min.css">
-    <link rel="stylesheet" href="{{ asset('frontend') }}/css/LineIcons.css">
+    <link rel="stylesheet" href="{{asset('frontend')}}/css/style.css">
+
+    <link rel="stylesheet" href="{{asset('frontend')}}/css/glightbox.min.css">
 
     <link rel="stylesheet" href="{{ asset('frontend') }}/css/slick.css">
-
-    <link rel="stylesheet" href="{{ asset('frontend') }}/css/style-min.css">
-    <link rel="stylesheet" href="{{ asset('frontend') }}/css/style.css">
-    <link rel="stylesheet" href="{{ asset('frontend') }}/css/glightbox.min.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     
@@ -37,7 +41,6 @@
     @include('layouts.landingPage.partial.header')
 
     @yield('content')
-
 
     @include('layouts.landingPage.partial.footer')
 
@@ -66,12 +69,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         
-
-</html>
-        
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </html>
 

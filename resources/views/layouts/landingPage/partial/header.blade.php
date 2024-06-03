@@ -1,6 +1,7 @@
 
+
     <!--====== HEADER PART START ======-->
-    
+
     <section class="header_area">
         <div class="header_navbar">
             <div class="container">
@@ -42,7 +43,7 @@
                                     <div class="user_option ml-5">
                                         <a href="{{ route('keranjang.index') }}" class="cart_link">
                                             <i class="lni lni-cart"></i>
-                                            <span class="shop_circle">{{ $cart_count }}</span>
+                                            <span class="shop_circle">{{ $keranjang_count }}</span>
                                         </a>
                                     </div>
                                     @if (Auth::check())
@@ -64,42 +65,6 @@
                 </div> <!-- row -->
             </div> <!-- container -->
         </div> <!-- header navbar -->
-        <div id="home" class="header_slider slider-active">
-            <div class="single_slider bg_cover d-flex align-items-center"
-                style="background-image: url(images/wallpaper-2.png)">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-9">
-                            <div class="slider_content">
-                                <h2 class="slider_title">Sate Balibul Bang Ali</h2>
-                                <p class="wow fadeInUp">Selamat datang di Rumah Makan Sate Kambing Balibul! Kami adalah
-                                    destinasi kuliner unik yang menghadirkan kelezatan sate kambing dengan cita rasa
-                                    autentik. Kami bangga menjadi tempat berkumpul bagi pecinta masakan khas Indonesia
-                                    yang ingin menikmati cita rasa kambing yang lezat dan istimewa</p>
-                                <!-- <a href="https://rebrand.ly/cafe-ud" rel="nofollow" class="main-btn">More About Us</a> -->
-                            </div> <!-- slider content -->
-                        </div>
-                    </div> <!-- row -->
-                </div> <!-- container -->
-            </div> <!-- single slider -->
-            <div class="single_slider bg_cover d-flex align-items-center"
-                style="background-image: url(images/wallpaper-1.png)">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-9">
-                            <div class="slider_content">
-                                <h2 class="slider_title">Sate Balibul Bang Ali</h2>
-                                <p class="wow fadeInUp">Selamat datang di Rumah Makan Sate Kambing Balibul! Kami adalah
-                                    destinasi kuliner unik yang menghadirkan kelezatan sate kambing dengan cita rasa
-                                    autentik. Kami bangga menjadi tempat berkumpul bagi pecinta masakan khas Indonesia
-                                    yang ingin menikmati cita rasa kambing yang lezat dan istimewa</p>
-                                <!-- <a href="https://rebrand.ly/cafe-ud" rel="nofollow" class="main-btn">More About Us</a> -->
-                            </div> <!-- slider content -->
-                        </div>
-                    </div> <!-- row -->
-                </div> <!-- container -->
-            </div> <!-- single slider -->
-        </div> <!-- header slider -->
     </section>
 
     <!--====== HEADER PART ENDS ======-->

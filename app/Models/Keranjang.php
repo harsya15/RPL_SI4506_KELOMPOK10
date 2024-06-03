@@ -8,14 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Keranjang extends Model
 {
     use HasFactory;
+    
     protected $table = 'keranjang';
-    protected $guarded = ['id'];
 
-    public function list_menu()
-    {
-        return $this->belongsTo(Menu::class, 'list_menu_id', 'id');
-    }
+    protected $fillable = [
+        'id', 'nama_menu', 'deskripsi_menu', 'harga_menu', 'gambar_menu', 'jumlah', 'created_at', 'updated_at'
+    ];
 }
-
-
-

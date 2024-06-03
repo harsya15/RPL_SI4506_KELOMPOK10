@@ -3,44 +3,65 @@
 namespace App\Http\Controllers;
 
 use App\Models\Keranjang;
+use App\Models\Menu;
 use Illuminate\Http\Request;
 
 class KeranjangController extends Controller
 {
     public function index()
     {
-        $items = Keranjang::where('user_id', auth()->id())->latest()->get();
-        return view('keranjang.index', [
-            'title' => 'Keranjang',
-            'items' => $items
-        ]);
+        $keranjang = Keranjang::all();
+        $keranjang_count = Keranjang::count();
+        return view('keranjang.index',compact('keranjang', 'keranjang_count'));
     }
 
-    public function update()
+    
+    public function store($id)
     {
-        request()->validate([
-            'id' => ['required'],
-            'jumlah' => ['required']
-        ]);
+        $menu = Menu::findOrFail($id);
 
-        $item = Keranjang::findOrFail(request('id'));
-        $harga = $item->list_menu->harga_menu;
-        $item->update([
-            'harga' => $harga,
-            'jumlah' => request('jumlah'),
-            'total_harga' => $harga * request('jumlah')
-        ]);
+        // Check if menu already exists in keranjang
+        $keranjang = Keranjang::where('nama_menu', $menu->nama_menu)->first();
 
-        return response()->json([
-            'status' => true
-        ]);
+        if ($keranjang){
+            // If menu already exists, increment jumlah by 1
+            $keranjang->jumlah += 1;
+            $keranjang->save();
+        } else {
+            // If menu doesn't exist, create a new keranjang entry
+            Keranjang::create([
+                'nama_menu' => $menu['nama_menu'],
+                'deskripsi_menu'  => $menu['deskripsi_menu'],
+                'harga_menu' => $menu['harga_menu'] ,
+                'gambar_menu'  => $menu['gambar_menu'],
+                'jumlah' => 1,
+            ]);
+        }
+
+        return redirect(route('landingPage'));
     }
-    public function destroy($id)
+
+    public function update(Request $request)
     {
-        $item = Keranjang::findOrFail($id);
-        $item->delete();
-        return redirect()->back();
+        $validated = $request->validate([
+            'id' => 'required|exists:keranjang,id',
+            'quantity' => 'required|integer|min=1'
+        ]);
+
+        $keranjang = Keranjang::find($request->id);
+        $keranjang->jumlah = $request->quantity;
+        $keranjang->save();
+
+        $newTotal = $keranjang->jumlah * $keranjang->harga_menu;
+
+        return response()->json(['newTotal' => $newTotal]);
+    }
+
+
+    public function delete($id)
+    {
+        $keranjang = Keranjang::findOrFail($id);
+        $keranjang->delete();
+        return redirect(route('keranjang.index'));
     }
 }
-
-

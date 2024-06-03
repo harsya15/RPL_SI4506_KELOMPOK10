@@ -1,138 +1,99 @@
 @extends('layouts.landingPage.app')
 @section('title', 'Sate Balibul')
-@section('content')
+@section('content')   
 
-    <!--====== ABOUT PART START ======-->
-
-    <section id="about" class="about_area pt-120 pb-130">
+    <section id="keranjang" class="ftco-section layout_padding pt-120">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="section_title text-center pb-10">
-                        <h4 class="title">Keranjang</h4>
-                        <span class="line">
-                            <span class="box"></span>
-                        </span>
-                    </div> <!-- section title -->
-                </div>
-            </div>
-            <div class="row mt-4">
-                <div class="col-md-12">
-                    <table class="table table-hover">
-                        <thead>
-                            <tr>
-                                <th scope="col">Gambar</th>
-                                <th scope="col">Produk</th>
-                                <th scope="col">Harga</th>
-                                <th scope="col">Jumlah</th>
-                                <th scope="col">Total</th>
-                                <th scope="col">Aksi</th>
-                            </tr>
-                        </thead>
-                        <tbody id="cart-items">
-                            @foreach ($items as $item)
-                                <tr>
-                                    <td>
-                                        <img src="{{ asset('uploads/menu/' . $item->list_menu->gambar_menu) }}"
-                                            class="img-fluid" alt="" style="max-height: 80px">
-                                    </td>
-                                    <td>{{ $item->list_menu->nama_menu }}</td>
-                                    <td>Rp {{ number_format($item->harga, 0, ',', '.') }}</td>
-                                    <td>
-                                        <input type="number" class="form-control jumlah" id="jumlah"
-                                            value="{{ $item->jumlah }}" name="jumlah" min="1" style="width: 70px">
-                                    </td>
-                                    <td>Rp {{ number_format($item->total_harga, 0, ',', '.') }}</td>
-                                    <td>
-                                        <button class="btn btn-primary btn-sm btnUpdate"
-                                            data-id="{{ $item->id }}">Update</button>
-                                        <form action="{{ route('keranjang.destroy', $item->id) }}" method="post"
-                                            class="d-inline">
-                                            @csrf
-                                            @method('delete')
-                                            <button class="btn btn-danger btn-sm" onclick="removeItem(this)">Hapus</button>
-                                        </form>
-                                    </td>
-                                </tr>
+            <div class="section_title text-center pb-25">
+                <h4 class="title">Keranjang</h4>
+                <span class="line">
+                    <span class="box"></span>
+                </span>
+            </div> <!-- section title -->
+    		<div class="row mt-20">
+    			<div class="table-wrap">
+					<table class="table">
+						<thead class="thead-primary">
+						    <tr>
+                                <th>Number</th>
+                                <th>Image</th>
+                                <th>Product</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Action</th>
+						    </tr>
+						</thead>
+						<?php $no = 1 ?>
+						@if (count($keranjang) > 0)
+						<tbody>
+                            @foreach($keranjang as $keranjangs)
+						    <tr class="alert" role="alert">
+						    	<td class="number">
+						    		{{ $no++ }}
+						    	</td>
+						    	<td>
+                                    <img class="img" src="{{ url('uploads/menu').'/'.$keranjangs->gambar_menu }}" alt="">
+						    	</td>
+						        <td>
+									<h4>{{ $keranjangs->nama_menu }}</h4>
+						        </td>
+						        <td>{{ $keranjangs->harga_menu }}</td>
+						        <td class="quantity">{{ $keranjangs->jumlah }}</td>
+						        <td class="aksi">
+									<a class="btn btn-warning ubah-button" href="">Ubah</a>
+									<form method="post" action="{{ route('keranjang.delete', $keranjangs->id) }}" style="display: inline-block;">
+										@csrf
+										@method('DELETE')
+										<button class="btn btn-danger" onclick="return confirm('Hapus Data?')">Hapus</button>
+									</form>
+				        	    </td>
+						    </tr>
                             @endforeach
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <td colspan="4" class="text-center">Total Harga</td>
-                                <th colspan="2">Rp {{ number_format($items->sum('total_harga'), 0, ',', '.') }}</th>
-                            </tr>
-                        </tfoot>
-                    </table>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6"></div>
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="text-center mb-4">Form Checkout</h4>
-                            <form action="" method="">
-                                @csrf
-                                <div class='form-group'>
-                                    <label for='metode_pembayaran'>Metode Pembayaran <span
-                                            class='text-danger'>*</span></label>
-                                    <select name='metode_pembayaran' id='metode_pembayaran'
-                                        class='form-control @error('metode_pembayaran') is-invalid @enderror'>
-                                        <option value='' selected disabled>Pilih Metode Pembayaran</option>
-                                    </select>
-                                    @error('metode_pembayaran')
-                                        <div class='invalid-feedback'>
-                                            {{ $message }}
-                                        </div>
-                                    @enderror
-                                </div>
-                                <div class='form-group mb-3'>
-                                    <label for='catatan' class='mb-2'>Catatan <span class='text-danger'>*</span></label>
-                                    <textarea name='catatan' id='catatan' cols='30' rows='3'
-                                        class='form-control @error('catatan') is-invalid @enderror'>{{ old('catatan') }}</textarea>
-                                    @error('catatan')
-                                        <div class='invalid-feedback'>
-                                            {{ $message }}
-                                        </div>
-                                    @enderror
-                                </div>
-                                <div class="form-group">
-                                    <button class="btn btn-primary btn-block">Checkout Sekarang</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </section>
-@endsection
-@push('scripts')
-    <script>
-        $(function() {
-            $('body').on('click', '.btnUpdate', function() {
-                let row = $(this).closest('tr');
-                let jumlah = row.find('input[name="jumlah"]').val();
-                let id = $(this).data('id');
+						</tbody>
+						@else
+						<tbody>
+							<tr class="alert" role="alert">
+								<td colspan="7">Keranjang Kosong</td>
+							</tr>
+						</tbody>
+						@endif
+					</table>
+				</div>
+    		</div>
 
-                $.ajax({
-                    url: '{{ route('keranjang.update') }}',
-                    dataType: 'JSON',
-                    type: 'POST',
-                    data: {
-                        "_token": "{{ csrf_token() }}",
-                        id: id,
-                        jumlah: jumlah
-                    },
-                    success: function(response) {
-                        if (response.status) {
-                            location.reload();
-                        }
-                    },
-                    error: function(error) {
-                        console.log(error);
-                    }
-                })
-            });
-        })
-    </script>
-@endpush
+			<div class="row">
+				<div class="form-group">
+					<label for="request">Request:</label>
+					<textarea class="form-control" id="request" name="request"></textarea>
+				</div>
+			</div>
+
+    		<div class="row justify-content-end">
+    			<div class="col col-lg-5 col-md-6 mt-5 cart-wrap ftco-animate">
+    				<div class="cart-total mb-3">
+    					<h3>Cart Totals</h3>
+    					<p class="d-flex">
+    						<span>Subtotal</span>
+    						<span>$20.60</span>
+    					</p>
+    					<p class="d-flex">
+    						<span>Delivery</span>
+    						<span>$0.00</span>
+    					</p>
+    					<p class="d-flex">
+    						<span>Discount</span>
+    						<span>$3.00</span>
+    					</p>
+    					<hr>
+    					<p class="d-flex">
+    						<span>Total</span>
+    						<span>$17.60</span>
+    					</p>
+    				</div>
+    				<p class="text-center"><a href="" class="btn btn-primary py-3 px-4">Proceed to Checkout</a></p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+@endsection

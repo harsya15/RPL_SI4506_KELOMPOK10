@@ -13,6 +13,7 @@ use App\Http\Controllers\KeranjangController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\RatingController;
+use App\Http\Controllers\ReservasiController;
 use App\Http\Controllers\UserController;
 use App\Http\Middleware\CustomerMiddleware;
 use App\Http\Middleware\KaryawanMiddleware;
@@ -29,6 +30,11 @@ Route::middleware(['auth', CustomerMiddleware::class])->group(function(){
     Route::get('keranjang', [KeranjangController::class, 'index'])->name('keranjang.index');
     Route::post('/keranjang/update', [KeranjangController::class, 'update'])->name('keranjang.update');
     Route::delete('/keranjang/{id}', [KeranjangController::class, 'destroy'])->name('keranjang.destroy');
+
+    Route::get('/keranjang', [KeranjangController::class, 'index'])->name('keranjang.index');
+    Route::post('/keranjang/store/{id}', [KeranjangController::class, 'store'])->name('keranjang.store');
+    Route::put('/keranjang/update', [KeranjangController::class, 'update'])->name('keranjang.update');
+    Route::delete('/keranjang/delete/{id}', [KeranjangController::class, 'delete'])->name('keranjang.delete');
 
     Route::get('/order', [OrderController::class, 'index'])->name('order.index');
     Route::post('/order/submit', [OrderController::class, 'submitOrder'])->name('submitOrder');
@@ -75,6 +81,11 @@ Route::middleware(['auth', KaryawanMiddleware::class])->group(function(){
     Route::post('/Cabang/store', [CabangController::class, 'store'])->name('cabang.store');
     Route::post('/Cabang/update/{id}', [CabangController::class, 'update'])->name('cabang.update');
     Route::delete('/Cabang/delete/{id}', [CabangController::class, 'delete'])->name('cabang.delete');
+
+    Route::get('/Reservasi', [ReservasiController::class, 'index'])->name('Reservasi.index');
+    Route::get('/Reservasi/edit/{id}', [ReservasiController::class, 'edit'])->name('Reservasi.edit');
+    Route::post('/Reservasi/update/{id}', [ReservasiController::class, 'update'])->name('Reservasi.update');
+    Route::delete('/Reservasi/delete/{id}', [ReservasiController::class, 'delete'])->name('Reservasi.delete');
 
 });
 
@@ -161,5 +172,4 @@ Route::post('/items/save', [ItemController::class, 'save'])->name('items.save');
 // Route untuk otentikasi
 Auth::routes();
 
-// Route untuk halaman home
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/admin', [UserController::class, 'index'])->name('admin');
