@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Keranjang;
 use App\Models\Menu;
 use Illuminate\Http\Request;
 
@@ -10,6 +11,7 @@ class HomeController extends Controller
     public function index()
     {
         $menu = Menu::all();
-        return view('landingPage', compact('menu'));
+        $keranjang_count = Keranjang::count(); 
+        return view('landingPage', compact('menu', 'keranjang_count'));
     }
 }

@@ -84,4 +84,31 @@ class ReservasiController extends Controller
             ], $statusCode);
         }
     }
+
+    public function index()
+    {
+        $reservasi = Reservasi::all();
+        return view('Reservasi.index', compact('reservasi'));
+    }
+
+    public function edit($id)
+    {
+        $reservasi = Reservasi::findOrFail($id);
+        return view('Reservasi.edit', compact('reservasi'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $data = $request->all();
+        $reservasi = Reservasi::findOrFail($id);
+        $reservasi->update($data);
+        return redirect(route('Reservasi.index'))->with('success', 'Data berhasil diubah');
+    }
+
+    public function delete($id)
+    {
+        $reservasi = Reservasi::findOrFail($id);
+        $reservasi->delete();
+        return redirect(route('Reservasi.index'))->with('success', 'Data berhasil dihapus');
+    }
 }
