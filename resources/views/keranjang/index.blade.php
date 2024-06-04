@@ -89,7 +89,7 @@
     					</p>
     				</div>
     				<p class="text-center">
-						<button type="button" class="btn btn-primary py-3 px-4" onclick="test({{ $total }})">Proceed to Checkout</button>
+						<button type="button" class="btn btn-primary py-3 px-4" onclick="test( '{{ $keranjang->id }}' )">Proceed to Checkout</button>
 					</p>
     			</div>
     		</div>
@@ -97,12 +97,12 @@
     </section>
 	<style>
 		.badan{
-        width:100vw;
-        height:100vh;
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        background:radial-gradient(circle at 75% 50%, #BFDCE5 25%, #F5E9CF 75%);
+			width:100vw;
+			height:100vh;
+			display:flex;
+			align-items:center;
+			justify-content:center;
+			background:radial-gradient(circle at 75% 50%, #BFDCE5 25%, #F5E9CF 75%);
         } 
         button.btn {
             background-color:#2B3467;

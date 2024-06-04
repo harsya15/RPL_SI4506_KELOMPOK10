@@ -12,6 +12,6 @@ class Keranjang extends Model
     protected $table = 'keranjang';
 
     protected $fillable = [
-        'id', 'nama_menu', 'deskripsi_menu', 'harga_menu', 'gambar_menu', 'jumlah', 'created_at', 'updated_at'
+        'id', 'nama_menu', 'deskripsi_menu', 'harga_menu', 'gambar_menu', 'jumlah', 'subtotal', 'created_at', 'updated_at'
     ];
 }
