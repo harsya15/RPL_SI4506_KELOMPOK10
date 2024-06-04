@@ -89,7 +89,9 @@
     					</p>
     				</div>
     				<p class="text-center">
-						<button type="button" class="btn btn-primary py-3 px-4" onclick="test( '{{ $keranjang->id }}' )">Proceed to Checkout</button>
+						<form action="">
+							<button type="button" class="btn btn-primary py-3 px-4" onclick="test( '{{ $menu->id }}', '{{ $menu->nama_menu }}', '{{ $menu->harga_menu }}' )">Proceed to Checkout</button>
+						</form>
 					</p>
     			</div>
     		</div>

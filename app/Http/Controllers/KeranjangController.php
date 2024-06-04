@@ -11,9 +11,9 @@ class KeranjangController extends Controller
     public function index()
     {
         $keranjang = Keranjang::all();
-        $total = $keranjang->sum('subtotal');
+        $menu = Menu::all();
         $keranjang_count = Keranjang::count();
-        return view('keranjang.index',compact('keranjang', 'keranjang_count'));
+        return view('keranjang.index',compact('keranjang','menu', 'keranjang', 'keranjang_count'));
     }
 
     
