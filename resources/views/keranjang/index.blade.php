@@ -28,16 +28,10 @@
 						<tbody>
                             @foreach($keranjang as $keranjangs)
 						    <tr class="alert" role="alert">
-						    	<td class="number">
-						    		{{ $no++ }}
-						    	</td>
-						    	<td>
-                                    <img class="img" src="{{ url('uploads/menu').'/'.$keranjangs->gambar_menu }}" alt="">
-						    	</td>
-						        <td>
-									<h4>{{ $keranjangs->nama_menu }}</h4>
-						        </td>
-						        <td>{{ $keranjangs->harga_menu }}</td>
+						    	<td class="number">{{ $no++ }}</td>
+						    	<td><img class="img" src="{{ url('uploads/menu').'/'.$keranjangs->gambar_menu }}" alt=""></td>
+						        <td><h4>{{ $keranjangs->nama_menu }}</h4></td>
+						        <td><p>{{ $keranjangs->harga_menu }}</p></td>
 						        <td class="quantity">{{ $keranjangs->jumlah }}</td>
 						        <td class="aksi">
 									<a class="btn btn-warning ubah-button" href="">Ubah</a>
@@ -61,10 +55,14 @@
 				</div>
     		</div>
 
-			<div class="row">
-				<div class="form-group">
-					<label for="request">Request:</label>
-					<textarea class="form-control" id="request" name="request"></textarea>
+			<div class="row mt-30">
+				<div class="container">
+					<div id="form">
+						<form action="">
+							<label for="request">Catatan:</label>
+							<input name="request" type="text" required placeholder="Contoh: tambahan bumbu">
+						</form>
+					</div>
 				</div>
 			</div>
 
