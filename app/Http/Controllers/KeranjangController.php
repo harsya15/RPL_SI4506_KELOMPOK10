@@ -26,6 +26,7 @@ class KeranjangController extends Controller
         if ($keranjang){
             // If menu already exists, increment jumlah by 1
             $keranjang->jumlah += 1;
+            $keranjang->subtotal = $keranjang->harga_menu * $keranjang->jumlah;
             $keranjang->save();
         } else {
             // If menu doesn't exist, create a new keranjang entry
@@ -35,6 +36,7 @@ class KeranjangController extends Controller
                 'harga_menu' => $menu['harga_menu'] ,
                 'gambar_menu'  => $menu['gambar_menu'],
                 'jumlah' => 1,
+                'subtotal' => $menu['harga_menu'],
             ]);
         }
 

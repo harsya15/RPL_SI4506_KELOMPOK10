@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer('harga_menu');
             $table->string('gambar_menu');
             $table->integer('jumlah');
+            $table->integer('subtotal');
             $table->timestamps();
         });
     }
