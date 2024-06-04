@@ -13,8 +13,7 @@ return new class extends Migration
     {
         Schema::create('data_pembelian', function (Blueprint $table) {
             $table->id();
-            $table->string('id_menu');
-            $table->string('nama_menu');
+            $table->integer('total');
             $table->string('bank');
             $table->timestamps();
         });

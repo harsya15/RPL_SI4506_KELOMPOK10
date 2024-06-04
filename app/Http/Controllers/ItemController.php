@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Item;
+use App\Models\Keranjang;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Session;
@@ -20,14 +21,12 @@ class ItemController extends Controller
 
         // Create a new item using the validated data
         $item = new Item();
-        $item->id_menu      = $request['id_menu'];
-        $item->nama_menu    = $request['nama_menu'];
+        $item->total        = $request['total'];
         $item->bank         = $request['id_bank'];
         $item->save();
 
-        Session::put('email_nama_menu', $request['nama_menu']);
+        Session::put('email_total', $request['total']);
         Session::put('email_bank', $request['id_bank']);
-        Session::put('email_harga', $request['harga']);
 
         $details = [
             'title' => 'Mail from Admin Restoran',

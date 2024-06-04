@@ -20,6 +20,7 @@ use App\Http\Middleware\ManagerMiddleware;
 Route::get('/', [HomeController::class, 'index'])->name('landingPage');
 
 Route::middleware(['auth', CustomerMiddleware::class])->group(function(){
+    Route::get('/Pembayaran', [ItemController::class, 'index']);
     Route::post('/insert', 'App\Http\Controllers\ReservasiController@insert');
     Route::post('/getintouch', 'App\Http\Controllers\ReservasiController@getintouch');
     Route::post('/insert', 'App\Http\Controllers\KontakController@insert');
