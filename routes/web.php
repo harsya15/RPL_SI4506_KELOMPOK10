@@ -47,3 +47,5 @@ Route::get('/order/input-nomor-hp', [OrderController::class, 'inputNomorHp'])->n
 Route::post('/order/check-points', [OrderController::class, 'checkPoints'])->name('order.checkPoints');
 Route::post('/order/select-items', [OrderController::class, 'selectItems'])->name('order.selectItems');
 Route::post('/order/process-claim', [OrderController::class, 'processClaim'])->name('order.processClaim');
+
+Route::get('/Pembayaran', [Itemcontroller::class, 'index']);
