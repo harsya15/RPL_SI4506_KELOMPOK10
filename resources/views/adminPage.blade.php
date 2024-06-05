@@ -13,6 +13,7 @@
                     <li class="list-group-item px-4 bg-transparent" style="border: none"><a style="text-decoration: none" class="text-black fw-bold" href="/Rating">Daftar Rating Customer</a></li>
                     <li class="list-group-item px-4 bg-transparent" style="border: none"><a style="text-decoration: none" class="text-black fw-bold" href="/Cabang">Daftar Cabang</a></li>
                     <li class="list-group-item px-4 bg-transparent" style="border: none"><a style="text-decoration: none" class="text-black fw-bold" href="/Reservasi">Daftar Reservasi</a></li>
+                    <li class="list-group-item px-4 bg-transparent" style="border: none"><a style="text-decoration: none" class="text-black fw-bold" href="/pesanan">Daftar Pesanan</a></li>
                     @if (auth()->user()->role == 'karyawan')
                     <li class="list-group-item px-4 bg-transparent" style="border: none"><a style="text-decoration: none" class="text-black fw-bold" href="/Karyawan/laporan">Laporan Kinerja</a></li>
                     @elseif (auth()->user()->role == 'manager')

@@ -45,6 +45,8 @@ Route::middleware(['auth', CustomerMiddleware::class])->group(function(){
     Route::post('/order/select-items', [OrderController::class, 'selectItems'])->name('order.selectItems');
     Route::post('/order/process-claim', [OrderController::class, 'processClaim'])->name('order.processClaim');
 
+    Route::post('/pesanan/store', [KeranjangController::class, 'simpan'])->name('pesanan.store');
+
 });
 
 Route::middleware(['auth', KaryawanMiddleware::class])->group(function(){
@@ -85,6 +87,10 @@ Route::middleware(['auth', KaryawanMiddleware::class])->group(function(){
     Route::get('/Reservasi/edit/{id}', [ReservasiController::class, 'edit'])->name('Reservasi.edit');
     Route::post('/Reservasi/update/{id}', [ReservasiController::class, 'update'])->name('Reservasi.update');
     Route::delete('/Reservasi/delete/{id}', [ReservasiController::class, 'delete'])->name('Reservasi.delete');
+
+    Route::get('/pesanan', [KeranjangController::class, 'lihat'])->name('pesanan.index');
+    Route::post('/pesanan/sendMail', 'App\Http\Controllers\KeranjangController@insert');
+    Route::get('/pesanan/updatestatus/{id}/{status}', [KeranjangController::class, 'updatestatus'])->name('pesanan.updatestatus');
 
 });
 

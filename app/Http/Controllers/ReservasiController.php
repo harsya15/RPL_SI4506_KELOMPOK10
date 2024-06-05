@@ -26,25 +26,25 @@ class ReservasiController extends Controller
             'jumlah_orang' => $jumlah_orang
         );
 
-        Session::put('email_no_meja', $no_meja);
-        Session::put('email_atas_nama', $atas_nama);
-        Session::put('email_date', $date);
-        Session::put('email_time', $time);
-        Session::put('email_jumlah_orang', $jumlah_orang);
+        // Session::put('email_no_meja', $no_meja);
+        // Session::put('email_atas_nama', $atas_nama);
+        // Session::put('email_date', $date);
+        // Session::put('email_time', $time);
+        // Session::put('email_jumlah_orang', $jumlah_orang);
 
-        $data["title"] = "From Admin Restoran";
-        $data["body"] = "Your reservation have been Placed Successfully";
-        $data['email'] = $email;
+        // $data["title"] = "From Admin Restoran";
+        // $data["body"] = "Your reservation have been Placed Successfully";
+        // $data['email'] = $email;
         
-        Mail::send('mails.Pesan', $data, function($message)use($data) {
-            $message->to($data["email"])
-                    ->subject($data["title"]);
-        });
+        // Mail::send('mails.Pesan', $data, function($message)use($data) {
+        //     $message->to($data["email"])
+        //             ->subject($data["title"]);
+        // });
 
         Reservasi::create($data);
         //send mail
-        // $this->sendmail($request->email,'Reservasi Meja','Meja Nomor '.$no_meja.' berhasil dipesan');
-        //return redirect with alert
+        $this->sendmail($request->email,'Reservasi Meja','Meja Nomor '.$no_meja.' berhasil dipesan');
+        // return redirect with alert
         return redirect('/')->with('alert', 'Meja Nomor '.$no_meja.' berhasil dipesan');
     }
 
@@ -137,18 +137,18 @@ class ReservasiController extends Controller
         $message = $request->message;
         $email = $request->email;
 
-        Session::put('email_getintouch_name', $name);
-        Session::put('email_getintouch_subject', $subject);
-        Session::put('email_getintouch_message', $message);
+        // Session::put('email_getintouch_name', $name);
+        // Session::put('email_getintouch_subject', $subject);
+        // Session::put('email_getintouch_message', $message);
 
-        $data["title"] = "From Admin Restoran";
-        $data["body"] = "Your reservation have been Placed Successfully";
-        $data['email'] = $email;
+        // $data["title"] = "From Admin Restoran";
+        // $data["body"] = "Your reservation have been Placed Successfully";
+        // $data['email'] = $email;
         
-        Mail::send('mails.Pesan', $data, function($message)use($data) {
-            $message->to($data["email"])
-                    ->subject($data["title"]);
-        });
+        // Mail::send('mails.Pesan', $data, function($message)use($data) {
+        //     $message->to($data["email"])
+        //             ->subject($data["title"]);
+        // });
 
         return redirect('/');
     }

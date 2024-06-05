@@ -373,47 +373,46 @@
 				</div>
     		</div>
 
-			<div class="row mt-30">
-				<div class="container">
-					<div id="form">
-						<form action="">
+			<form action="{{ route('pesanan.store') }}" method="post">
+				@csrf
+				<div class="row mt-30">
+					<div class="container">
+						<div id="form">
 							<label for="request">Catatan:</label>
-							<input name="request" type="text" required placeholder="Contoh: tambahan bumbu">
-						</form>
+							<input name="catatan" type="text" required placeholder="Contoh: tambahan bumbu">
+						</div>
 					</div>
 				</div>
-			</div>
 
-    		<div class="row justify-content-end">
-    			<div class="col col-lg-5 col-md-6 mt-5 cart-wrap ftco-animate">
-    				<div class="cart-total mb-3">
-    					<h3>Cart Totals</h3>
-    					<p class="d-flex">
-    						<span>Subtotal</span>
-    						<span>$20.60</span>
-    					</p>
-    					<p class="d-flex">
-    						<span>Delivery</span>
-    						<span>$0.00</span>
-    					</p>
-    					<p class="d-flex">
-    						<span>Discount</span>
-    						<span>$3.00</span>
-    					</p>
-    					<hr>
-    					<p class="d-flex">
-    						<span>Total</span>
-    						<span>$17.60</span>
-    					</p>
-    				</div>
-    				<p class="text-center">
-						<form action="">
-							<button type="button" class="btn btn-primary py-3 px-4" onclick="test( '{{ $menu->id }}', '{{ $menu->nama_menu }}', '{{ $menu->harga_menu }}' )">Proceed to Checkout</button>
-						</form>
-					</p>
-    			</div>
-    		</div>
-    	</div>
+				<div class="row justify-content-end">
+					<div class="col col-lg-5 col-md-6 mt-5 cart-wrap ftco-animate">
+						<div class="cart-total mb-3">
+							<h3>Cart Totals</h3>
+							<p class="d-flex">
+								<span>Subtotal</span>
+								<span>$20.60</span>
+							</p>
+							<p class="d-flex">
+								<span>Delivery</span>
+								<span>$0.00</span>
+							</p>
+							<p class="d-flex">
+								<span>Discount</span>
+								<span>$3.00</span>
+							</p>
+							<hr>
+							<p class="d-flex">
+								<span>Total</span>
+								<span>$17.60</span>
+							</p>
+						</div>
+						<p class="text-center">
+							<button type="submit" class="btn btn-primary py-3 px-4">Proceed to Checkout</button>
+						</p>
+					</div>
+				</div>
+			</form>
+		</div>
     </section>
 
 	<script>
