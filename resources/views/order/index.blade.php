@@ -35,6 +35,10 @@
                 <label for="nomor_hp" class="form-label">Nomor HP</label>
                 <input type="text" class="form-control" id="nomor_hp" name="nomor_hp">
             </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email">
+            </div>
 
             <!-- Menu Cards for selecting items to order -->
             <div class="container">

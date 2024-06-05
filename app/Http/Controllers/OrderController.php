@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Models\Keranjang;
 use App\Models\Order;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
@@ -8,7 +10,8 @@ use Illuminate\Http\Request;
 class OrderController extends Controller
 {
     public function index(){
-       return view("order.index");
+        $keranjang_count = Keranjang::all();
+        return view("order.index", compact('keranjang_count'));
     }
 
     public function submitOrder(Request $request)
