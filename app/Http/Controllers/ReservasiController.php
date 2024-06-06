@@ -9,93 +9,59 @@ use Session;
 
 class ReservasiController extends Controller
 {
-    //make insert data to order_meja
     public function insert(Request $request)
     {
-        $data = $request->all();
+        $no_meja = $request->no_meja;
+        $atas_nama = $request->atas_nama;
+        $date = $request->date;
+        $time = $request->time;
+        $jumlah_orang = $request->jumlah;
 
-        Reservasi::create([
-            'no_meja' => $data['no_meja'],
-            'atas_nama' => $data['atas_nama'],
-            'date' => $data['date'],
-            'time' => $data['time'],
-            'jumlah_orang' => $data['jumlah']
-        ]);
-
-        // Session::put('email_no_meja', $no_meja);
-        // Session::put('email_atas_nama', $atas_nama);
-        // Session::put('email_date', $date);
-        // Session::put('email_time', $time);
-        // Session::put('email_jumlah_orang', $jumlah_orang);
-
-        // $data["title"] = "From Admin Restoran";
-        // $data["body"] = "Your reservation have been Placed Successfully";
-        // $data['email'] = $email;
-        
-        // Mail::send('mails.Pesan', $data, function($message)use($data) {
-        //     $message->to($data["email"])
-        //             ->subject($data["title"]);
-        // });
-
+        $data = array(
+            'no_meja' => $no_meja,
+            'atas_nama' => $atas_nama,
+            'date' => $date,
+            'time' => $time,
+            'jumlah_orang' => $jumlah_orang
+        );  
+        Reservasi::create($data);
         //send mail
-        $this->sendmail($request->email,'Reservasi Meja','Meja Nomor '.$data['no_meja'].' berhasil dipesan');
-        // return redirect with alert
-        return redirect('/')->with('alert', 'Meja Nomor '.$data['no_meja'].' berhasil dipesan');
+        $this->sendmail($request->email,'Reservasi Meja','Meja Nomor '.$no_meja.' berhasil dipesan');
+        //return redirect with alert
+        return redirect('/')->with('alert', 'Meja Nomor '.$no_meja.' berhasil dipesan');
     }
 
-    public function sendmail($to, $subject, $message){
+    public function sendmail($to,$subject,$message){
         $client = new Client();
-    
-        try {
-            $response = $client->post('https://api.mailersend.com/v1/email', [
-                'headers' => [
-                    'Content-Type' => 'application/json',
-                    'Authorization' => 'Bearer mlsn.7cbdd0020e01e14b572276b7af46bf3c99a45e9c548636cd7fae6023a13fa2c6'
+
+        $response = $client->post('https://api.mailersend.com/v1/email', [
+            'headers' => [
+                'Content-Type' => 'application/json',
+                'Authorization' => 'Bearer mlsn.7cbdd0020e01e14b572276b7af46bf3c99a45e9c548636cd7fae6023a13fa2c6'
+            ],
+            'json' => [
+                "from" => [
+                    "email" => "AdminBalibul@trial-k68zxl2ekoklj905.mlsender.net"
                 ],
-                'json' => [
-                    "from" => [
-                        "email" => "AdminBalibul@trial-k68zxl2ekoklj905.mlsender.net"
-                    ],
-                    "to" => [
-                        [
-                            "email" => $to
-                        ]
-                    ],
-                    "subject" => $subject,
-                    "text" => $message,
-                    "html" => "<p>".$message."</p>"
-                ]
-            ]);
-    
-            $statusCode = $response->getStatusCode();
-            $body = $response->getBody()->getContents();
-    
-            return response()->json([
-                'status_code' => $statusCode,
-                'response_body' => $body
-            ]);
-        } catch (\GuzzleHttp\Exception\ClientException $e) {
-            $response = $e->getResponse();
-            $statusCode = $response->getStatusCode();
-            $body = $response->getBody()->getContents();
-    
-            // Handle specific 422 error
-            if ($statusCode == 422) {
-                $errorData = json_decode($body, true);
-                $errorMessage = $errorData['message'];
-                return response()->json([
-                    'status_code' => $statusCode,
-                    'error_message' => $errorMessage,
-                    'detailed_errors' => $errorData['errors']
-                ], 422);
-            }
-    
-            return response()->json([
-                'status_code' => $statusCode,
-                'error_message' => 'An error occurred while sending the email.',
-                'response_body' => $body
-            ], $statusCode);
-        }
+                "to" => [
+                    [
+                        "email" => $to
+                    ]
+                ],
+                "subject" => $subject,
+                "text" =>   $message,
+                "html" => "<p>".$message."</p>"
+            ]
+        ]);
+
+        // Handle response as needed
+        $statusCode = $response->getStatusCode();
+        $body = $response->getBody()->getContents();
+
+        return response()->json([
+            'status_code' => $statusCode,
+            'response_body' => $body
+        ]);
     }
 
     public function index()
