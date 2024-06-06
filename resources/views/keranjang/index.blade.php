@@ -11,12 +11,12 @@
 		justify-content:center;
 		background:radial-gradient(circle at 75% 50%, #BFDCE5 25%, #F5E9CF 75%);
 	} 
-	button.btn {
+	.modal-content button.btn {
 		background-color:#2B3467;
 		color:white;
 		height:42px;
 	}
-	button.btn:hover{
+	.modal-content button.btn:hover{
 		background-color:#3E54AC;
 		color:white;
 		height:42px;
@@ -333,12 +333,13 @@
 					<table class="table">
 						<thead class="thead-primary">
 						    <tr>
-                                <th>Number</th>
-                                <th>Image</th>
-                                <th>Product</th>
-                                <th>Price</th>
-                                <th>Quantity</th>
-                                <th>Action</th>
+                                <th>No</th>
+                                <th>Gambar</th>
+                                <th>Produk</th>
+                                <th>Harga</th>
+                                <th>Jumlah</th>
+                                <th>Subtotal</th>
+                                <th>Aksi</th>
 						    </tr>
 						</thead>
 						<?php $no = 1 ?>
@@ -351,6 +352,7 @@
 						        <td><h4>{{ $keranjangs->nama_menu }}</h4></td>
 						        <td><p>{{ $keranjangs->harga_menu }}</p></td>
 						        <td class="quantity">{{ $keranjangs->jumlah }}</td>
+								<td><p>{{ $keranjangs->subtotal }}</p></td>
 						        <td class="aksi">
 									<a class="btn btn-warning ubah-button" href="">Ubah</a>
 									<form method="post" action="{{ route('keranjang.delete', $keranjangs->id) }}" style="display: inline-block;">
@@ -390,20 +392,20 @@
 							<h3>Cart Totals</h3>
 							<p class="d-flex">
 								<span>Subtotal</span>
-								<span>$20.60</span>
+								<span>{{ 'Rp. ' . number_format($keranjang_subtotal, 0, ',', '.') }}</span>
 							</p>
 							<p class="d-flex">
 								<span>Delivery</span>
-								<span>$0.00</span>
+								<span>Rp. 0</span>
 							</p>
 							<p class="d-flex">
 								<span>Discount</span>
-								<span>$3.00</span>
+								<span>Rp. 0</span>
 							</p>
 							<hr>
 							<p class="d-flex">
 								<span>Total</span>
-								<span>$17.60</span>
+								<span>{{ 'Rp. ' . number_format($keranjang_subtotal, 0, ',', '.') }}</span>
 							</p>
 						</div>
 						<p class="text-center">
