@@ -92,6 +92,7 @@ Route::middleware(['auth', KaryawanMiddleware::class])->group(function(){
     Route::post('/pesanan/sendMail', 'App\Http\Controllers\KeranjangController@insert');
     Route::get('/pesanan/updatestatus/{id}/{status}', [KeranjangController::class, 'updatestatus'])->name('pesanan.updatestatus');
 
+    Route::get('/best-seller', [MenuController::class, 'best_seller'])->name('menu.best-seller');
 });
 
 Route::middleware(['auth', ManagerMiddleware::class])->group(function(){

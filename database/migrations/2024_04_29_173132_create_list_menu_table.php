@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('kategori_menu');
             $table->integer('harga_menu');
             $table->string('gambar_menu');
+            $table->string('label_menu')->default('no_label');
             $table->timestamps();
         });
     }

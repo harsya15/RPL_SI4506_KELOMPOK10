@@ -10,21 +10,17 @@ use Session;
 class ReservasiController extends Controller
 {
     //make insert data to order_meja
-    public function insert(Request $request){
-        $no_meja = $request->no_meja;
-        $atas_nama = $request->atas_nama;
-        $date = $request->date;
-        $time = $request->time;
-        $jumlah_orang = $request->jumlah;
-        $email = $request->email;
+    public function insert(Request $request)
+    {
+        $data = $request->all();
 
-        $data = array(
-            'no_meja' => $no_meja,
-            'atas_nama' => $atas_nama,
-            'date' => $date,
-            'time' => $time,
-            'jumlah_orang' => $jumlah_orang
-        );
+        Reservasi::create([
+            'no_meja' => $data['no_meja'],
+            'atas_nama' => $data['atas_nama'],
+            'date' => $data['date'],
+            'time' => $data['time'],
+            'jumlah_orang' => $data['jumlah']
+        ]);
 
         // Session::put('email_no_meja', $no_meja);
         // Session::put('email_atas_nama', $atas_nama);
@@ -41,11 +37,10 @@ class ReservasiController extends Controller
         //             ->subject($data["title"]);
         // });
 
-        Reservasi::create($data);
         //send mail
-        $this->sendmail($request->email,'Reservasi Meja','Meja Nomor '.$no_meja.' berhasil dipesan');
+        $this->sendmail($request->email,'Reservasi Meja','Meja Nomor '.$data['no_meja'].' berhasil dipesan');
         // return redirect with alert
-        return redirect('/')->with('alert', 'Meja Nomor '.$no_meja.' berhasil dipesan');
+        return redirect('/')->with('alert', 'Meja Nomor '.$data['no_meja'].' berhasil dipesan');
     }
 
     public function sendmail($to, $subject, $message){

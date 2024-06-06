@@ -21,6 +21,11 @@
         <label for="gambar" class="mb-2">Gambar Menu</label>
         <img src="{{ url('uploads/menu').'/'.$menu->gambar_menu }}" style="max-width:200px;">
         <input name="gambar" type="file">
+        <label for="best_seller">Label Menu</label>
+        <select name="label_menu" required>
+          <option value="no_label" {{ $menu->label_menu == ''? 'selected' : '' }}>No Label</option>
+          <option value="best_seller" {{ $menu->label_menu == 'best_seller'? 'selected' : '' }}>Best_seller</option>
+        </select>
         <button class="btn btn-primary" type="submit" style="margin-top: 40px;">Update</button>
       </form>
     </div>

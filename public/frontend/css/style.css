@@ -786,6 +786,21 @@ p {
   padding: 25px;
 }
 
+.food_section .filters-content .box .detail-box .menu {
+  display: flex;
+}
+
+.food_section .filters-content .box .detail-box .menu span{
+  margin-top: 2px;
+  margin-left: 10px;
+  font-size: 12px;
+  padding: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 10px;
+  background-color: #e69c00;
+}
+
 .food_section .filters-content .box .detail-box h4 {
   color: #EEEEEE;
 }

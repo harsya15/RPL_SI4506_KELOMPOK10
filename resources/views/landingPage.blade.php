@@ -437,7 +437,12 @@
                                     <img src="{{asset('uploads/menu/'.$menus->gambar_menu)}}" alt="">
                                 </div>
                                 <div class="detail-box">
-                                    <h4 class="mb-2">{{ $menus->nama_menu }}</h4>
+                                    <div class="menu mb-2">
+                                        <h4>{{ $menus->nama_menu }}</h4>
+                                        @if ($menus->label_menu == 'best_seller')
+                                        <span>Best Seller</span>
+                                        @endif
+                                    </div>
                                     <p>{{ $menus->deskripsi_menu }}</p>
                                     <div class="options mt-3">
                                         <h6>{{ 'Rp '.number_format($menus->harga_menu/1000).'k' }}</h6>
@@ -450,7 +455,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div> 
+                        </div>
                     </div> <!-- single menu -->
                     @endforeach
                 </div> <!-- row-->

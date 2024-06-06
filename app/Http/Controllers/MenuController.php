@@ -70,4 +70,9 @@ class MenuController extends Controller
       
         return redirect(route('Menu.index'))->with('success', 'Berhasil menghapus menu ' . $menu->nama_menu);
     }
+
+    public function best_seller()
+    {
+        
+    }
 }

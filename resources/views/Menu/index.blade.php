@@ -19,6 +19,7 @@
                     <th>Kategori Menu</th>
                     <th>Harga Menu</th>
                     <th>Gambar Menu</th>
+                    <th>Best Seller</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
@@ -27,14 +28,15 @@
                 @foreach($menu as $menus)
                 <tr>
                     <td>{{ $no++ }}</td>
-                    <td style="width : 250px">{{ $menus->nama_menu }}</td>
-                    <td>{{ $menus->deskripsi_menu }}</td>
+                    <td style="width : 200px">{{ $menus->nama_menu }}</td>
+                    <td style="width: 500px">{{ $menus->deskripsi_menu }}</td>
                     <td>{{ $menus->kategori_menu }}</td>
                     <td>{{ $menus->harga_menu }}</td>
                     <td>
                         <img src="{{asset('uploads/menu/'.$menus->gambar_menu)}}" style="max-width:200px">
                     </td>
-                    <td class="d-flex flex-col gap-3 justify-items-center">
+                    <td>{{ $menus->label_menu }}</td>
+                    <td class="d-flex flex-col gap-2 justify-items-center">
                         <a class="btn btn-warning" href="{{ route('Menu.edit', $menus->id) }}">Ubah</a>
                         <form method="post" action="{{ route('Menu.delete', $menus->id) }}" style="display: inline-block;">
                             @csrf
