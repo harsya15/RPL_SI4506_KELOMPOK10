@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.adminPage.layout')
 
 @section('content')
   <section id='form'>

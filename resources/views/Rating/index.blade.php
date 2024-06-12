@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.adminPage.layout')
 
 @if (session('success'))
     <p class="alert alert-success">{{ session('success') }}</p>
