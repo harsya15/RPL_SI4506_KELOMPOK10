@@ -12,7 +12,7 @@ class pesanan extends Model
     protected $table = 'data_pesanan';
 
     protected $fillable = [
-        'id', 'nama_pemesan', 'email', 'list_menu', 'catatan', 'status', 'created_at', 'updated_at'
+        'id', 'nama_pemesan', 'email', 'list_menu', 'alamat', 'no_hp', 'catatan', 'total', 'status', 'created_at', 'updated_at'
     ];
 
     protected $casts = [

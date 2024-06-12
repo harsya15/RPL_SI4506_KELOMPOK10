@@ -5,7 +5,7 @@
         <a class="nav-link active" href="{{ route('admin') }}" aria-current="page">Home</a>
         <div class="d-flex">
           <li class="nav-item dropdown">
-            <a class="nav-link text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a id="user-dropdown" class="nav-link text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               {{ Auth::user()->name }}
             </a>
             <ul class="dropdown-menu dropdown-menu-end">

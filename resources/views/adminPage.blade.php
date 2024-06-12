@@ -15,10 +15,10 @@
                     <li class="list-group-item px-4 bg-transparent" style="border: none"><a style="text-decoration: none" class="text-black fw-bold" href="/Reservasi">Daftar Reservasi</a></li>
                     <li class="list-group-item px-4 bg-transparent" style="border: none"><a style="text-decoration: none" class="text-black fw-bold" href="/pesanan">Daftar Pesanan</a></li>
                     @if (auth()->user()->role == 'karyawan')
-                    <li class="list-group-item px-4 bg-transparent" style="border: none"><a style="text-decoration: none" class="text-black fw-bold" href="/Karyawan/laporan">Laporan Kinerja</a></li>
+                    <li class="list-group-item px-4 bg-transparent" style="border: none"><a style="text-decoration: none" class="text-black fw-bold" href="/Karyawan/laporan/create">Laporan Kinerja</a></li>
                     @elseif (auth()->user()->role == 'manager')
                     <li class="list-group-item px-4 bg-transparent" style="border: none"><a style="text-decoration: none" class="text-black fw-bold" href="/Karyawan">Daftar Karyawan</a></li>
-                    <li class="list-group-item px-4 bg-transparent" style="border: none"><a style="text-decoration: none" class="text-black fw-bold" href="/Manager/laporan">Laporan Kinerja</a></li>
+                    <li class="list-group-item px-4 bg-transparent" style="border: none"><a style="text-decoration: none" class="text-black fw-bold" href="/Karyawan/laporan">Laporan Kinerja</a></li>
                     @endif
                     
                 </ul>

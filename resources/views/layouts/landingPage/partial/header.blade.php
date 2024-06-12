@@ -8,7 +8,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <nav class="navbar navbar-expand-lg">
-                            <a class="navbar-brand" href="#" alt="Logo">
+                            <a class="navbar-brand" href="/" alt="Logo">
                                 <div class="cuisine">Sate Balibul</div>
                                 <img class="logo-sate" src="images/logobalibul.png" />
                             </a>
@@ -47,14 +47,27 @@
                                         </a>
                                     </div>
                                     @if (Auth::check())
-                                    <div class="user_option ml-2">
+                                    <div class="user_option ml-1">
+                                        <li class="dropdown">
+                                            <a class="cart_link dropdown-toggle mt-1" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="lni lni-user"></i></a>
+                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                <a class="dropdown-item" href="/">Reward</a>
+                                                <a class="dropdown-item" href="/order/cekdelivery/{nohp}">Delivery</a>
+                                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                                                <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                                                    @csrf
+                                                </form>
+                                            </div>
+                                        </li>
+                                    </div>
+                                    <!-- <div class="user_option ml-2">
                                         <a href="{{ route('logout') }}" class="login" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST">
                                             @csrf
                                         </form>
-                                    </div>
+                                    </div> -->
                                     @else
-                                    <div class="user_option ml-2">
+                                    <div class="user_option ml-3">
                                         <a href="/login" class="login">Login</a>
                                     </div>
                                     @endif

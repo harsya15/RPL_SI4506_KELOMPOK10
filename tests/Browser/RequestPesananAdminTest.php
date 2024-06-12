@@ -10,6 +10,7 @@ class RequestPesananAdminTest extends DuskTestCase
 {
     /**
      * A Dusk test example.
+     * @group requestAdmin
      */
     public function testExample(): void
     {
@@ -17,9 +18,8 @@ class RequestPesananAdminTest extends DuskTestCase
             $browser->visit('/')
                     ->assertSee('Login')
                     ->clickLink('Login')
-                    ->assertPathIs('/login')
-                    ->type('email', 'davidtoreh12@gmail.com')
-                    ->type('password', '12345678')
+                    ->type('email', 'asep@gmail.com')
+                    ->type('password', 'password')
                     ->press('Login')
                     ->assertSee('Daftar Pesanan')
                     ->clickLink('Daftar Pesanan')

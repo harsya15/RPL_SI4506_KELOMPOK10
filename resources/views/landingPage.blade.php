@@ -482,7 +482,7 @@
                     </div>
                 </div> <!-- row -->
 
-                <form action="/insert" method="post">
+                <form action="/reservasi/insert" method="post">
                     @csrf
                     <div class="row">
                         <div class="col-lg-6">

@@ -48,7 +48,8 @@ public function showSuccessPage(Request $request)
 
     public function inputNomorHp()
     {
-        return view('order.input_nomor_hp');
+        $keranjang_count = Keranjang::count();
+        return view('order.input_nomor_hp', compact('keranjang_count'));
     }
 
     public function checkPoints(Request $request)
@@ -126,7 +127,8 @@ public function showSuccessPage(Request $request)
 }
 //cekdelivery
 public function cekDelivery($no)
-{
+{   
+    $keranjang_count = Keranjang::count();
     //get order by nohp
     $order = Order::where('nomor_hp', $no)->first();
 
@@ -144,7 +146,7 @@ public function cekDelivery($no)
     // Get the items in the order
     $items = json_decode($order->pesanan, true);
 
-    return view('order.cekdelivery', compact('order', 'deliveryStatus', 'deliveryAddress', 'items'));
+    return view('order.cekdelivery', compact('keranjang_count', 'order', 'deliveryStatus', 'deliveryAddress', 'items'));
 
 }
 

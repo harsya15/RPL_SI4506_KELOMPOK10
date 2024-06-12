@@ -322,6 +322,7 @@
 
     <section id="keranjang" class="ftco-section layout_padding pt-120">
         <div class="container">
+			<a href="/" class="btn btn-danger mt-5 mb-3">kembali</a>
             <div class="section_title text-center pb-25">
                 <h4 class="title">Keranjang</h4>
                 <span class="line">
@@ -331,7 +332,7 @@
     		<div class="row mt-20">
     			<div class="table-wrap">
 					<table class="table">
-						<thead class="thead-primary">
+						<thead class="thead-primary">							
 						    <tr>
                                 <th>No</th>
                                 <th>Gambar</th>
@@ -377,6 +378,12 @@
 
 			<form action="{{ route('pesanan.store') }}" method="post">
 				@csrf
+				<div class="data_pemesan mt-4 mb-3" id="form">
+					<label for="alamat" class="form-label">Alamat</label>
+					<input type="text" class="form-control" id="alamat" name="alamat">
+					<label for="no_hp" class="form-label mt-1">Nomor HP</label>
+					<input type="text" class="form-control" id="no_hp" name="no_hp">
+				</div>
 				<div class="row mt-30">
 					<div class="container">
 						<div id="form">

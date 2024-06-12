@@ -21,9 +21,9 @@ Route::get('/', [HomeController::class, 'index'])->name('landingPage');
 
 Route::middleware(['auth', CustomerMiddleware::class])->group(function(){
     Route::get('/Pembayaran', [ItemController::class, 'index']);
-    Route::post('/insert', 'App\Http\Controllers\ReservasiController@insert');
-    Route::post('/getintouch', 'App\Http\Controllers\ReservasiController@getintouch');
-    Route::post('/insert', 'App\Http\Controllers\KontakController@insert');
+    Route::post('/reservasi/insert', 'App\Http\Controllers\ReservasiController@insert');
+    Route::post('/reservasi/getintouch', 'App\Http\Controllers\ReservasiController@getintouch');
+    Route::post('/kontak/insert', 'App\Http\Controllers\KontakController@insert');
 
     Route::get('/keranjang', [KeranjangController::class, 'index'])->name('keranjang.index');
     Route::post('/keranjang/store/{id}', [KeranjangController::class, 'store'])->name('keranjang.store');
@@ -66,7 +66,7 @@ Route::middleware(['auth', KaryawanMiddleware::class])->group(function(){
     Route::delete('/Karyawan/delete/{id}', [KaryawanController::class, 'delete'])->name('karyawan.delete');
 
 
-    Route::get('/Karyawan/laporan', [LaporanController::class, 'create'])->name('laporan.create');
+    Route::get('/Karyawan/laporan/create', [LaporanController::class, 'create'])->name('laporan.create');
     Route::post('/Karyawan/laporan/store', [LaporanController::class, 'store'])->name('laporan.store');
 
     Route::get('/Rating', [RatingController::class, 'index'])->name('rating.index');
@@ -103,6 +103,8 @@ Route::middleware(['auth', ManagerMiddleware::class])->group(function(){
     Route::get('/Karyawan/edit/{id}', [KaryawanController::class, 'edit'])->name('karyawan.edit');
     Route::post('/Karyawan/update/{id}', [KaryawanController::class, 'update'])->name('karyawan.update');
     Route::delete('/Karyawan/delete/{id}', [KaryawanController::class, 'delete'])->name('karyawan.delete');
+
+    Route::get('/Karyawan/laporan', [LaporanController::class, 'index'])->name('laporan.index');
 });
 
 // Route untuk menyimpan item

@@ -6,7 +6,6 @@
 <p class="alert alert-success">{{ session('success') }}</p>
 @endif
 
-<a href="/Reservasi/create" type="button" class="btn btn-primary mt-4 mb-2 ms-4">Tambah</a>
 <div class="card card-default px-4">
     @if (count($reservasi) > 0)
     <div class="card-body mt-4 p-0 table-responsive">
@@ -19,7 +18,6 @@
                     <th>Tanggal</th>
                     <th>Waktu</th>
                     <th>Jumlah Orang</th>
-                    <th>Aksi</th>
                 </tr>
             </thead>
             <?php $no = 1 ?>
@@ -31,14 +29,6 @@
                 <td>{{ $reservasis->date }}</td>
                 <td>{{ $reservasis->time }}</td>
                 <td>{{ $reservasis->jumlah_orang }}</td>
-                <td class="d-flex flex-col gap-3 justify-items-center">
-                    <a class="btn btn-warning" href="{{ route('Reservasi.edit', $reservasis->id) }}">Ubah</a>
-                    <form method="post" action="{{ route('Reservasi.delete', $reservasis->id) }}" style="display: inline-block;">
-                        @csrf
-                        @method('DELETE')
-                        <button class="btn btn-danger" onclick="return confirm('Hapus Data?')">Hapus</button>
-                    </form>
-                </td>
             </tr>
             @endforeach
         </table>

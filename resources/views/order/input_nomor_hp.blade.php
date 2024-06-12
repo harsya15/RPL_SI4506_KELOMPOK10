@@ -2,6 +2,7 @@
 @section('title', 'Informasi Klaim Poin')
 @section('content')
 
+<section id="" class="layout_padding pt-120">
     <div class="container ">
         <div class="row justify-content-center">
             <div class="col-md-8">
@@ -28,5 +29,5 @@
             </div>
         </div>
     </div>
-
+</section>
 @endsection

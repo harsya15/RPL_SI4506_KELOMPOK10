@@ -15,6 +15,9 @@
                     <th>No</th>
                     <th>Nama Pemesan</th>
                     <th>Email Pemesan</th>
+                    <th>Alamat</th>
+                    <th>List Menu</th>
+                    <th>Total</th>
                     <th>Catatan</th>
                     <th>status</th>
                 </tr>
@@ -26,6 +29,9 @@
                     <td>{{ $no++ }}</td>
                     <td>{{ $pesanans->nama_pemesan }}</td>
                     <td>{{ $pesanans->email }}</td>
+                    <td>{{ $pesanans->alamat }}</td>
+                    <td>{{ $pesanans->list_menu }}</td>
+                    <td>{{ $pesanans->total }}</td>
                     <td>{{ $pesanans->catatan }}</td>
                     <td>
                         <?php

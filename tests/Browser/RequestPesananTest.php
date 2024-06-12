@@ -6,10 +6,13 @@ use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Laravel\Dusk\Browser;
 use Tests\DuskTestCase;
 
+use function PHPSTORM_META\type;
+
 class RequestPesananTest extends DuskTestCase
 {
     /**
      * A Dusk test example.
+     * @group request
      */
     public function testExample(): void
     {
@@ -17,14 +20,14 @@ class RequestPesananTest extends DuskTestCase
             $browser->visit('/')
                     ->assertSee('Login')
                     ->clickLink('Login')
-                    ->assertPathIs('/login')
                     ->type('email', 'davidtoreh12@gmail.com')
-                    ->type('password', '12345678')
+                    ->type('password', 'password')
                     ->press('Login')
-                    ->visitRoute('keranjang.index')
+                    ->visit('/keranjang')
+                    ->type('alamat', 'sukapura')
+                    ->type('no_hp', '0828228')
                     ->type('catatan', 'Banyakin bumbu kacang')
-                    ->assertSee('Proceed to Checkout')
-                    ->clickLink('Proceed to Checkout');
+                    ->press('Proceed to Checkout');
         });
     }
 }

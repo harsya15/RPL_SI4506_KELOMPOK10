@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 
 class LaporanController extends Controller
 {
+    public function index()
+    {
+        $laporan = Laporan::all();
+        return view('karyawan.laporan.index', compact('laporan'));
+    }
+
     public function create() 
     {
         return view('karyawan.laporan.create');

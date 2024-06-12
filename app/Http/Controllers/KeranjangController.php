@@ -79,11 +79,16 @@ class KeranjangController extends Controller
         $pemesan = Auth::user()->name;
         $email = Auth::user()->email;
         $menu = Keranjang::all();
+        $nama_menu_list = $menu->pluck('nama_menu');
+        $total = $menu->sum('subtotal');
 
         pesanan::create([
             'nama_pemesan' => $pemesan,
             'email' => $email,
-            'list_menu' => json_encode($menu),
+            'list_menu' => json_encode($nama_menu_list),
+            'alamat' => $data['alamat'],
+            'no_hp' => $data['no_hp'],
+            'total' => $total,
             'catatan' => $data['catatan'],
         ]);
 

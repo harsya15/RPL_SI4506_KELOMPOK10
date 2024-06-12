@@ -10,7 +10,7 @@ class MengelolaReservasiTest extends DuskTestCase
 {
     /**
      * A Dusk test example.
-     * @group login
+     * @group mengelolareservasi
      */
     public function testExample(): void
     {
@@ -18,12 +18,12 @@ class MengelolaReservasiTest extends DuskTestCase
             $browser->visit('/')
                     ->assertSee('Login')
                     ->clickLink('Login')
-                    ->assertPathIs('/login')
-                    ->type('email', 'davidtoreh12@gmail.com')
-                    ->type('password', '12345678')
+                    ->type('email', 'asep@gmail.com')
+                    ->type('password', 'password')
                     ->press('Login')
                     ->assertsee('Daftar Reservasi')
-                    ->clickLink('Daftar Reservasi');
+                    ->clickLink('Daftar Reservasi')
+                    ->assertSee('Nama Pemesan');
         });
     }
 }
